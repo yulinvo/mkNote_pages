@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mysql和mysqld通信 | mkNote</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="这是我的第一个 VuePress 站点">
+    
+    <link rel="preload" href="/mkNote_pages/assets/css/0.styles.5ee5f47c.css" as="style"><link rel="preload" href="/mkNote_pages/assets/js/app.85220451.js" as="script"><link rel="preload" href="/mkNote_pages/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/mkNote_pages/assets/js/174.86aeb91c.js" as="script"><link rel="prefetch" href="/mkNote_pages/assets/js/10.a5dfed7e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/100.5933671b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/101.e7ae901e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/102.7d2ee805.js"><link rel="prefetch" href="/mkNote_pages/assets/js/103.9f737274.js"><link rel="prefetch" href="/mkNote_pages/assets/js/104.ab4d4eef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/105.aa179439.js"><link rel="prefetch" href="/mkNote_pages/assets/js/106.09c2236d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/107.792b3162.js"><link rel="prefetch" href="/mkNote_pages/assets/js/108.fa4d9ba7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/109.c1b1bc01.js"><link rel="prefetch" href="/mkNote_pages/assets/js/11.e74f9970.js"><link rel="prefetch" href="/mkNote_pages/assets/js/110.a376ba9e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/111.e0d5bfbf.js"><link rel="prefetch" href="/mkNote_pages/assets/js/112.8deb7e0b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/113.90cdc72f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/114.a8614e3e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/115.69c9e725.js"><link rel="prefetch" href="/mkNote_pages/assets/js/116.e17dc90c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/117.628d9208.js"><link rel="prefetch" href="/mkNote_pages/assets/js/118.acb3c70b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/119.513144cc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/12.e8ed3d1e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/120.40ee3ff6.js"><link rel="prefetch" href="/mkNote_pages/assets/js/121.53e3b584.js"><link rel="prefetch" href="/mkNote_pages/assets/js/122.b76c0d2b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/123.49a8313c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/124.74b93b0f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/125.019ceceb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/126.369d5d5b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/127.0f1da716.js"><link rel="prefetch" href="/mkNote_pages/assets/js/128.6d918cfd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/129.33bd60fb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/13.fb0ebe5f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/130.3937b900.js"><link rel="prefetch" href="/mkNote_pages/assets/js/131.785ea357.js"><link rel="prefetch" href="/mkNote_pages/assets/js/132.faab3688.js"><link rel="prefetch" href="/mkNote_pages/assets/js/133.018c0003.js"><link rel="prefetch" href="/mkNote_pages/assets/js/134.a82749c3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/135.8752b815.js"><link rel="prefetch" href="/mkNote_pages/assets/js/136.fd9a6dc0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/137.89479564.js"><link rel="prefetch" href="/mkNote_pages/assets/js/138.d12a008d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/139.f355a2db.js"><link rel="prefetch" href="/mkNote_pages/assets/js/14.e6f6b9ba.js"><link rel="prefetch" href="/mkNote_pages/assets/js/140.e3eb3d51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/141.a7835f24.js"><link rel="prefetch" href="/mkNote_pages/assets/js/142.502e152f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/143.1477dcbd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/144.157a8cf3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/145.e8587394.js"><link rel="prefetch" href="/mkNote_pages/assets/js/146.2d4de5af.js"><link rel="prefetch" href="/mkNote_pages/assets/js/147.ce48995f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/148.d946a47e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/149.9a19208c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/15.fadd07e0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/150.801eb813.js"><link rel="prefetch" href="/mkNote_pages/assets/js/151.5b1c566b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/152.d8d370f5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/153.03ade5ec.js"><link rel="prefetch" href="/mkNote_pages/assets/js/154.411ac005.js"><link rel="prefetch" href="/mkNote_pages/assets/js/155.1167b51b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/156.fb81c665.js"><link rel="prefetch" href="/mkNote_pages/assets/js/157.85f8b3d9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/158.b669b6be.js"><link rel="prefetch" href="/mkNote_pages/assets/js/159.6c5df155.js"><link rel="prefetch" href="/mkNote_pages/assets/js/16.7423e971.js"><link rel="prefetch" href="/mkNote_pages/assets/js/160.6019a527.js"><link rel="prefetch" href="/mkNote_pages/assets/js/161.39ebd813.js"><link rel="prefetch" href="/mkNote_pages/assets/js/162.ae2a809b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/163.d5eb40cb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/164.6191445e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/165.c15ffeab.js"><link rel="prefetch" href="/mkNote_pages/assets/js/166.9a84e265.js"><link rel="prefetch" href="/mkNote_pages/assets/js/167.a8543b7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/168.3a539990.js"><link rel="prefetch" href="/mkNote_pages/assets/js/169.b389d90a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/17.34d1f82b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/170.28e07f21.js"><link rel="prefetch" href="/mkNote_pages/assets/js/171.f3fe7650.js"><link rel="prefetch" href="/mkNote_pages/assets/js/172.495611f9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/173.426a510a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/175.7350b0a4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/176.8ddc1f51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/177.0800c99b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/178.cdb30931.js"><link rel="prefetch" href="/mkNote_pages/assets/js/179.7b48396e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/18.78c86e3b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/180.4e23d3ef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/181.fc8f8e7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/182.7b21b02b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/19.50754958.js"><link rel="prefetch" href="/mkNote_pages/assets/js/20.ef3cda8e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/21.543f9674.js"><link rel="prefetch" href="/mkNote_pages/assets/js/22.a05f11b4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/23.4d88a77e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/24.71aad58c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/25.46bf477a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/26.54c34fac.js"><link rel="prefetch" href="/mkNote_pages/assets/js/27.67e8f2b5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/28.99aed72a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/29.4c0af258.js"><link rel="prefetch" href="/mkNote_pages/assets/js/3.6e6f36ce.js"><link rel="prefetch" href="/mkNote_pages/assets/js/30.a3725351.js"><link rel="prefetch" href="/mkNote_pages/assets/js/31.8fe83090.js"><link rel="prefetch" href="/mkNote_pages/assets/js/32.d55fa767.js"><link rel="prefetch" href="/mkNote_pages/assets/js/33.e5bdf3fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/34.294ee56f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/35.58414bef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/36.a02d8d8c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/37.6389f6de.js"><link rel="prefetch" href="/mkNote_pages/assets/js/38.9dd6d752.js"><link rel="prefetch" href="/mkNote_pages/assets/js/39.44021b7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/4.26f73e91.js"><link rel="prefetch" href="/mkNote_pages/assets/js/40.3dc34bae.js"><link rel="prefetch" href="/mkNote_pages/assets/js/41.71d0dde8.js"><link rel="prefetch" href="/mkNote_pages/assets/js/42.07966c0e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/43.77899178.js"><link rel="prefetch" href="/mkNote_pages/assets/js/44.f19b6dc9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/45.231d2aa7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/46.ac9e7b0b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/47.33976224.js"><link rel="prefetch" href="/mkNote_pages/assets/js/48.0e3c1af5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/49.00f6e0d0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/5.5dcec586.js"><link rel="prefetch" href="/mkNote_pages/assets/js/50.c7c22232.js"><link rel="prefetch" href="/mkNote_pages/assets/js/51.b7042968.js"><link rel="prefetch" href="/mkNote_pages/assets/js/52.b83eedba.js"><link rel="prefetch" href="/mkNote_pages/assets/js/53.da1c8817.js"><link rel="prefetch" href="/mkNote_pages/assets/js/54.db0a7189.js"><link rel="prefetch" href="/mkNote_pages/assets/js/55.1357acf3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/56.697208cd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/57.b63549c0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/58.204ba5fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/59.9ced4e6d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/6.f2a96706.js"><link rel="prefetch" href="/mkNote_pages/assets/js/60.b38cc8c1.js"><link rel="prefetch" href="/mkNote_pages/assets/js/61.8e3d0e43.js"><link rel="prefetch" href="/mkNote_pages/assets/js/62.40e135b6.js"><link rel="prefetch" href="/mkNote_pages/assets/js/63.d9ba50a8.js"><link rel="prefetch" href="/mkNote_pages/assets/js/64.e230d9dc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/65.cd9f99da.js"><link rel="prefetch" href="/mkNote_pages/assets/js/66.5083d893.js"><link rel="prefetch" href="/mkNote_pages/assets/js/67.72619bd4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/68.2ff46f6e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/69.22862b0f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/7.26f9313b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/70.5cc3357a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/71.d4fb1d0e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/72.8de19a9a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/73.3fd8d00e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/74.4a823212.js"><link rel="prefetch" href="/mkNote_pages/assets/js/75.c3b89e51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/76.b3caa364.js"><link rel="prefetch" href="/mkNote_pages/assets/js/77.6edf2137.js"><link rel="prefetch" href="/mkNote_pages/assets/js/78.c178059c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/79.dd7733d3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/8.6281cc2b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/80.d98d5bcc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/81.636a3744.js"><link rel="prefetch" href="/mkNote_pages/assets/js/82.c8bdaffb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/83.710462f3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/84.f6c0e8b3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/85.b43cb128.js"><link rel="prefetch" href="/mkNote_pages/assets/js/86.1c1ef745.js"><link rel="prefetch" href="/mkNote_pages/assets/js/87.25b23344.js"><link rel="prefetch" href="/mkNote_pages/assets/js/88.ae93f86f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/89.e85fc20a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/9.0a278515.js"><link rel="prefetch" href="/mkNote_pages/assets/js/90.6232d8a0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/91.068a5731.js"><link rel="prefetch" href="/mkNote_pages/assets/js/92.aa28597f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/93.912181b7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/94.cd6910a4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/95.fc74d1d4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/96.3e6dd3fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/97.cfde28b0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/98.4372bf96.js"><link rel="prefetch" href="/mkNote_pages/assets/js/99.257a4da4.js">
+    <link rel="stylesheet" href="/mkNote_pages/assets/css/0.styles.5ee5f47c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mkNote_pages/" class="home-link router-link-active"><img src="/mkNote_pages/images/logo.png" alt="mkNote" class="logo"> <span class="site-name can-hide">mkNote</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mkNote_pages/03_ENG/" class="nav-link">
+  ENG
+</a></div><div class="nav-item"><a href="/mkNote_pages/05_历史/" class="nav-link">
+  历史
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Base技能" class="dropdown-title"><span class="title">Base技能</span> <span class="arrow down"></span></button> <button type="button" aria-label="Base技能" class="mobile-dropdown-title"><span class="title">Base技能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/10_公网笔记资源/10_筆記資源.html" class="nav-link">
+  公网笔记资源
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/50_git/10_参考文档.html" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/1000_其他/" class="nav-link">
+  vscode、mk...
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/10_Linux/10_参考文档.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/50_nginx/10_参考文档.html" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/90_docker/10_参考文档.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/100_ansible/10_参考文档.html" class="nav-link">
+  Ansible
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/150_k8s/10_参考文档.html" class="nav-link">
+  K8S
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web前端" class="dropdown-title"><span class="title">web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="web前端" class="mobile-dropdown-title"><span class="title">web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/10_HTML5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/20_CSS3/" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/25_UI库/" class="nav-link">
+  UI 库
+</a></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/30_JavaScript/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/40_ES规范/" class="nav-link">
+  ES规范
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/60_vue2/60_vue_CLI脚手架.html" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/70_Vue3+TS快速上手/00_课程介绍.html" class="nav-link">
+  Vue3.x + TS快速上手
+</a></li></ul></li><li class="dropdown-item"><h4>
+          构建工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/100_构建工具类/" class="nav-link">
+  前端构建工具
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="python" class="dropdown-title"><span class="title">python</span> <span class="arrow down"></span></button> <button type="button" aria-label="python" class="mobile-dropdown-title"><span class="title">python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/40_python/10_python/20_环境准备.html" class="nav-link">
+  python基础
+</a></li><li class="dropdown-item"><h4>
+          Django笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/50_Django/10_参考文档.html" class="nav-link">
+  Django
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/60_RestFramework/10_参考文档.html" class="nav-link">
+  RestFramework
+</a></li></ul></li><li class="dropdown-item"><h4>
+          爬虫笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/10_sqlite/10_参考文档.html" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/20_mysql/10_参考文档.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/30_mongodb/10_参考文档.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/40_redis/10_参考文档.html" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/50_postgreSQL/10_参考文档.html" class="nav-link">
+  PostgreSQL
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.yulinvo.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mySite
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mkNote_pages/03_ENG/" class="nav-link">
+  ENG
+</a></div><div class="nav-item"><a href="/mkNote_pages/05_历史/" class="nav-link">
+  历史
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Base技能" class="dropdown-title"><span class="title">Base技能</span> <span class="arrow down"></span></button> <button type="button" aria-label="Base技能" class="mobile-dropdown-title"><span class="title">Base技能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/10_公网笔记资源/10_筆記資源.html" class="nav-link">
+  公网笔记资源
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/50_git/10_参考文档.html" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/1000_其他/" class="nav-link">
+  vscode、mk...
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/10_Linux/10_参考文档.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/50_nginx/10_参考文档.html" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/90_docker/10_参考文档.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/100_ansible/10_参考文档.html" class="nav-link">
+  Ansible
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/150_k8s/10_参考文档.html" class="nav-link">
+  K8S
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web前端" class="dropdown-title"><span class="title">web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="web前端" class="mobile-dropdown-title"><span class="title">web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/10_HTML5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/20_CSS3/" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/25_UI库/" class="nav-link">
+  UI 库
+</a></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/30_JavaScript/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/40_ES规范/" class="nav-link">
+  ES规范
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/60_vue2/60_vue_CLI脚手架.html" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/70_Vue3+TS快速上手/00_课程介绍.html" class="nav-link">
+  Vue3.x + TS快速上手
+</a></li></ul></li><li class="dropdown-item"><h4>
+          构建工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/100_构建工具类/" class="nav-link">
+  前端构建工具
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="python" class="dropdown-title"><span class="title">python</span> <span class="arrow down"></span></button> <button type="button" aria-label="python" class="mobile-dropdown-title"><span class="title">python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/40_python/10_python/20_环境准备.html" class="nav-link">
+  python基础
+</a></li><li class="dropdown-item"><h4>
+          Django笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/50_Django/10_参考文档.html" class="nav-link">
+  Django
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/60_RestFramework/10_参考文档.html" class="nav-link">
+  RestFramework
+</a></li></ul></li><li class="dropdown-item"><h4>
+          爬虫笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/10_sqlite/10_参考文档.html" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/20_mysql/10_参考文档.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/30_mongodb/10_参考文档.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/40_redis/10_参考文档.html" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/50_postgreSQL/10_参考文档.html" class="nav-link">
+  PostgreSQL
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.yulinvo.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mySite
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/mkNote_pages/50_DB数据库/20_mysql/10_参考文档.html" class="sidebar-link">参考文档</a></li><li><a href="/mkNote_pages/50_DB数据库/20_mysql/20_环境准备.html" class="sidebar-link">环境准备</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="mysql和mysqld通信"><a href="#mysql和mysqld通信" class="header-anchor">#</a> mysql和mysqld通信</h2> <p>可供选择的协议protocol： tcp、socket、pipe、memory</p> <ul><li><p>mysql和mysqld在同一台主机上，采用sock通信</p> <div class="language- extra-class"><pre class="language-text"><code>unix :
+	mysql  --&gt; mysql.sock --&gt; mysqld
+windows:
+	mysql  --&gt; memory(pipe) --&gt;mysqld
+</code></pre></div></li> <li><p>mysql和mysqld不在同一台主机上，采用TCP/IP协议</p> <div class="language- extra-class"><pre class="language-text"><code>mysql:
+	-uroot  -h172.16.100.1
+</code></pre></div></li></ul> <h2 id="存储引擎"><a href="#存储引擎" class="header-anchor">#</a> 存储引擎</h2> <blockquote><p>存储引擎不是数据库级别的概念，是表级别的概念</p></blockquote> <ul><li><p>MyISAM（无事务，表锁）</p> <div class="language- extra-class"><pre class="language-text"><code>.frm   表结构定义
+.MYD    表数据
+.MYI    索引
+
+创建新的数据库后有一个默认的mysql数据库，里面的表大部分都是myisam存储引擎
+</code></pre></div></li> <li><p>InnoDB</p> <div class="language- extra-class"><pre class="language-text"><code>每表使用一个独立的表空间文件（innodb_file_per_table要开启，默认为OFF）
+.frm        表结构
+.ibd         表空间（数据和索引）
+</code></pre></div></li></ul> <h2 id="服务器端启动命令"><a href="#服务器端启动命令" class="header-anchor">#</a> 服务器端启动命令</h2> <div class="language- extra-class"><pre class="language-text"><code>mysqld
+mysqld_safe（大多数情况下使用的是这个安全线程的方式，而不是mysqld，linux上可以查看init.d/mysqld里面的内容）
+mysqld_multi(多实例)：一台服务器上启用多个mysql实例，使用的是不同的端口
+</code></pre></div><h2 id="配置文件"><a href="#配置文件" class="header-anchor">#</a> 配置文件</h2> <p>#mysqld --help --verbose       #可以显示mysqld的 可以写到配置文件中的选项</p> <ul><li><p>my.cnf 配置文件的查找顺序</p> <ol><li>/etc/my.cnf</li> <li>/etc/mysql/my.cnf</li> <li>$MYSQL_HOME/my.cnf</li> <li>--default-extra-file=/path-to-somefile</li> <li>~/.my.cnf</li></ol> <p>生效顺序：最后一个查找到的是最终生效的配置（什么意思，当几个位置查到的同样的配置项内容不同时以最后的生效么）</p></li> <li><p>配置文件中的配置段</p> <div class="language- extra-class"><pre class="language-text"><code>【mysqld】
+【mysqld_safe】
+【client】    #对所有客户端程序生效（是不是包含navicat），下面mysql只对mysql客户端生效
+【mysql】     #只对mysql客户端生效，上面client对所有客户端生效
+    default-extra-file、default_extra_file        #斜线写在中间和写在下面都对，不过尽量统一格式
+    innodb_file_per_table和innodb-file-per-table 这两种写法应该也都对（不过这个应该是写在mysqld下的配置项）
+</code></pre></div></li> <li><p>可动态调整的参数：不需要重启服务器即可生效</p> <p>全局：对当前会话无效，只对新建立会话有效</p> <p>会话：即时生效，但只对当前会话有效</p> <div class="language- extra-class"><pre class="language-text"><code>set global|session  变量名='value'     默认不写global|session是不是默认就是session？？？
+</code></pre></div></li> <li><p>静态调正: 需要重启服务器才能生效</p> <p>1，有些必须要写在配置文件中（因为配置后重启服务器就没了）</p> <p>2，有些只能通过参数传递给mysqld，无法写入配置文件</p></li></ul> <p>验证用户的连接是否合法，经常需要验证主机名，（当不需要主机名来进行验证的话）为了加速mysql服务器的连接性能，可以在启动mysql的时候添加参数：--skip-name-resolve  这样用户连接的时候就不用解析主机名了</p> <h2 id="用户和权限配置"><a href="#用户和权限配置" class="header-anchor">#</a> 用户和权限配置</h2> <p>用户的密码默认是使用password()加密存储的</p> <p><strong>show grants for root@localhost;       查看用户权限</strong></p> <h3 id="与帐号、权限相关的6张表"><a href="#与帐号、权限相关的6张表" class="header-anchor">#</a> 与帐号、权限相关的6张表</h3> <div class="language- extra-class"><pre class="language-text"><code>user：用户帐号、全局权限
+db：数据库级别的权限定义
+host：现在已经废弃了
+tables_priv：表级别权限
+columns_priv：列级别的权限
+procs_priv：存储过程和存储函数相关的权限
+proxies_priv: 偶尔可能会用到，mysql的代理用户权限
+
+通配符：172.16.%.%
+</code></pre></div><h3 id="权限"><a href="#权限" class="header-anchor">#</a> 权限</h3> <div class="language- extra-class"><pre class="language-text"><code>reload：reload_priv ，可以使用flush privleges;
+super：服务器级别的管理权限，设定一个mysql的从服务器的主服务器是谁、杀死线程、删除二进制日志，这个权限不要轻易授予 
+usage：没有任何权限，只允许登录mysql；使用create user之后默认usage权限
+file：file_priv，访问服务器文件
+
+create_routine：创建存储过程或存储函数
+alter_routine：修改存储过程或存储函数
+execute：执行存储过程或存储函数
+
+create_view：创建视图
+show_view：显示视图
+
+index：给表创建索引
+create_temporary_tables：创建临时表，临时表指的是内存表，通常大小是有限的
+trigger：触发器
+</code></pre></div><h3 id="创建用户、赋权"><a href="#创建用户、赋权" class="header-anchor">#</a> 创建用户、赋权</h3> <ul><li>create user jim@localhost identified by 'jim123';</li></ul> <p>​	#identified可以省略，默认为usage权限；create user默认会触发flush privileges</p> <ul><li>grant all privileges on [table|function|procedure] db.* to ''@localhost identified by 'jim123' [require ssl] with  grant option;</li></ul> <p>​		1，如果用户已经存在（如create user时已经identified过）,此处就不需要identified了(否则修改掉密码了);</p> <p>​				#db.*中*代表了表、存储函数、存储过程</p> <p>​		2，with options (除了with grant option之外)</p> <p>​				| MAX_QUERIES_PER_HOUR count                          	# <strong>用来限制用户每小时运行的查询数量</strong></p> <p>​				| MAX_UPDATES_PER_HOUR count                         	#<strong>用来限制用户每小时的修改数据库数据的数量</strong></p> <p>​				| MAX_CONNECTIONS_PER_HOUR count                    #<strong>用来控制用户每小时打开新连接的数量</strong></p> <p>​				| MAX_USER_CONNECTIONS count                         	# <strong>限制有多少用户连接MYSQL服务器</strong></p> <ul><li>insert into mysql.user ...</li></ul> <p>示例：</p> <p>​	grant <strong>update(age)</strong> on mysql_test.test to 'tom'@'%'     #只允许修改mysql_test数据库test表的age字段</p> <p>​	<strong>show grants for root@localhost;       查看用户权限</strong></p> <h3 id="删除用户"><a href="#删除用户" class="header-anchor">#</a> 删除用户</h3> <p>drop user 'username'@'host';</p> <p>drop user ''@localhost;       				#删除匿名用户，这种亲测是可以的</p> <h3 id="重命名用户"><a href="#重命名用户" class="header-anchor">#</a> 重命名用户</h3> <p>rename user 'jeffrey'@'localhost' to 'jeff'@'127.0.0.1';</p> <h3 id="收回权限"><a href="#收回权限" class="header-anchor">#</a> 收回权限</h3> <p>revoke select on mysql_test.* from 'tom'@'%';</p> <h2 id="管理员密码遗忘"><a href="#管理员密码遗忘" class="header-anchor">#</a> 管理员密码遗忘</h2> <p>如果没有重要数据，可直接重新初始化</p> <p>找回密码：</p> <ol><li><p>service mysqld stop</p></li> <li><p>在启动脚本mysqld中或是my.cnf 中添加 --skip-grant-tables(跳过授权表)  --skip-networking(跳过网络，因为此时没有密码，设置此时mysql不允许别人通过网络连接，只能是客户端和服务器在同一台主机上)</p></li> <li><p>启动mysql后修改密码</p> <p>set password for root@localhost = password('123456'); 此时不要使用这种方法，因为已经跳过了授权表，使用下面这种：</p> <p>update user set authentication_string=password('123456') where user='root';      密码<strong>原来是password字段，现在改成了               authentication_string字段</strong>，原来是password=password('123456') ,第一个password是mysql中密码保存的字段名称</p></li> <li><p>关闭mysql， 两个参数-skip-grant-tables(跳过授权表)  --skip-networking恢复正常后，启动mysql</p></li></ol> <h2 id="可选数据类型"><a href="#可选数据类型" class="header-anchor">#</a> 可选数据类型</h2> <h3 id="数值型"><a href="#数值型" class="header-anchor">#</a> 数值型</h3> <ul><li><p>精确数值</p> <p>tinyint：1个字节			#tinyint(1) 数值型后面的数值对能存取多大数字是没有意义的，只是显示几位数字的</p> <p>smallint：2个字节</p> <p>mediumint：3个字节</p> <p>int：4个字节					#int后的数值只是显示的位数</p> <p>bigint：8个字节</p> <p>decimal：精确十进制型，如1.11</p> <p>zerofill：自动补0</p></li> <li><p>近似数值</p> <p>float：单精度浮点型-4byte               #float(3,2) 整体3位、小数点后2位</p> <p>double：双精度-8byte</p> <p>real：实数</p></li></ul> <p>​	   单精度浮点数和双精度区别：https://zhidao.baidu.com/question/679884920889618612.html</p> <ul><li>bit：按位存储</li></ul> <h3 id="字符型"><a href="#字符型" class="header-anchor">#</a> 字符型</h3> <ul><li><p>定长</p> <p>char(n)：不区分大小写，可以全部索引   			#n是字符的个数，不是字节长度,n最大255</p> <p>binary：区分大小写</p></li> <li><p>变长</p> <p>varchar(n)：不区分大小写		#n最大为65535，varchar后面有一个结束符</p> <p>​	 		#只存储了ab，为了不存储成这中ab000000，所以varchar需要一个结束符</p> <p>varbinary：区分大小写</p></li></ul> <p>​</p> <ul><li>大字符（二进制？）：</li></ul> <p>​		text：不区分大小写，不能全部索引：</p> <p>​				tinytext</p> <p>​				text</p> <p>​				mediumtext</p> <p>​				longtext</p> <p>​		blob：区分大小写</p> <p>​				tinyblob(255-byte)</p> <p>​				blob(64kb)</p> <p>​				mediumblob(16M)</p> <p>​				longblob(4G)</p> <h3 id="两个内置类型"><a href="#两个内置类型" class="header-anchor">#</a> 两个内置类型</h3> <ul><li>ENUM：枚举，在给定的里面选择，如ENUM('M','F')，该字段只能填男、女其他的字符无法填写</li> <li>SET：集合，只能在给定的字符里面任意组合，如set('M','F')，可以写m、f、mf、fm、ff（这一种好像不太允许？）等</li></ul> <h3 id="日期时间型"><a href="#日期时间型" class="header-anchor">#</a> 日期时间型</h3> <ul><li>date：'CCYY-MM-DD' FORMAT</li> <li>time: 'HH:MM:SS' FORMAT</li> <li>datetime: 'CCYY-MM-DD   HH:MM:SS'   FORMAT</li> <li>timestamp: 时间戳</li> <li>year: 'CCYY' OR 'YY' FORMAT  #year(4)  or year(2)</li></ul> <h3 id="域属性"><a href="#域属性" class="header-anchor">#</a> 域属性</h3> <h3 id="修饰符"><a href="#修饰符" class="header-anchor">#</a> 修饰符</h3> <h2 id="特殊字段"><a href="#特殊字段" class="header-anchor">#</a> 特殊字段</h2> <h3 id="自增长的列"><a href="#自增长的列" class="header-anchor">#</a> 自增长的列</h3> <ol><li><p>不能为空</p></li> <li><p>一定要创建索引，要么是主键索引，要么是唯一键索引</p> <p>#一个表只能有一个主键（数据在该列唯一而且不能为空），但是可以有多个唯一键（数据在该列唯一但可以为空）</p> <p>#primary和unique定义后默认包含创建索引，index则是明确定义索引</p></li></ol> <h2 id="服务器变量"><a href="#服务器变量" class="header-anchor">#</a> 服务器变量</h2> <h3 id="全局变量"><a href="#全局变量" class="header-anchor">#</a> 全局变量</h3> <p>my.cnf</p> <p>show global variables或者是SELECT @@global.sql_mode  #两个@@是服务器变量，一个@是用户变量</p> <h3 id="会话变量"><a href="#会话变量" class="header-anchor">#</a> 会话变量</h3> <p>只对会话变量，会话终止，变量就失效了</p> <p>show [SESSION] variables或者SELECT @@session.SQL_mode(SELECT @@SQL_mode不加session表示的就是会话)</p> <h2 id="shell中操作mysql"><a href="#shell中操作mysql" class="header-anchor">#</a> shell中操作mysql</h2> <p>mysql -e：</p> <div class="language- extra-class"><pre class="language-text"><code>mysql -e 'create database edb'
+mysql -e &quot;insert ... values (' .'..'. ' ) &quot;            
+	#注意单引号和双引号的问题，如果'insert也是单引号可能会报错，此处的单引号和字符串的单引号误认为是一对
+</code></pre></div><h2 id="mysql通用操作"><a href="#mysql通用操作" class="header-anchor">#</a> mysql通用操作</h2> <p><strong>help</strong></p> <div class="language- extra-class"><pre class="language-text"><code>help create database、table;            创建数据库帮助
+heLp create index                  另：索引是不能被修改的，只能创建、删除、查看
+help drop index
+help alter database;                如何修改数据库帮助
+     help中的'UPGRADE DATA DIRECTORY NAME' 在旧数据库迁到新数据库上时，需要升级数据字典名称
+
+help drop database;                删除数据库帮助
+help insert
+help create user
+help rename user            #给用户重命名
+</code></pre></div><p><strong>show</strong></p> <div class="language- extra-class"><pre class="language-text"><code>show engines;            查看支持的所有存储引擎，support里面的default是默认引擎（创建表是不指定引擎时使用）
+	结果显示格式：引擎 -- 是否支持 -- 描述 -- 事务  -- 分布式事务  -- 保存点
+	csv：csv文本文件
+	archive：用来归档的，以后用来数据挖掘，不再修改了
+	memory：内存引擎，将内存中空间拿来用来创建临时表
+	还有一些第三方存储引擎，也可以加进去
+show table status;
+show table status like 'user'      :    查看user表的属性信息
+
+status：   查看当前用户的登录信息
+show status
+
+show  variables （like  'datadir' / like '%dir%'）
+show CHARACTER set;        查看当前服务器所支持的所有字符集
+show COLLATION                 显示各个字符集下的排序规则
+show global variables like 'sql_mode'        查看sql模型
+show indexes from test;                #显示表的索引
+
+show create view           				#查看创建view使用的语句
+show create table test\G;				#查看建表属性
+desc test;                        		#查看表结构
+
+unix_timestamp(datetime)            	#将datetime转换为时间戳
+FROM_UNIXTIME(timestamp);        		#将时间戳转换为datetime
+</code></pre></div><p><strong>select</strong></p> <div class="language- extra-class"><pre class="language-text"><code>select database();                带括号的是mysql的内置函数        存储函数执行：select fun();
+select user()
+select last_insert_id()            查看最后自增长的ID；清空表之后再insert，id序号还是接着增加，不会重新开始，就是因为这个
+</code></pre></div><h2 id="table"><a href="#table" class="header-anchor">#</a> table</h2> <h3 id="创建表的三种方式"><a href="#创建表的三种方式" class="header-anchor">#</a> 创建表的三种方式</h3> <blockquote><p>help create table</p></blockquote> <ul><li><p>方式一：直接定义一张空表</p> <p>primary(id,name)    			连个字段联合起来做主键，primay key这个要单独写，不能在id或是name里面定义<br>
+unique(name)            			定义为唯一键
+index(age)            				在age字段上创建索引
+AUTO_INCREMENT =        	从哪个值开始自动增长</p> <div class="language- extra-class"><pre class="language-text"><code>create table test(ID INT UNSIGNED AUTO_INCREMENT NOT NULL DEFAULT 'XX' PRIMARY KEY ,NAME CHAR(20))
+	# not null 写在unsigned的后面，   PRIMARY KEY中的key不能省略
+
+create table test (id int unsigned not null primary key auto_increment,name varchar(50),comment varchar(50),unique  key `name`(name) ) engine=InnoDB;            #name是反引号
+</code></pre></div><ul><li><p>示例一：建表时指定data_dircetory和index_directory</p> <div class="language- extra-class"><pre class="language-text"><code>CREATE TABLE `hr_positive` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL COMMENT '姓名',
+  `enter_date` date NOT NULL COMMENT '入职日期',
+  `positive_date` date NOT NULL COMMENT '转正日期',
+  `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name_enter_date` (`name`,`enter_date`)
+) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 DATA DIRECTORY='/web/mysqldata/' INDEX DIRECTORY='/web/mysqldata';
+</code></pre></div></li> <li><p>示例二：建表时指定分区(要在/web/mysqldata/ 目录下先建一个wechat_statistic的文件夹，root、777):</p> <div class="language- extra-class"><pre class="language-text"><code>CREATE TABLE `wechat_statistic` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `wxh_name` varchar(255) NOT NULL COMMENT '微信号',
+  `flag` enum('0','1','2') DEFAULT NULL COMMENT '0,未知，1，自营，2，代运营',
+  `ref_date` date NOT NULL COMMENT '数据的日期',
+  `user_source` int(10) NOT NULL COMMENT '用户来源',
+  `cumulate_user` int(10) NOT NULL COMMENT '总用户量',
+  PRIMARY KEY (`id`,`ref_date`),
+  UNIQUE KEY `wxh_name,ref_date,user_source` (`wxh_name`,`ref_date`,`user_source`) USING BTREE
+) ENGINE=MyISAM   DEFAULT CHARSET=utf8
+PARTITION BY RANGE (to_days(ref_date))
+(PARTITION p0 VALUES LESS THAN (736815) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p1 VALUES LESS THAN (736829) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p2 VALUES LESS THAN (736846) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p3 VALUES LESS THAN (736860) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p4 VALUES LESS THAN (736876) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p5 VALUES LESS THAN (736890) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p6 VALUES LESS THAN (736907) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p7 VALUES LESS THAN (736921) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p8 VALUES LESS THAN (736938) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p9 VALUES LESS THAN (736952) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p10 VALUES LESS THAN (736968) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p11 VALUES LESS THAN (736982) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p12 VALUES LESS THAN (736999) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p13 VALUES LESS THAN (737013) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p14 VALUES LESS THAN (737029) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p15 VALUES LESS THAN (737043) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p16 VALUES LESS THAN (737060) DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM,
+ PARTITION p999 VALUES LESS THAN MAXVALUE DATA DIRECTORY = '/web/mysqldata/wechat_statistic' INDEX DIRECTORY = '/web/mysqldata/wechat_statistic' ENGINE = MyISAM);
+</code></pre></div></li></ul></li> <li><p>方式二：从其他表中查询出数据，并以之创建新表</p> <div class="language- extra-class"><pre class="language-text"><code>create table test_copy select * from test where id &gt;= 2;            #表结构很多定义会不在存在了
+
+同理：insert into teacher (tname,sex,age) select name,sex,age from students where age &gt;=20;    #插入新表中时要指定字段
+</code></pre></div></li> <li><p>方式三：以其他表为模版创建一个空表</p> <div class="language- extra-class"><pre class="language-text"><code>create table test_3 like test;                #创建一个test_3的空表，表结构是完全一样的
+
+</code></pre></div></li></ul> <h3 id="alter修改表结构"><a href="#alter修改表结构" class="header-anchor">#</a> alter修改表结构</h3> <div class="language- extra-class"><pre class="language-text"><code>alter table test add   index(id) ;            	#添加索引
+alter table test drop   index id_2 ;          	#删除索引，id_2是索引的名称
+alter table test add  age int not null;        	#添加一栏age（不用加column）
+alter table test add date datetime default '2000-10-10 10:00:00'  after ages;       添加一datetime字段
+alter table test drop age;                            删除一栏
+alter table test modify  age  int(11) not null unique key ;   
+	#修改列的属性，添加了unique key，没有 'age'(age)这些
+	#修改的时候最好加上原来的属性，测试的时候至少要加一个int才不会报错
+alter table test modify ages int after name;        修改字段位置，要加属性int
+alter table test add unique key (age);                添加一个索引
+alter table test change age ages int ;                 修改字段名称，后面没有int添加不上
+alter table test rename test_new;                         修改表名
+rename table test_new to  test;                         help rename里面有解释
+alter table test engine=myisam;                         修改表引擎    
+alter table student add foreign key foreign_cid ( CID) references courses (CID);        
+	#建立外间约束，建立外键后往student中的CID列插入数据时，该数据在courses时才有效，否则会报错无法插入；只有innodb才支持外键;  问题：怎么删除外键？？？
+</code></pre></div><h3 id="表操作-增"><a href="#表操作-增" class="header-anchor">#</a> 表操作--增</h3> <p>insert</p> <div class="language- extra-class"><pre class="language-text"><code>insert into test (id,name) values ('2','aaa'),('3','bbb'),('4','ccc');  #只要id为自增长，就可以不写id让其自动添加
+	奇怪此处(`id`,`name`) 加反引号或是 values和value是否加s，  任意组合都可以正常执行
+	
+insert into teacher (tname,sex,age) select name,sex,age from students where age &gt;=20;    #批量插入
+
+insert into插入是如果已经存在是无法插入的，此时使用replace into，不存在插入，存在则替换
+</code></pre></div><h3 id="表操作-删"><a href="#表操作-删" class="header-anchor">#</a> 表操作--删</h3> <p>delete：</p> <p>delete from aa;         		清空表 ,delete有一个内置法则，不加where条件不让删除</p> <p>truncate:   清空表</p> <p>truncate tb_name :清空表并重置auto_increment计数器</p> <h3 id="表操作-改"><a href="#表操作-改" class="header-anchor">#</a> 表操作--改</h3> <p>update：</p> <p>update aa as a,aa as b set a.c1 = b.c2,a.c2 = b.c1 where a.c1 = b.c1;       两列数据互换</p> <h3 id="表操作-查"><a href="#表操作-查" class="header-anchor">#</a> 表操作--查</h3> <p>select</p> <div class="language- extra-class"><pre class="language-text"><code>select now() ;                查看当前时间
+
+select * from courses,student;            直接显示两张表中内容（笛卡尔乘积）；可以连接3张或更多张表
+
+select name,course from student,courses where student.cid=courses.cid; 通过两张表中的cid查找student中name对应课程
+	1, select * from courses,student; 
+	2, select * from courses,student where student.cid=courses.cid;
+	3, select student.name,courses.course from student,courses where student.cid=courses.cid;  
+		如果两张表都有必须加表名
+	4，select s.name,c.course from student as s,courses as c where s.cid=c.cid;        #两张表取别名
+
+select distinct  id from student;            disctinct去重
+select  name 'xingming' from student;            #自定义'xingming’栏
+</code></pre></div><p><strong>from子句</strong>：后面可以是表、多表、其他的select语句</p> <h4 id="where语句"><a href="#where语句" class="header-anchor">#</a> <strong>where语句</strong></h4> <ul><li><p>条件运算符</p> <div class="language- extra-class"><pre class="language-text"><code>where age =20;        当age是数值类型的时候，20 一定不能加引号，（字符比较的时候一定要加引号
+where age+1 &gt;20;
+
+
+多条件：and（&amp;&amp;）、or（||）、not（！）
+	where not age &gt;20;   等同于 where age &lt;= 20;
+	where not age &gt;20 and not sex='M' 
+	where not (age &gt;20 or sex='M')    #和上面的是同一个意思，此处加一个括号 
+</code></pre></div></li> <li><p>null判断</p> <div class="language- extra-class"><pre class="language-text"><code>where name is null;     	#name为空的，is not null为不空；跟null比较的时候不能使用=，name = null是过滤不出来的
+</code></pre></div></li> <li><p>between和in</p> <div class="language- extra-class"><pre class="language-text"><code>where id between 2 and 5;            		#id在2和5之间
+where id in (1,5);                            #id是1或是5
+</code></pre></div></li> <li><p>like和rlike</p> <div class="language- extra-class"><pre class="language-text"><code>where name like 'y%';                    #所有以y开头的name
+where name like 'y____';                    #以y开头的四个字符的名称    下划线'_'匹配单个字符
+
+where name rlike '^[ya].*$';            #正则表达式，以y或者以a开头的name；rlike和regexp代表正则表达式
+
+</code></pre></div></li></ul> <h4 id="order-by排序"><a href="#order-by排序" class="header-anchor">#</a> order by排序</h4> <p>默认是asc升序，也可以desc降序</p> <div class="language- extra-class"><pre class="language-text"><code>select name from test order by name desc;		#排序，order by后跟字段名称
+</code></pre></div><h4 id="as别名"><a href="#as别名" class="header-anchor">#</a> as别名</h4> <div class="language- extra-class"><pre class="language-text"><code>select  name  as new_name from test  order by  name  desc;            #as后跟别名
+
+select 2+1;        进行算数运算
+select 2+1 as sum; 和    select 2+1  sum;    这种是一样的       
+</code></pre></div><h4 id="limit"><a href="#limit" class="header-anchor">#</a> limit</h4> <p>格式：limit [offset,]count</p> <div class="language- extra-class"><pre class="language-text"><code>select  name  as new_name from test  order by  name  desc limit 2;          结果只返回前2个
+                                                          limit 2,3;    #2是偏移量，跳过前2个，然后取出3个值 
+</code></pre></div><h4 id="聚合计算"><a href="#聚合计算" class="header-anchor">#</a> 聚合计算</h4> <div class="language- extra-class"><pre class="language-text"><code>select avg(ages) from test ;            计算所有人的 平均年龄
+	#where id &gt;=2;    计算id大于等于2的人的 平均年龄，如求女同学的平均年龄
+
+select max(ages) from test;                #最大值
+
+select min(ages) from test;                #最小值
+
+select sum(ages) from test;                #求和
+
+select count(*) from test;                    #条目数量
+	#select count(ages) from test;                    #条目数量
+</code></pre></div><h4 id="group-by"><a href="#group-by" class="header-anchor">#</a> group by</h4> <p>主要是做聚合计算的，前面一般有相应的 数学计算操作，<strong>GROUP BY子句必须在WHERE 子句之后，ORDER BY 子句之前。</strong></p> <div class="language- extra-class"><pre class="language-text"><code>select avg(age)   from test group by sex;            求出男同学和女同学的平均年龄
+         ,sex											显示的更直观一点，也可以不要
+
+select count(*) from test group by sex;                统计男、女同学的个数	 
+</code></pre></div><p>对group by的结果进行过滤，不能使用where，要使用<strong>having</strong>:</p> <div class="language- extra-class"><pre class="language-text"><code>select count(*) from test group by sex having count(*)&gt;=2;     计算总数超过2个的性别群体，也可用别名比较，见下例
+
+select count(*) as zongshu,sex from test group by sex having zongshu&gt;=2;        计算总数超过2个的性别群体
+
+select cid1 from students group by cid1 having count(cid1) &gt;=2;   将选课超过2个人的课程挑选出来
+</code></pre></div><p>查询weixin表中personal_wxh重复超过5次，而且status &gt; -2的项（不加as wxh_name也可以输出信息，不过有点乱）：</p> <div class="language- extra-class"><pre class="language-text"><code>SELECT GROUP_CONCAT(wxh_name)as wxh_name ,personal_wxh,count(*) as count ,status from weixin GROUP BY personal_wxh HAVING count &gt; 5 and status &gt; -2;
+</code></pre></div><h4 id="复合查询"><a href="#复合查询" class="header-anchor">#</a> 复合查询</h4> <h5 id="笛卡尔乘积"><a href="#笛卡尔乘积" class="header-anchor">#</a> 笛卡尔乘积：</h5> <p>​		select * from courses,student;</p> <h5 id="自然连接"><a href="#自然连接" class="header-anchor">#</a> 自然连接：</h5> <p>​		select s.name,c.course from <strong>student as s</strong>**,courses** <strong>as c</strong> where s.cid=c.cid;       #条件相等</p> <h5 id="外连接"><a href="#外连接" class="header-anchor">#</a> <strong>外连接：</strong></h5> <p>连接条件：使用ON设定连接条件，也可以用WHERE代替     #但是用where代替测试的时候会报错</p> <p>​		ON：设定连接条件；	WHERE：进行结果集记录的过滤</p> <p>​</p> <ul><li><p>左外连接：left join 。。。on 。。。</p> <div class="language- extra-class"><pre class="language-text"><code>select s.name,c.course from students as s left join courses as c on s.cid1=c.cid    
+	#student表中有些同学选择的课程并不在courses的cid中，如果像上面‘where s.cid=c.cid’则这部分同学不会显示，这种方法的效果是，如果同学选的课程存在则显示，如果课程不存在则显示为null（多了几行name--null的项）
+</code></pre></div></li> <li><p>右外连接：right join 。。。 on 。。。</p> <div class="language- extra-class"><pre class="language-text"><code>select s.name,c.course from students as s right join courses as c on s.cid1=c.cid
+	（多了几行null--course的项）
+</code></pre></div></li> <li><p>内连接inner join .... on</p></li></ul> <h5 id="自连接"><a href="#自连接" class="header-anchor">#</a> <strong>自连接：</strong></h5> <p>select s.name as stu,c.name as teacher from students as s ,students as c where c.tid=s.sid;         #都是students中的name字段</p> <h4 id="子查询"><a href="#子查询" class="header-anchor">#</a> 子查询</h4> <ul><li><p>比较操作中使用子查询，子查询返回的结果是单个值，不光是一行，必须是单值</p> <div class="language- extra-class"><pre class="language-text"><code>select name from students where age &gt; (select avg(age) from students);    #查找年龄大于平均年龄的同学
+</code></pre></div></li> <li><p>在in()，返回的结果可以不是单值</p> <div class="language- extra-class"><pre class="language-text"><code>select name from students where age in (select age from teachers);     #查找和老师年龄一样的学生
+</code></pre></div></li> <li><p>在from中使用子查询，from的不是一张表，而是一个子查询</p> <div class="language- extra-class"><pre class="language-text"><code>select name,age from (select name,age from studens) as t where t.age &gt;=20;
+	#对子查询的结果再次进行过来; 每张表必须有别名，不然会报错（将子查询的结果当成一个新表）
+</code></pre></div></li></ul> <h4 id="联合查询"><a href="#联合查询" class="header-anchor">#</a> 联合查询</h4> <p>将查询的结果联合起来</p> <div class="language- extra-class"><pre class="language-text"><code>(select name,age from students) union (select name,age from teachers);
+</code></pre></div><h2 id="index索引"><a href="#index索引" class="header-anchor">#</a> index索引</h2> <h3 id="创建索引"><a href="#创建索引" class="header-anchor">#</a> 创建索引</h3> <div class="language- extra-class"><pre class="language-text"><code>create index  name_on_test on test(name);       	 #在name字段上创建索引，索引主要是为了排序
+	#。。。 on test(xx (5) asc);  len过大会占用很多内存，因为一个字段可能是写入5个字符，也可能写如90个字符，指定索引几个字符；默认是索引全部,默认是asc升序，也可以desc降序
+</code></pre></div><p>alter table test add  index(id) ;       添加索引</p> <h3 id="删除索引"><a href="#删除索引" class="header-anchor">#</a> 删除索引</h3> <div class="language- extra-class"><pre class="language-text"><code>drop index name_on_test on test;
+</code></pre></div><p>alter table test drop  index id_2 ;     		删除索引，id_2是索引的名称</p> <h2 id="视图"><a href="#视图" class="header-anchor">#</a> 视图</h2> <p>视图的作用在mysql上作用是不大的，通常是跟安全相关的时候：限定用户只能够看见的字段</p> <p>试图：一个视图就是存储下来的select语句，把这个select当作一张表来用</p> <p>不允许往视图中插入数据，数据存在基表而不是在view中</p> <h3 id="创建视图"><a href="#创建视图" class="header-anchor">#</a> 创建视图</h3> <p>create view age_is_22 as select name from test where age=22;     #age_is_22是视图名称</p> <p>show tables; 可以看到‘age_is_22’这张表</p> <p>show table status\G;        可以分辨哪个是view（ Comment: VIEW）</p> <h3 id="删除视图"><a href="#删除视图" class="header-anchor">#</a> 删除视图</h3> <p>drop view age_is_22 				#删除视图</p> <h3 id="物化视图"><a href="#物化视图" class="header-anchor">#</a> 物化视图</h3> <p>物化视图：将select的结果保存下来，视图上没有索引</p> <p>缺点：基表更新了，这个要重新创建，建议使用在基表更新不频繁的场景</p> <p>mysql上不支持物化视图，mysql也不支持在视图上创建索引；在mysql上也不建议使用视图</p> <h2 id="日志"><a href="#日志" class="header-anchor">#</a> 日志</h2> <p>日志(show global variables like '%log%')（mysql默认情况下没有启用任何日志功能）</p> <h3 id="错误日志-log-error"><a href="#错误日志-log-error" class="header-anchor">#</a> 错误日志（log_error）</h3> <div class="language- extra-class"><pre class="language-text"><code>mysqld启动和关闭过程的信息
+运行过程中的错误信息
+时间调度器运行一个事件时产生的信息
+从服务器 启动、停止 产生的信息也会在从服务器的错误日志中
+my.ini里面定义了log_error,$datadir下也会默认生成一份 hostname.err错误日志文件,以配置文件中定义的为准
+log_warnings为1时 是将warning信息也记录到error日志里，0是不记录
+</code></pre></div><p>与文件相关的variables一般服务器启动后不能set改的，如 set global log_error='xxx',会提示'log_error' is a read only variable,但是某项日志的开关配置(ON|OFF)经常可以直接set global;涉及到文件的操作一般都要重启服务器才能生效</p> <h3 id="一般查询日志-general-log"><a href="#一般查询日志-general-log" class="header-anchor">#</a> 一般查询日志（general_log）</h3> <p>常用的select操作都会被记录，通常不开启，因为对繁忙的服务器会产生大量的这种日志</p> <p>log_output默认为file，也可以将日志文件输出到tables或是none</p> <h3 id="慢查询日志-slow-query-log"><a href="#慢查询日志-slow-query-log" class="header-anchor">#</a> 慢查询日志（slow_query_log）</h3> <p>慢速，执行了很长时间的查询操作,超过'long_query_time'定义时间的查询都是慢查询（这里的语句     执行时长为实际的执行时间，而非在cpu上的执行时长，因而负载重的服务器上更容易产生慢查询）</p> <p>log_output {table|file|none}   ;table和file能同时指定，用逗号隔开</p> <p>show global variables like 'long_query_time';</p> <p>select @@global.long_query_time;</p> <h3 id="二进制日志"><a href="#二进制日志" class="header-anchor">#</a> 二进制日志</h3> <p>用于实现mysql复制、即时点恢复(恢复到一个指定的时间点上)</p> <p>mysqlbinlog查看二进制格式的文件</p> <ul><li><p>二进制日志存储位置尽量和数据目录不要放在同一块磁盘上</p> <p>1，因为写数据的时候也要写二进制日志，会有io竞争;数据可靠性的原因</p> <p>2，当数据损坏的时候，二进制日志文件是好的</p></li></ul> <p>配置项：</p> <ol><li><p>server-id = 1  （必选）</p></li> <li><p>log-bin = C:\mysql-5.7.19-winx64\data\mysql-bin  （必选）                        #mysql-bin是固定格式，mysql-bin不能变</p> <p>这一句相当于同时定义三项：</p> <p>​	log-bin =on</p> <p>​	log_bin_basename = C:\mysql-5.7.19-winx64\data\mysql-bin</p> <p>​	log_bin_index=C:\mysql-5.7.19-winx64\data\mysql-bin.index</p></li> <li><p>可选项</p> <p>binlog_format	= statement					#binlog日志格式，statement:基于语句(row:基于行、mixed:混合方式)</p> <p>expire_logs_days    = 7         					 #binlog过期清理时间</p></li></ol> <p>​		max_binlog_size     = 100m       		 	 #binlog每个日志文件大小</p> <p>​		binlog_cache_size    = 4m						#binlog二进制缓存大小,跟binlog_stmt_cache_size 保持一直，所以调整通常stm</p> <p>​		max_binlog_cache_size  = 512m       	#最大binlog缓存大小，这个和max_binlog_stmt_cache_size通常不修改</p> <p>​		binlog_stmt_cache_size                             	#跟事务相关的二进制日志缓存的大小</p> <p>sql_log_off :用于控制是否禁止将一般查询日志类信息记录进查询日志文件</p> <p>sync_binlog： 设定多久同步一次二进制日志至磁盘文件中，0表示不同步，如5表示每5个写操作同步一次，当autocommit为1时，每条   语句的执行都会引起二进制日志同步，否则每个事务的提交会引起二进制日志同步</p> <p><strong>二进制日志格式</strong>：</p> <p>statement：根据执行语句，如select，但有些语句不同时间执行会获取不同的结果，就是非精确值</p> <p>row：直接复制这个语句所执行的结果，值是精确的</p> <p>mixed：混合方式</p> <p><strong>二进制日志文件：</strong></p> <p>索引文件  ：mysql-bin.index</p> <p>二进制日志文件  ：mysql-bin.000001(每次重启mysql服务，都会滚动一次，或手工滚动：flush logs)</p> <p>​	#flush logs只会滚动二进制日志，错误日志只会关闭在打开不会做滚动，其他日志同样道理；从服务器只会滚动中继日志，错误日志关闭在打开</p> <p><strong>查看当前使用的二进制日志文件</strong>： show master status；</p> <div class="language- extra-class"><pre class="language-text"><code>show master status：
+File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++------------------+----------+--------------+------------------+-------------------+
+
+| mysql-bin.000003 |      154 |              |                  |
+Position：上一次数据库改变的位置，如insert、delete命令就可以改变position
+</code></pre></div><p>show binlog events in 'mysql-bin.000003'  [ from 123 ];</p> <p>​		#可以查看到该bin文件中相应的操作（5.7好像看不到具体执行的语句了）,从position 123开始</p> <p>show binary logs:				查看当前存在的二进制文件</p> <p><strong>删除二进制日志</strong></p> <p>#不能rm删除，否则mysql下次启动可能会崩溃</p> <p>mysql&gt;<strong>purge</strong> binary logs to 'mysql-bin.000003';     #将mysql-bin.000003之前（不包含）的二进制日志删除</p> <p><strong>reset master</strong>;   #清除主备信息；没有做主备同步的情况下，也可以使用这个命令，也能生效</p> <p><strong>mysqlbinlog：</strong></p> <p>​		--start-datetime</p> <p>​		--stop--datetime   (如果不指定，则到文件的尾部)</p> <p>​</p> <p>​		--start-position</p> <p>​		--stop-position (如果不指定，则到文件的尾部)</p> <p>mysqlbinlog --start-position=640 --stop-position=754 mysql-bin.000003  [ &gt;/root/xxx ]</p> <p>mysqlbinlog --start-datetime=**&quot;**2017-09-14 19:34:20&quot; --stop-datetime=&quot;2017-09-14 19:34:20&quot; mysql-bin.000003(时间使用双引号括起来的，使用单引号会报错“ERROR: Incorrect date and time argument:”)</p> <h3 id="中继日志"><a href="#中继日志" class="header-anchor">#</a> 中继日志</h3> <p>relay_log</p> <p>从服务器需要把二进制文件复制一份保存到本地的文件中，中继日志仅仅是从服务器上要求要执行一遍的文件，格式和二进制日志一样;</p> <h3 id="事务日志"><a href="#事务日志" class="header-anchor">#</a> 事务日志</h3> <p>在有事务功能的存储引擎上存在（如innodb），用于保证原子性、一致性、隔离行和持久性，将随机IO转换为顺序IO</p> <p>如将表中数据由30改为了50，现在想撤销，但是撤销必须要知道之前的数据是什么，这时候需要有事务日志,用户无法操作，引擎自己维护</p> <p>innodb_locks_unsafe_for_binlog</p> <p>innodb_flush_log_at_trx_commit =x：</p> <p>​		 0：每秒同步一次，并执行磁盘flush操作</p> <p>​		1：为每事务提交，并执行磁盘flush操作</p> <p>​		2：为每事务提交，但不执行磁盘flush操作  （性能好，但是有数据安全隐患）</p> <p>innodb_log_buffer_size：日志缓冲大小</p> <p>innodb_log_file_size  ：日志文件大小</p> <p>innodb_log_files_in_group =2： 默认定义了2个文件，其他的也可以自己定义</p> <p>innodb_log_group_home_dir：日志组所在的目录（文件好像是ib_logfile0和ib_logfile1）</p> <h2 id="mysql数据备份、恢复"><a href="#mysql数据备份、恢复" class="header-anchor">#</a> mysql数据备份、恢复</h2> <p>备份类型：</p> <ul><li>热备份：在线备份，读、写不受影响，因为可以写导致备份的数据不是某一时间点的，而是跨时间段的，导致出现问题时，不能拿来还原</li> <li>温备份：能读不能写</li> <li>冷备份：离线备份，不能读、写  （此时可以直接copy数据文件）</li></ul> <p>完全备份、增量备份和差异备份：</p> <p>mysql自带的备份工具：</p> <p>​		mysqldump：逻辑备份工具，myisam（温备份 --lock-all-tables）、innodb（热备份 single-transaction）；还原速度慢</p> <p>​		mysqlhotcopy：温备工具</p> <h3 id="备份命令"><a href="#备份命令" class="header-anchor">#</a> 备份命令</h3> <p>mysqldump常用参数</p> <ul><li><p>--master-date = {0|1|2}  （在xx.sql文件中有一行change master to 'mysql-bin.000x',position xx ）  ：用于记录二进制文件是什么，以及所处的位置</p> <p>0:不记录二进制日志文件及位置</p> <p>1：以change master to的方式记录位置，可用于恢复后直接启动从服务器</p> <p>2，以change master to的方式记录位置，但默认 被注释（通常是这个，但是从服务器的要注意什么，忘记了？？？）</p> <p>加上master-data的：mysqldump -uroot -p --master-data=2 jiaowu &gt;/root/jiaowu-<code>date +%F-%H-%M-%S</code>.sql</p></li> <li><p>--lock-all-tables: 备份之前先锁定所有表，就不用手工lock锁定了;不能和--single-transaction一起使用</p></li> <li><p>--lock-tables ：只备份一张表的时候使用这个？？</p></li> <li><p>--flush-logs ：执行日志滚动</p></li> <li><p>--single-transaction： 如果指定库中所有表均为innodb,可以使用--single-transaction启用热备，此时就不用--lock-all-tables了</p></li> <li><p>--all-databases; 备份所有库，会备份建库语句，还原的时候不用先建库了(作了完全备份后，以前的二进制文件可以删除，但是不建议这么做)</p></li> <li><p>--databases db_name1,db_name2  备份多个库，会备份创建库语句，还原的时候不用先创建库了</p> <p>mysqldump -uroot -p --master-data=2 --lock-all-tables --flush-logs --all-databases &gt; /root/all.sql  (多次执行会覆盖all.sql)</p></li> <li><p>补充性的：</p> <p>--event：备份事件</p> <p>--routines：备份存储过程和存储函数的</p> <p>--triggers：备份触发器的</p></li></ul> <p><strong>命令</strong>：</p> <ul><li><p>mysqldump DB_name [tb1] [tb2]  (这种只备份一个数据库的方式，不包含创建数据库的命令，将来还原的时候要先创建数据库)</p> <div class="language- extra-class"><pre class="language-text"><code>mysql &gt; flush tables with read lock ;  或者先lock tables然后flush tables，加锁后只能读不能写，该客户端一退出锁就释放了(不能退)，该客户端不退其他客户端也不能写入数据
+	mysql&gt;flush tables；
+	mysql&gt;lock tables；
+
+
+mysql &gt; flush logs;    先滚动下二进制日志，下面unlock之后才insert的语句可以配合这个二进制日志进行还原
+mysql &gt; show binary logs;      #记录下当前正在使用的二进制文件，下面的--master-date参数可以自动记录
+
+mysql -uroot -p jiaowu &gt;/root/jiaowu.sql      #备份
+	#将数据库jiaowu备份到root下，回车输入密码即可；jiaowu.sql可以文本打开
+mysql &lt; jiaowu.sql        #导入，要先创建jiaowu数据库，也可以改名 mysql new_jiaowu&lt; jiaowu.sql
+mysql &gt; unlock tables;        #解锁
+</code></pre></div></li></ul> <p>mysqldump还原的时候尽量先把二进制日志关闭，因为还原的过程会产生大量的二进制日志，而这些是没有必要的；</p> <div class="language- extra-class"><pre class="language-text"><code>处理方法：在当前mysql 的session下 set sql_log_bin=off或'=0'；(查询select @@sql_log_bin)这个是临时关闭生成当前session的二进制bin文件，现象是show master status的position不会在变化了
+
+在当前mysql 的session下执行sql文件（不要另外打开窗口）：mysql&gt; source /root/jiaowu.sql或者 . /root/jiaowu.sql
+</code></pre></div><p>innodb在备份的时候可能后台还有buffer 没有写入，show engine innodb status;查看innodb的存储状态，里面没有数据的时候才能mysqldump备份，所以建议innodb使用-single-transcation备份</p> <h3 id="第三方工具"><a href="#第三方工具" class="header-anchor">#</a> 第三方工具</h3> <p>ibbackup：商业工具</p> <p>xtrabackup：开源工具</p> <h3 id="select-into备份"><a href="#select-into备份" class="header-anchor">#</a> select into备份</h3> <p>通常用来备份单张表</p> <div class="language- extra-class"><pre class="language-text"><code>select * into outfile '/tmp/tutor.txt' from tutors [where ...];    将tutors表的内容保存到/tmp/tutor.txt文件中，通常不要保存到/root下，因为mysql用户通常没有访问/root的权限
+
+
+恢复：
+load data infile '/tmp/tutor.txt' into table tutor;    表tutor的表格式要事先创建好
+</code></pre></div><h2 id="mysql无法启动"><a href="#mysql无法启动" class="header-anchor">#</a> mysql无法启动：</h2> <p>可能原因：</p> <ul><li>原来已经装过mysql，没有停止；	killall mysqld (killall mysqld_safe),如将mysql的$data目录全删除了，使用service     mysqld stop就会报错：mysql server pid file could not found ! 此时就要使用killall mysqld停用mysql</li></ul> <h2 id="mysql的错误日志"><a href="#mysql的错误日志" class="header-anchor">#</a> mysql的错误日志：</h2> <div class="language- extra-class"><pre class="language-text"><code>$datadir下 hostname.err（本机为：DESKTOP-S2FSMKO.err）：一般mysql启动后的错误都会在这个日志里面
+    （该目录下还有一个PID：DESKTOP-S2FSMKO.pid）
+
+
+如果没有错误日志文件，
+    1，因为数据目录位置指定错了，编辑my.cnf，明确指定datadir的位置（datadir = C:\mysql-5.7.19-winx64\data），这样能保证错误日志能出现
+    2，将数据目录重新初始化一下
+</code></pre></div><h2 id="data-truncated问题"><a href="#data-truncated问题" class="header-anchor">#</a> Data truncated问题：</h2> <div class="language- extra-class"><pre class="language-text"><code>mysql&gt; alter table test modify xx varchar(20) not null ;
+ERROR 1265 (01000): Data truncated for column 'xx' at row 1
+解决方法：http://blog.csdn.net/chwshuang/article/details/54945485（将字段中的值先更新为0，然后再更新）
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/mkNote_pages/assets/js/app.85220451.js" defer></script><script src="/mkNote_pages/assets/js/2.2defd20b.js" defer></script><script src="/mkNote_pages/assets/js/174.86aeb91c.js" defer></script>
+  </body>
+</html>

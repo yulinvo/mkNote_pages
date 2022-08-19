@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>模块引入 | mkNote</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="这是我的第一个 VuePress 站点">
+    
+    <link rel="preload" href="/mkNote_pages/assets/css/0.styles.5ee5f47c.css" as="style"><link rel="preload" href="/mkNote_pages/assets/js/app.85220451.js" as="script"><link rel="preload" href="/mkNote_pages/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/mkNote_pages/assets/js/161.39ebd813.js" as="script"><link rel="prefetch" href="/mkNote_pages/assets/js/10.a5dfed7e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/100.5933671b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/101.e7ae901e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/102.7d2ee805.js"><link rel="prefetch" href="/mkNote_pages/assets/js/103.9f737274.js"><link rel="prefetch" href="/mkNote_pages/assets/js/104.ab4d4eef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/105.aa179439.js"><link rel="prefetch" href="/mkNote_pages/assets/js/106.09c2236d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/107.792b3162.js"><link rel="prefetch" href="/mkNote_pages/assets/js/108.fa4d9ba7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/109.c1b1bc01.js"><link rel="prefetch" href="/mkNote_pages/assets/js/11.e74f9970.js"><link rel="prefetch" href="/mkNote_pages/assets/js/110.a376ba9e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/111.e0d5bfbf.js"><link rel="prefetch" href="/mkNote_pages/assets/js/112.8deb7e0b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/113.90cdc72f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/114.a8614e3e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/115.69c9e725.js"><link rel="prefetch" href="/mkNote_pages/assets/js/116.e17dc90c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/117.628d9208.js"><link rel="prefetch" href="/mkNote_pages/assets/js/118.acb3c70b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/119.513144cc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/12.e8ed3d1e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/120.40ee3ff6.js"><link rel="prefetch" href="/mkNote_pages/assets/js/121.53e3b584.js"><link rel="prefetch" href="/mkNote_pages/assets/js/122.b76c0d2b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/123.49a8313c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/124.74b93b0f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/125.019ceceb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/126.369d5d5b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/127.0f1da716.js"><link rel="prefetch" href="/mkNote_pages/assets/js/128.6d918cfd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/129.33bd60fb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/13.fb0ebe5f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/130.3937b900.js"><link rel="prefetch" href="/mkNote_pages/assets/js/131.785ea357.js"><link rel="prefetch" href="/mkNote_pages/assets/js/132.faab3688.js"><link rel="prefetch" href="/mkNote_pages/assets/js/133.018c0003.js"><link rel="prefetch" href="/mkNote_pages/assets/js/134.a82749c3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/135.8752b815.js"><link rel="prefetch" href="/mkNote_pages/assets/js/136.fd9a6dc0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/137.89479564.js"><link rel="prefetch" href="/mkNote_pages/assets/js/138.d12a008d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/139.f355a2db.js"><link rel="prefetch" href="/mkNote_pages/assets/js/14.e6f6b9ba.js"><link rel="prefetch" href="/mkNote_pages/assets/js/140.e3eb3d51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/141.a7835f24.js"><link rel="prefetch" href="/mkNote_pages/assets/js/142.502e152f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/143.1477dcbd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/144.157a8cf3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/145.e8587394.js"><link rel="prefetch" href="/mkNote_pages/assets/js/146.2d4de5af.js"><link rel="prefetch" href="/mkNote_pages/assets/js/147.ce48995f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/148.d946a47e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/149.9a19208c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/15.fadd07e0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/150.801eb813.js"><link rel="prefetch" href="/mkNote_pages/assets/js/151.5b1c566b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/152.d8d370f5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/153.03ade5ec.js"><link rel="prefetch" href="/mkNote_pages/assets/js/154.411ac005.js"><link rel="prefetch" href="/mkNote_pages/assets/js/155.1167b51b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/156.fb81c665.js"><link rel="prefetch" href="/mkNote_pages/assets/js/157.85f8b3d9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/158.b669b6be.js"><link rel="prefetch" href="/mkNote_pages/assets/js/159.6c5df155.js"><link rel="prefetch" href="/mkNote_pages/assets/js/16.7423e971.js"><link rel="prefetch" href="/mkNote_pages/assets/js/160.6019a527.js"><link rel="prefetch" href="/mkNote_pages/assets/js/162.ae2a809b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/163.d5eb40cb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/164.6191445e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/165.c15ffeab.js"><link rel="prefetch" href="/mkNote_pages/assets/js/166.9a84e265.js"><link rel="prefetch" href="/mkNote_pages/assets/js/167.a8543b7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/168.3a539990.js"><link rel="prefetch" href="/mkNote_pages/assets/js/169.b389d90a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/17.34d1f82b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/170.28e07f21.js"><link rel="prefetch" href="/mkNote_pages/assets/js/171.f3fe7650.js"><link rel="prefetch" href="/mkNote_pages/assets/js/172.495611f9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/173.426a510a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/174.86aeb91c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/175.7350b0a4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/176.8ddc1f51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/177.0800c99b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/178.cdb30931.js"><link rel="prefetch" href="/mkNote_pages/assets/js/179.7b48396e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/18.78c86e3b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/180.4e23d3ef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/181.fc8f8e7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/182.7b21b02b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/19.50754958.js"><link rel="prefetch" href="/mkNote_pages/assets/js/20.ef3cda8e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/21.543f9674.js"><link rel="prefetch" href="/mkNote_pages/assets/js/22.a05f11b4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/23.4d88a77e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/24.71aad58c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/25.46bf477a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/26.54c34fac.js"><link rel="prefetch" href="/mkNote_pages/assets/js/27.67e8f2b5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/28.99aed72a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/29.4c0af258.js"><link rel="prefetch" href="/mkNote_pages/assets/js/3.6e6f36ce.js"><link rel="prefetch" href="/mkNote_pages/assets/js/30.a3725351.js"><link rel="prefetch" href="/mkNote_pages/assets/js/31.8fe83090.js"><link rel="prefetch" href="/mkNote_pages/assets/js/32.d55fa767.js"><link rel="prefetch" href="/mkNote_pages/assets/js/33.e5bdf3fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/34.294ee56f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/35.58414bef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/36.a02d8d8c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/37.6389f6de.js"><link rel="prefetch" href="/mkNote_pages/assets/js/38.9dd6d752.js"><link rel="prefetch" href="/mkNote_pages/assets/js/39.44021b7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/4.26f73e91.js"><link rel="prefetch" href="/mkNote_pages/assets/js/40.3dc34bae.js"><link rel="prefetch" href="/mkNote_pages/assets/js/41.71d0dde8.js"><link rel="prefetch" href="/mkNote_pages/assets/js/42.07966c0e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/43.77899178.js"><link rel="prefetch" href="/mkNote_pages/assets/js/44.f19b6dc9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/45.231d2aa7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/46.ac9e7b0b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/47.33976224.js"><link rel="prefetch" href="/mkNote_pages/assets/js/48.0e3c1af5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/49.00f6e0d0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/5.5dcec586.js"><link rel="prefetch" href="/mkNote_pages/assets/js/50.c7c22232.js"><link rel="prefetch" href="/mkNote_pages/assets/js/51.b7042968.js"><link rel="prefetch" href="/mkNote_pages/assets/js/52.b83eedba.js"><link rel="prefetch" href="/mkNote_pages/assets/js/53.da1c8817.js"><link rel="prefetch" href="/mkNote_pages/assets/js/54.db0a7189.js"><link rel="prefetch" href="/mkNote_pages/assets/js/55.1357acf3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/56.697208cd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/57.b63549c0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/58.204ba5fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/59.9ced4e6d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/6.f2a96706.js"><link rel="prefetch" href="/mkNote_pages/assets/js/60.b38cc8c1.js"><link rel="prefetch" href="/mkNote_pages/assets/js/61.8e3d0e43.js"><link rel="prefetch" href="/mkNote_pages/assets/js/62.40e135b6.js"><link rel="prefetch" href="/mkNote_pages/assets/js/63.d9ba50a8.js"><link rel="prefetch" href="/mkNote_pages/assets/js/64.e230d9dc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/65.cd9f99da.js"><link rel="prefetch" href="/mkNote_pages/assets/js/66.5083d893.js"><link rel="prefetch" href="/mkNote_pages/assets/js/67.72619bd4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/68.2ff46f6e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/69.22862b0f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/7.26f9313b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/70.5cc3357a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/71.d4fb1d0e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/72.8de19a9a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/73.3fd8d00e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/74.4a823212.js"><link rel="prefetch" href="/mkNote_pages/assets/js/75.c3b89e51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/76.b3caa364.js"><link rel="prefetch" href="/mkNote_pages/assets/js/77.6edf2137.js"><link rel="prefetch" href="/mkNote_pages/assets/js/78.c178059c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/79.dd7733d3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/8.6281cc2b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/80.d98d5bcc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/81.636a3744.js"><link rel="prefetch" href="/mkNote_pages/assets/js/82.c8bdaffb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/83.710462f3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/84.f6c0e8b3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/85.b43cb128.js"><link rel="prefetch" href="/mkNote_pages/assets/js/86.1c1ef745.js"><link rel="prefetch" href="/mkNote_pages/assets/js/87.25b23344.js"><link rel="prefetch" href="/mkNote_pages/assets/js/88.ae93f86f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/89.e85fc20a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/9.0a278515.js"><link rel="prefetch" href="/mkNote_pages/assets/js/90.6232d8a0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/91.068a5731.js"><link rel="prefetch" href="/mkNote_pages/assets/js/92.aa28597f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/93.912181b7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/94.cd6910a4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/95.fc74d1d4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/96.3e6dd3fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/97.cfde28b0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/98.4372bf96.js"><link rel="prefetch" href="/mkNote_pages/assets/js/99.257a4da4.js">
+    <link rel="stylesheet" href="/mkNote_pages/assets/css/0.styles.5ee5f47c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mkNote_pages/" class="home-link router-link-active"><img src="/mkNote_pages/images/logo.png" alt="mkNote" class="logo"> <span class="site-name can-hide">mkNote</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mkNote_pages/03_ENG/" class="nav-link">
+  ENG
+</a></div><div class="nav-item"><a href="/mkNote_pages/05_历史/" class="nav-link">
+  历史
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Base技能" class="dropdown-title"><span class="title">Base技能</span> <span class="arrow down"></span></button> <button type="button" aria-label="Base技能" class="mobile-dropdown-title"><span class="title">Base技能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/10_公网笔记资源/10_筆記資源.html" class="nav-link">
+  公网笔记资源
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/50_git/10_参考文档.html" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/1000_其他/" class="nav-link">
+  vscode、mk...
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/10_Linux/10_参考文档.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/50_nginx/10_参考文档.html" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/90_docker/10_参考文档.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/100_ansible/10_参考文档.html" class="nav-link">
+  Ansible
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/150_k8s/10_参考文档.html" class="nav-link">
+  K8S
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web前端" class="dropdown-title"><span class="title">web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="web前端" class="mobile-dropdown-title"><span class="title">web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/10_HTML5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/20_CSS3/" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/25_UI库/" class="nav-link">
+  UI 库
+</a></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/30_JavaScript/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/40_ES规范/" class="nav-link">
+  ES规范
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/60_vue2/60_vue_CLI脚手架.html" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/70_Vue3+TS快速上手/00_课程介绍.html" class="nav-link">
+  Vue3.x + TS快速上手
+</a></li></ul></li><li class="dropdown-item"><h4>
+          构建工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/100_构建工具类/" class="nav-link">
+  前端构建工具
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="python" class="dropdown-title"><span class="title">python</span> <span class="arrow down"></span></button> <button type="button" aria-label="python" class="mobile-dropdown-title"><span class="title">python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/40_python/10_python/20_环境准备.html" class="nav-link">
+  python基础
+</a></li><li class="dropdown-item"><h4>
+          Django笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/50_Django/10_参考文档.html" class="nav-link">
+  Django
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/60_RestFramework/10_参考文档.html" class="nav-link">
+  RestFramework
+</a></li></ul></li><li class="dropdown-item"><h4>
+          爬虫笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/10_sqlite/10_参考文档.html" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/20_mysql/10_参考文档.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/30_mongodb/10_参考文档.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/40_redis/10_参考文档.html" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/50_postgreSQL/10_参考文档.html" class="nav-link">
+  PostgreSQL
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.yulinvo.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mySite
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mkNote_pages/03_ENG/" class="nav-link">
+  ENG
+</a></div><div class="nav-item"><a href="/mkNote_pages/05_历史/" class="nav-link">
+  历史
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Base技能" class="dropdown-title"><span class="title">Base技能</span> <span class="arrow down"></span></button> <button type="button" aria-label="Base技能" class="mobile-dropdown-title"><span class="title">Base技能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/10_公网笔记资源/10_筆記資源.html" class="nav-link">
+  公网笔记资源
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/50_git/10_参考文档.html" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/1000_其他/" class="nav-link">
+  vscode、mk...
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/10_Linux/10_参考文档.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/50_nginx/10_参考文档.html" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/90_docker/10_参考文档.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/100_ansible/10_参考文档.html" class="nav-link">
+  Ansible
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/150_k8s/10_参考文档.html" class="nav-link">
+  K8S
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web前端" class="dropdown-title"><span class="title">web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="web前端" class="mobile-dropdown-title"><span class="title">web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/10_HTML5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/20_CSS3/" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/25_UI库/" class="nav-link">
+  UI 库
+</a></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/30_JavaScript/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/40_ES规范/" class="nav-link">
+  ES规范
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/60_vue2/60_vue_CLI脚手架.html" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/70_Vue3+TS快速上手/00_课程介绍.html" class="nav-link">
+  Vue3.x + TS快速上手
+</a></li></ul></li><li class="dropdown-item"><h4>
+          构建工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/100_构建工具类/" class="nav-link">
+  前端构建工具
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="python" class="dropdown-title"><span class="title">python</span> <span class="arrow down"></span></button> <button type="button" aria-label="python" class="mobile-dropdown-title"><span class="title">python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/40_python/10_python/20_环境准备.html" class="nav-link">
+  python基础
+</a></li><li class="dropdown-item"><h4>
+          Django笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/50_Django/10_参考文档.html" class="nav-link">
+  Django
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/60_RestFramework/10_参考文档.html" class="nav-link">
+  RestFramework
+</a></li></ul></li><li class="dropdown-item"><h4>
+          爬虫笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/10_sqlite/10_参考文档.html" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/20_mysql/10_参考文档.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/30_mongodb/10_参考文档.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/40_redis/10_参考文档.html" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/50_postgreSQL/10_参考文档.html" class="nav-link">
+  PostgreSQL
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.yulinvo.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mySite
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/mkNote_pages/40_python/10_python/10_参考文档.html" class="sidebar-link">参考文档</a></li><li><a href="/mkNote_pages/40_python/10_python/20_环境准备.html" class="sidebar-link">环境准备</a></li><li><a href="/mkNote_pages/40_python/10_python/40_pip.html" class="sidebar-link">pip</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基础数据类型</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/mkNote_pages/40_python/10_python/60_基础.html" class="sidebar-link">基础</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>常用模块</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/mkNote_pages/40_python/10_python/80_模块、包.html" class="active sidebar-link">模块、包</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/80_模块、包.html#模块引入" class="sidebar-link">模块引入</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/80_模块、包.html#包的引入" class="sidebar-link">包的引入</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/80_模块、包.html#相对引入" class="sidebar-link">相对引入</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/80_模块、包.html#包的制作、安装、删除" class="sidebar-link">包的制作、安装、删除</a></li></ul></li><li><a href="/mkNote_pages/40_python/10_python/90_文件操作.html" class="sidebar-link">文件操作</a></li><li><a href="/mkNote_pages/40_python/10_python/100_函数.html" class="sidebar-link">函数</a></li><li><a href="/mkNote_pages/40_python/10_python/110_闭包.html" class="sidebar-link">闭包</a></li><li><a href="/mkNote_pages/40_python/10_python/120_装饰器.html" class="sidebar-link">装饰器</a></li><li><a href="/mkNote_pages/40_python/10_python/130_迭代器.html" class="sidebar-link">迭代器</a></li><li><a href="/mkNote_pages/40_python/10_python/140_生成器.html" class="sidebar-link">生成器</a></li><li><a href="/mkNote_pages/40_python/10_python/150_class.html" class="sidebar-link">class</a></li><li><a href="/mkNote_pages/40_python/10_python/160_异常处理.html" class="sidebar-link">异常处理</a></li><li><a href="/mkNote_pages/40_python/10_python/170_进程、线程.html" class="sidebar-link">进程、线程</a></li><li><a href="/mkNote_pages/40_python/10_python/180_Socket编程.html" class="sidebar-link">Socket编程</a></li><li><a href="/mkNote_pages/40_python/10_python/190_队列.html" class="sidebar-link">队列</a></li><li><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html" class="sidebar-link">python脚本练习</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="模块引入"><a href="#模块引入" class="header-anchor">#</a> 模块引入</h2> <p>模块引入方式：</p> <div class="language- extra-class"><pre class="language-text"><code>方式一： 引入整个模块
+	import  demo   &amp;&amp;  print(demo.age)   或者  import  demo  as do &amp;&amp;  print(do.age)
+
+方式二： 只引入模块中的部分方法
+	 from demo import age 	或者	 from demo import age as age111
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>#cat aa.py:
+    __all__ = ['add',]		# noqa (加上这个好像是语法不检查还是什么)       
+        #控制模块对外接口,不是强制性的！！！！
+        -	from aa import *只会引入add，可以在ipython中执行dir()查看环境变量中的内容有没有say 
+        -	但是from module import  say依然可以引用
+        -	但是import aa，依然可以使用module.say()
+
+    def _say():    print('111')		
+        #一个下划线开头的函数是模块私有的，不希望被外部调用，但是也不是强制的，外部依然可以调用，君子协定
+
+    def say():    print('say...12')
+    def add(a,b):    return a+b
+
+    if __name__ == &quot;__main__&quot;:    say()			#直接执行import aa时不会输出‘say...12'
+
+
+import aa	&amp;&amp;	aa.__xx				#aa.__	使用tab查看都有哪些方法		#直接在ipython中import aa即可！！！
+​	#aa.__name__	   	输出str格式结果，'aa'，__name__是一个方法，直接执行__name__输出的是__main__
+​	#aa.__file__		
+</code></pre></div><h2 id="包的引入"><a href="#包的引入" class="header-anchor">#</a> 包的引入</h2> <blockquote><p><em>_init</em>_.py文件：当引入一个包的变量或方法时，默认就会先执行__init__.py中代码，比如aa包的init语句中有一个print(&quot;引入aa包中的模块...&quot;)语句，import aa时就会先输出这一句</p> <p><em>_init</em>_.py文件中的变量、函数都属于是包的，比如init文件中写入一个def func1():pass，可以：1，import aa &amp;&amp; aa.func1()调用  2，from aa import func1调用     ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！</p> <p>from aa.xx 这种写法，点后面的xx只能是包名（即使在__init__中引入了也不行）【也是，<em>_init</em>_中定义的内容就相当于是包自身的属性了，当然可以直接调取，不用再次导入了】；from aa import xx这样可以直接引入__init__中定义的内容 ！！！！！</p> <p>from django.http import request	#http是包，则request  1：要么是包下面的模块，2：要么是__init__.py中引入的快捷方式！！！</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>目录结构：
++--- 01.py					#文件内容为空
++--- aa
+|   +--- __init__.py		#文件中只有一行代码：	print(&quot;引入aa包中的模块...&quot;)
+|   +--- a1.py				#文件中只有一行代码： name1 = &quot;a1&quot;
+|   +--- a2.py				#文件中只有一行代码： name2 = &quot;a2&quot;
+</code></pre></div><ol><li><p>在01.py中引入aa/a2.py中的name2变量，执行的是01.py文件，这个是期望的结果没有问题</p> <div class="language- extra-class"><pre class="language-text"><code>$ cat 01.py
+	from aa.a2 import name2			
+		#注意这句代码的执行顺序：1，先执行包的__init__.py  2，执行a2中的全部代码  ！！！！！！！！！！！！
+		#接上，即使这段代码是写在包的__init__.py文件中的，也会执行a2中的全部代码  ！！！！！！！！！！！！
+	print(name2)
+
+# 执行结果为：
+	引入aa包中的模块...
+	a2
+</code></pre></div></li> <li><p>01.py文件内容和上面的内容保持不变，</p> <ul><li><p>在aa/a2.py中引入aa/a1.py的name1变量，当执行的是a2.py文件时正常输出&quot;a1&quot;</p> <div class="language- extra-class"><pre class="language-text"><code>$ cat a2.py
+	name2 = &quot;a2&quot;
+	from a1 import name1			#此时a1是包还是模块呢？？？ 注意此时a1和.a1是由区别的
+	#.a1是相对目录；a1是模块，报错是显示：ModuleNotFoundError: No module named 'a1' ！！！！！！！！！！!!!!!!
+	print(name1)
+</code></pre></div></li> <li><p>接上，但是当执行01.py文件时，期望输出的结果为</p> <div class="language- extra-class"><pre class="language-text"><code>引入aa包中的模块...
+a1
+a2
+
+但是执行结果报错：（a2.py） ModuleNotFoundError: No module named 'a1'
+
+此时：
+	-. 将aa/a2.py中的内容由“from a1 import name1” 改为 “from aa.a1 import name1”就能正常输出了，为啥？？？
+为什么 包内部的同级文件间导入，也需要通过包名绕一下？？？
+	-. 将aa/a2.py中的内容由“from a1 import name1” 改为 “from .a1 import name1”也能正常输出了
+----------------------------------------------------------------------------------------
+a2.py中整个模块导入时：import aa.a1 &amp;&amp; print(aa.a1.name1)			#模块整体导入！！！！！
+</code></pre></div></li></ul></li></ol> <h2 id="相对引入"><a href="#相对引入" class="header-anchor">#</a> 相对引入</h2> <blockquote><p>绝对引入时是通过sys.path查找路径；</p> <p>相对引入也需要先使用sys.path找到py文件所属于的包（不过要先告诉解释器文件所属于的包是哪个） ！！！！！！！！！！</p> <p>参考文档：<a href="https://zhuanlan.zhihu.com/p/145903888" target="_blank" rel="noopener noreferrer">Python 中的绝对导入和相对导入 - 知乎 (zhihu.com)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>​					<a href="https://www.bilibili.com/video/BV1EK411g7Ff?from=search&amp;seid=1673769137031295504&amp;spm_id_from=333.337.0.0" target="_blank" rel="noopener noreferrer">python import中的绝对引用和相对引用_哔哩哔哩_bilibili<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>目录结构：
++--- aa
+|   +--- __init__.py		#文件中只有一行代码：	print(&quot;引入aa包中的模块...&quot;)
+|   +--- a1.py				#文件中只有一行代码： name1 = &quot;a1&quot;
+|   +--- a2.py				#文件中只有一行代码： name2 = &quot;a2&quot;
+</code></pre></div><p>a1.py中代码&quot;from . import a2&quot;执行时报错&quot;ImportError: attempted relative import with no known parent package&quot;；这个跟是否是顶层目录没有关系，aa下在建一层bb，下两个文件b1.py/b2.py结构和内容类似上面，依然是报同样的错误，说明跟目录深度没有关系；但是子包之间通过相对引用时，通过主程序来运行的话是没有问题的（B站参考视频的13.00左右），因为子包被调用时__package__和__name__是有正确的值的，<em>_init</em>_能使用相对路径引入也是这个道理！！！！！！！</p> <div class="language- extra-class"><pre class="language-text"><code>a2.py中添加打印语句：
+	print('__file__={0:&lt;35} | __name__={1:&lt;20} | __package__={2:&lt;20}'.format(
+    __file__, __name__, str(__package__)))
+
+a1.py中添加代码：
+	sys.path.append('c:\\Users\\yulinvo\\Desktop\\temp\\python3_1634879321\\code0001')	
+		#要先能找到上层包aa
+		#sys.path.append只是程序执行时临时加进去，执行结束后就自动释放了，测试：单独在a2.py中打印sys.path就没有这个路径
+	
+	__package__ = 'aa'			#__name__和__package__使用任意一个即可
+		#如果 __package__ 为 None 表示该模块是顶层模块！！！！！！！！！！！！
+	# __name__ = 'aa.xx'		#__name__和__package__使用任意一个即可
+	from . import a2			#这样就能正常引入了
+	
+	
+a1.py中代码执行后输出结果：
+		引入aa包中的模块...
+		__file__=c:\Users\...\code0001\aa\a2.py | __name__=aa.a2    | __package__=aa
+</code></pre></div><h2 id="包的制作、安装、删除"><a href="#包的制作、安装、删除" class="header-anchor">#</a> 包的制作、安装、删除</h2> <ol><li><p>目录结构</p> <div class="language- extra-class"><pre class="language-text"><code>目录解构：
++--- aa
+|   +--- __init__.py		#文件中只有一行代码：	print(&quot;引入aa包中的模块...&quot;)
+|   +--- a1.py				#文件中只有一行代码： name1 = &quot;a1&quot;
+|   +--- a2.py				#文件中只有一行代码： name2 = &quot;a2&quot;
++--- setup.py					#文件内容为空
+</code></pre></div><ul><li><p>setup.py内容</p> <div class="language- extra-class"><pre class="language-text"><code>from setuptools import setup, find_packages		#如果是这种写法，配合packages=find_packages()
+# from distutils.core import setup				#如果是这种写法，配合下面的py_modules=[...]
+
+
+setup(
+    name=&quot;aaa01&quot;,
+    version=&quot;1.0&quot;,
+    description=&quot;aa test module&quot;,
+    long_description=&quot;aa test module ---------&quot;,
+    author=&quot;yulinvo&quot;,                         # your name
+    author_email=&quot;yulinvo@163.cn&quot;,    # your email
+    url=&quot;https://yulinvo.cn&quot;,          # your module home page, such as
+    # py_modules=[&quot;aaa01.a1&quot;,&quot;aaa01.a2&quot;]     #这一句必须要写，否则build的结果为空，同样的执行sdist的结果也为空
+
+    # license=&quot;MIT&quot;,
+    packages=find_packages(),
+    # include_package_data=True,
+    # platforms=&quot;any&quot;,
+    # install_requires=[]
+)
+
+</code></pre></div></li></ul></li> <li><p>制作包</p> <div class="language- extra-class"><pre class="language-text"><code>方式一：from setuptools import setup, find_packages	（推荐）
+    参考文档：http://zhongjiajie.com/2017/10/21/pypi安装包制作及发布/
+
+    python setup.py sdist       # 生成二进制包 支持pip安装 推荐使用
+    python setup.py bdist_egg   # 生成egg 支持easy_install安装
+
+
+方式二：from distutils.core import setup
+    参考文档：https://www.bilibili.com/video/BV1ex411x7Em?p=442
+
+    #python setup.py build 					#构建模块
+    #python setup.py sdist					#生成发布压缩包
+
+</code></pre></div></li> <li><p>安装包</p> <div class="language- extra-class"><pre class="language-text"><code>方式一：	对应制作包的方式一
+	pip install sdist/xxx.tar.gz
+
+方式二：	对应制作包的方式二
+	tar -zxvf xx.tar.gz  &amp;&amp;  python setup.py install
+	或者：pip install aaa01-1.0.tar.gz
+</code></pre></div></li> <li><p>上传到pypi</p> <div class="language- extra-class"><pre class="language-text"><code>上传到pypi没有测试，
+
+参考链接：
+	参考下上面链接：http://zhongjiajie.com/2017/10/21/pypi安装包制作及发布/
+	或者：https://docs.djangoproject.com/zh-hans/2.1/intro/reusable-apps/
+</code></pre></div></li> <li><p>删除包</p> <div class="language- extra-class"><pre class="language-text"><code>直接将磁盘文件删除即可：
+	#cd  ${workdir}\python3_1634879321\Lib\site-packages\	#可以在ipython中 aaa01.__file__查看
+	#rm -rf aaa01
+	#rm -rf aaa01-1.0-py3.9.egg-info
+</code></pre></div></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mkNote_pages/40_python/10_python/70_常用模块/190_paramiko模块.html" class="prev">
+        paramiko模块
+      </a></span> <span class="next"><a href="/mkNote_pages/40_python/10_python/90_文件操作.html">
+        文件操作
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/mkNote_pages/assets/js/app.85220451.js" defer></script><script src="/mkNote_pages/assets/js/2.2defd20b.js" defer></script><script src="/mkNote_pages/assets/js/161.39ebd813.js" defer></script>
+  </body>
+</html>

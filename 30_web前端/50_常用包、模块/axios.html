@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>axios中文参考文档 | mkNote</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="这是我的第一个 VuePress 站点">
+    
+    <link rel="preload" href="/mkNote_pages/assets/css/0.styles.5ee5f47c.css" as="style"><link rel="preload" href="/mkNote_pages/assets/js/app.85220451.js" as="script"><link rel="preload" href="/mkNote_pages/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/mkNote_pages/assets/js/92.aa28597f.js" as="script"><link rel="prefetch" href="/mkNote_pages/assets/js/10.a5dfed7e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/100.5933671b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/101.e7ae901e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/102.7d2ee805.js"><link rel="prefetch" href="/mkNote_pages/assets/js/103.9f737274.js"><link rel="prefetch" href="/mkNote_pages/assets/js/104.ab4d4eef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/105.aa179439.js"><link rel="prefetch" href="/mkNote_pages/assets/js/106.09c2236d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/107.792b3162.js"><link rel="prefetch" href="/mkNote_pages/assets/js/108.fa4d9ba7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/109.c1b1bc01.js"><link rel="prefetch" href="/mkNote_pages/assets/js/11.e74f9970.js"><link rel="prefetch" href="/mkNote_pages/assets/js/110.a376ba9e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/111.e0d5bfbf.js"><link rel="prefetch" href="/mkNote_pages/assets/js/112.8deb7e0b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/113.90cdc72f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/114.a8614e3e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/115.69c9e725.js"><link rel="prefetch" href="/mkNote_pages/assets/js/116.e17dc90c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/117.628d9208.js"><link rel="prefetch" href="/mkNote_pages/assets/js/118.acb3c70b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/119.513144cc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/12.e8ed3d1e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/120.40ee3ff6.js"><link rel="prefetch" href="/mkNote_pages/assets/js/121.53e3b584.js"><link rel="prefetch" href="/mkNote_pages/assets/js/122.b76c0d2b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/123.49a8313c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/124.74b93b0f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/125.019ceceb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/126.369d5d5b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/127.0f1da716.js"><link rel="prefetch" href="/mkNote_pages/assets/js/128.6d918cfd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/129.33bd60fb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/13.fb0ebe5f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/130.3937b900.js"><link rel="prefetch" href="/mkNote_pages/assets/js/131.785ea357.js"><link rel="prefetch" href="/mkNote_pages/assets/js/132.faab3688.js"><link rel="prefetch" href="/mkNote_pages/assets/js/133.018c0003.js"><link rel="prefetch" href="/mkNote_pages/assets/js/134.a82749c3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/135.8752b815.js"><link rel="prefetch" href="/mkNote_pages/assets/js/136.fd9a6dc0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/137.89479564.js"><link rel="prefetch" href="/mkNote_pages/assets/js/138.d12a008d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/139.f355a2db.js"><link rel="prefetch" href="/mkNote_pages/assets/js/14.e6f6b9ba.js"><link rel="prefetch" href="/mkNote_pages/assets/js/140.e3eb3d51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/141.a7835f24.js"><link rel="prefetch" href="/mkNote_pages/assets/js/142.502e152f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/143.1477dcbd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/144.157a8cf3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/145.e8587394.js"><link rel="prefetch" href="/mkNote_pages/assets/js/146.2d4de5af.js"><link rel="prefetch" href="/mkNote_pages/assets/js/147.ce48995f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/148.d946a47e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/149.9a19208c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/15.fadd07e0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/150.801eb813.js"><link rel="prefetch" href="/mkNote_pages/assets/js/151.5b1c566b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/152.d8d370f5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/153.03ade5ec.js"><link rel="prefetch" href="/mkNote_pages/assets/js/154.411ac005.js"><link rel="prefetch" href="/mkNote_pages/assets/js/155.1167b51b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/156.fb81c665.js"><link rel="prefetch" href="/mkNote_pages/assets/js/157.85f8b3d9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/158.b669b6be.js"><link rel="prefetch" href="/mkNote_pages/assets/js/159.6c5df155.js"><link rel="prefetch" href="/mkNote_pages/assets/js/16.7423e971.js"><link rel="prefetch" href="/mkNote_pages/assets/js/160.6019a527.js"><link rel="prefetch" href="/mkNote_pages/assets/js/161.39ebd813.js"><link rel="prefetch" href="/mkNote_pages/assets/js/162.ae2a809b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/163.d5eb40cb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/164.6191445e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/165.c15ffeab.js"><link rel="prefetch" href="/mkNote_pages/assets/js/166.9a84e265.js"><link rel="prefetch" href="/mkNote_pages/assets/js/167.a8543b7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/168.3a539990.js"><link rel="prefetch" href="/mkNote_pages/assets/js/169.b389d90a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/17.34d1f82b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/170.28e07f21.js"><link rel="prefetch" href="/mkNote_pages/assets/js/171.f3fe7650.js"><link rel="prefetch" href="/mkNote_pages/assets/js/172.495611f9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/173.426a510a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/174.86aeb91c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/175.7350b0a4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/176.8ddc1f51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/177.0800c99b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/178.cdb30931.js"><link rel="prefetch" href="/mkNote_pages/assets/js/179.7b48396e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/18.78c86e3b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/180.4e23d3ef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/181.fc8f8e7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/182.7b21b02b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/19.50754958.js"><link rel="prefetch" href="/mkNote_pages/assets/js/20.ef3cda8e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/21.543f9674.js"><link rel="prefetch" href="/mkNote_pages/assets/js/22.a05f11b4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/23.4d88a77e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/24.71aad58c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/25.46bf477a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/26.54c34fac.js"><link rel="prefetch" href="/mkNote_pages/assets/js/27.67e8f2b5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/28.99aed72a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/29.4c0af258.js"><link rel="prefetch" href="/mkNote_pages/assets/js/3.6e6f36ce.js"><link rel="prefetch" href="/mkNote_pages/assets/js/30.a3725351.js"><link rel="prefetch" href="/mkNote_pages/assets/js/31.8fe83090.js"><link rel="prefetch" href="/mkNote_pages/assets/js/32.d55fa767.js"><link rel="prefetch" href="/mkNote_pages/assets/js/33.e5bdf3fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/34.294ee56f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/35.58414bef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/36.a02d8d8c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/37.6389f6de.js"><link rel="prefetch" href="/mkNote_pages/assets/js/38.9dd6d752.js"><link rel="prefetch" href="/mkNote_pages/assets/js/39.44021b7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/4.26f73e91.js"><link rel="prefetch" href="/mkNote_pages/assets/js/40.3dc34bae.js"><link rel="prefetch" href="/mkNote_pages/assets/js/41.71d0dde8.js"><link rel="prefetch" href="/mkNote_pages/assets/js/42.07966c0e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/43.77899178.js"><link rel="prefetch" href="/mkNote_pages/assets/js/44.f19b6dc9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/45.231d2aa7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/46.ac9e7b0b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/47.33976224.js"><link rel="prefetch" href="/mkNote_pages/assets/js/48.0e3c1af5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/49.00f6e0d0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/5.5dcec586.js"><link rel="prefetch" href="/mkNote_pages/assets/js/50.c7c22232.js"><link rel="prefetch" href="/mkNote_pages/assets/js/51.b7042968.js"><link rel="prefetch" href="/mkNote_pages/assets/js/52.b83eedba.js"><link rel="prefetch" href="/mkNote_pages/assets/js/53.da1c8817.js"><link rel="prefetch" href="/mkNote_pages/assets/js/54.db0a7189.js"><link rel="prefetch" href="/mkNote_pages/assets/js/55.1357acf3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/56.697208cd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/57.b63549c0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/58.204ba5fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/59.9ced4e6d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/6.f2a96706.js"><link rel="prefetch" href="/mkNote_pages/assets/js/60.b38cc8c1.js"><link rel="prefetch" href="/mkNote_pages/assets/js/61.8e3d0e43.js"><link rel="prefetch" href="/mkNote_pages/assets/js/62.40e135b6.js"><link rel="prefetch" href="/mkNote_pages/assets/js/63.d9ba50a8.js"><link rel="prefetch" href="/mkNote_pages/assets/js/64.e230d9dc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/65.cd9f99da.js"><link rel="prefetch" href="/mkNote_pages/assets/js/66.5083d893.js"><link rel="prefetch" href="/mkNote_pages/assets/js/67.72619bd4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/68.2ff46f6e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/69.22862b0f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/7.26f9313b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/70.5cc3357a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/71.d4fb1d0e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/72.8de19a9a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/73.3fd8d00e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/74.4a823212.js"><link rel="prefetch" href="/mkNote_pages/assets/js/75.c3b89e51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/76.b3caa364.js"><link rel="prefetch" href="/mkNote_pages/assets/js/77.6edf2137.js"><link rel="prefetch" href="/mkNote_pages/assets/js/78.c178059c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/79.dd7733d3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/8.6281cc2b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/80.d98d5bcc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/81.636a3744.js"><link rel="prefetch" href="/mkNote_pages/assets/js/82.c8bdaffb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/83.710462f3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/84.f6c0e8b3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/85.b43cb128.js"><link rel="prefetch" href="/mkNote_pages/assets/js/86.1c1ef745.js"><link rel="prefetch" href="/mkNote_pages/assets/js/87.25b23344.js"><link rel="prefetch" href="/mkNote_pages/assets/js/88.ae93f86f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/89.e85fc20a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/9.0a278515.js"><link rel="prefetch" href="/mkNote_pages/assets/js/90.6232d8a0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/91.068a5731.js"><link rel="prefetch" href="/mkNote_pages/assets/js/93.912181b7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/94.cd6910a4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/95.fc74d1d4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/96.3e6dd3fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/97.cfde28b0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/98.4372bf96.js"><link rel="prefetch" href="/mkNote_pages/assets/js/99.257a4da4.js">
+    <link rel="stylesheet" href="/mkNote_pages/assets/css/0.styles.5ee5f47c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mkNote_pages/" class="home-link router-link-active"><img src="/mkNote_pages/images/logo.png" alt="mkNote" class="logo"> <span class="site-name can-hide">mkNote</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mkNote_pages/03_ENG/" class="nav-link">
+  ENG
+</a></div><div class="nav-item"><a href="/mkNote_pages/05_历史/" class="nav-link">
+  历史
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Base技能" class="dropdown-title"><span class="title">Base技能</span> <span class="arrow down"></span></button> <button type="button" aria-label="Base技能" class="mobile-dropdown-title"><span class="title">Base技能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/10_公网笔记资源/10_筆記資源.html" class="nav-link">
+  公网笔记资源
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/50_git/10_参考文档.html" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/1000_其他/" class="nav-link">
+  vscode、mk...
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/10_Linux/10_参考文档.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/50_nginx/10_参考文档.html" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/90_docker/10_参考文档.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/100_ansible/10_参考文档.html" class="nav-link">
+  Ansible
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/150_k8s/10_参考文档.html" class="nav-link">
+  K8S
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web前端" class="dropdown-title"><span class="title">web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="web前端" class="mobile-dropdown-title"><span class="title">web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/10_HTML5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/20_CSS3/" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/25_UI库/" class="nav-link">
+  UI 库
+</a></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/30_JavaScript/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/40_ES规范/" class="nav-link">
+  ES规范
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/60_vue2/60_vue_CLI脚手架.html" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/70_Vue3+TS快速上手/00_课程介绍.html" class="nav-link">
+  Vue3.x + TS快速上手
+</a></li></ul></li><li class="dropdown-item"><h4>
+          构建工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/100_构建工具类/" class="nav-link">
+  前端构建工具
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="python" class="dropdown-title"><span class="title">python</span> <span class="arrow down"></span></button> <button type="button" aria-label="python" class="mobile-dropdown-title"><span class="title">python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/40_python/10_python/20_环境准备.html" class="nav-link">
+  python基础
+</a></li><li class="dropdown-item"><h4>
+          Django笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/50_Django/10_参考文档.html" class="nav-link">
+  Django
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/60_RestFramework/10_参考文档.html" class="nav-link">
+  RestFramework
+</a></li></ul></li><li class="dropdown-item"><h4>
+          爬虫笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/10_sqlite/10_参考文档.html" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/20_mysql/10_参考文档.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/30_mongodb/10_参考文档.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/40_redis/10_参考文档.html" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/50_postgreSQL/10_参考文档.html" class="nav-link">
+  PostgreSQL
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.yulinvo.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mySite
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mkNote_pages/03_ENG/" class="nav-link">
+  ENG
+</a></div><div class="nav-item"><a href="/mkNote_pages/05_历史/" class="nav-link">
+  历史
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Base技能" class="dropdown-title"><span class="title">Base技能</span> <span class="arrow down"></span></button> <button type="button" aria-label="Base技能" class="mobile-dropdown-title"><span class="title">Base技能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/10_公网笔记资源/10_筆記資源.html" class="nav-link">
+  公网笔记资源
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/50_git/10_参考文档.html" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/1000_其他/" class="nav-link">
+  vscode、mk...
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/10_Linux/10_参考文档.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/50_nginx/10_参考文档.html" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/90_docker/10_参考文档.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/100_ansible/10_参考文档.html" class="nav-link">
+  Ansible
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/150_k8s/10_参考文档.html" class="nav-link">
+  K8S
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web前端" class="dropdown-title"><span class="title">web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="web前端" class="mobile-dropdown-title"><span class="title">web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/10_HTML5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/20_CSS3/" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/25_UI库/" class="nav-link">
+  UI 库
+</a></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/30_JavaScript/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/40_ES规范/" class="nav-link">
+  ES规范
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/60_vue2/60_vue_CLI脚手架.html" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/70_Vue3+TS快速上手/00_课程介绍.html" class="nav-link">
+  Vue3.x + TS快速上手
+</a></li></ul></li><li class="dropdown-item"><h4>
+          构建工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/100_构建工具类/" class="nav-link">
+  前端构建工具
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="python" class="dropdown-title"><span class="title">python</span> <span class="arrow down"></span></button> <button type="button" aria-label="python" class="mobile-dropdown-title"><span class="title">python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/40_python/10_python/20_环境准备.html" class="nav-link">
+  python基础
+</a></li><li class="dropdown-item"><h4>
+          Django笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/50_Django/10_参考文档.html" class="nav-link">
+  Django
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/60_RestFramework/10_参考文档.html" class="nav-link">
+  RestFramework
+</a></li></ul></li><li class="dropdown-item"><h4>
+          爬虫笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/10_sqlite/10_参考文档.html" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/20_mysql/10_参考文档.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/30_mongodb/10_参考文档.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/40_redis/10_参考文档.html" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/50_postgreSQL/10_参考文档.html" class="nav-link">
+  PostgreSQL
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.yulinvo.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mySite
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="axios中文参考文档"><a href="#axios中文参考文档" class="header-anchor">#</a> axios中文参考文档</h2> <p>github地址：https://github.com/axios/axios</p> <p>https://www.kancloud.cn/yunye/axios/234845/
+http://www.axios-js.com/zh-cn/docs/</p> <h2 id="搭建json-server"><a href="#搭建json-server" class="header-anchor">#</a> 搭建json-server</h2> <p>github地址：https://github.com/typicode/json-server</p> <p>搭建步骤：</p> <ol><li><p>Install JSON Server</p> <div class="language- extra-class"><pre class="language-text"><code>npm install -g json-server
+</code></pre></div></li> <li><p>Create a <code>db.json</code> file with some data</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;posts&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;json-server&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;typicode&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;上硅谷大厂学院上线了&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;小编&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token punctuation">{</span> <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span><span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;今天天气不错，还挺风和日丽的&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;comments&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token property">&quot;body&quot;</span><span class="token operator">:</span> <span class="token string">&quot;some comment&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;postId&quot;</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;profile&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;typicode&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>Start JSON Server</p> <div class="language- extra-class"><pre class="language-text"><code>json-server --watch db.json
+</code></pre></div></li></ol> <p>Now if you go to http://localhost:3000/posts/1, you'll get</p> <div class="language- extra-class"><pre class="language-text"><code>{ &quot;id&quot;: 1, &quot;title&quot;: &quot;json-server&quot;, &quot;author&quot;: &quot;typicode&quot; }
+</code></pre></div><h3 id="延时响应"><a href="#延时响应" class="header-anchor">#</a> 延时响应</h3> <blockquote><p>课件中在演示cancel token时有用到延时响应，需要长时间才能等待才能获取到数据，模拟服务强响应慢或网速慢</p></blockquote> <p>文档中的参考位置：CLI usage</p> <div class="language- extra-class"><pre class="language-text"><code>json-server --watch db.json -d 2000
+</code></pre></div><h2 id="rest-协议"><a href="#rest-协议" class="header-anchor">#</a> REST 协议</h2> <table><thead><tr><th>method方法</th> <th>URL路径</th> <th>说明</th> <th>返回值</th> <th>备注</th></tr></thead> <tbody><tr><td>GET</td> <td>/articles</td> <td>获取所有文章</td> <td>成功：所有的文章数据<br>失败：</td> <td></td></tr> <tr><td>GET</td> <td>/articles/1</td> <td>获取id为1的文章</td> <td>成功：id为1的文章全部字段信息<br>失败：</td> <td></td></tr> <tr><td>POST</td> <td>/articles</td> <td>新建文章</td> <td>成功：新添加文章的全部字段信息<br>失败：</td> <td></td></tr> <tr><td>PUT</td> <td>/articles/1</td> <td>修改id为1的文章内容</td> <td>成功：id为1文章修改后的全部字段信息<br>失败：</td> <td>即使只修改其中一个字段，提交请求时也需要带上全部字段</td></tr> <tr><td>PATCH</td> <td>/articles/1</td> <td>修改id为1的文章内容</td> <td>成功：id为1文章修改后的全部字段信息！！！<br>失败：</td> <td>和PUT的区别是：只需要带上修改的字段即可，不需要带上全部字段</td></tr> <tr><td>DELETE</td> <td>/articles/1</td> <td>删除id为1的文章</td> <td>成功：无数据返回，一个空的对象{}<br>失败：</td> <td></td></tr></tbody></table> <h2 id="安装axios"><a href="#安装axios" class="header-anchor">#</a> 安装axios</h2> <ul><li><p>方式一：npm安装	<code>$ npm install axios</code></p></li> <li><p>方式二：yarn安装    <code>$ yarn add axios</code></p></li> <li><p>方式三：Using jsDelivr CDN</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
+</code></pre></div></li> <li><p>方式四：Using unpkg CDN</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
+</code></pre></div></li> <li><p>方式五：使用<a href="https://www.bootcdn.cn/" target="_blank" rel="noopener noreferrer">BootCDN - Bootstrap 中文网开源项目免费 CDN 加速服务<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>中的资源（方式三、方式四中国外的资源速度可能有点慢，切换到国内的资源访问）</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script src=&quot;https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js&quot;&gt;&lt;/script&gt;
+</code></pre></div></li></ul> <h2 id="axios的基本使用"><a href="#axios的基本使用" class="header-anchor">#</a> axios的基本使用</h2> <blockquote><p>axios发送请求时method方法大小写都可以</p></blockquote> <p><strong>axios({method: &quot;xx&quot;,URL: &quot;xx&quot;,data })</strong></p> <p>示例演示：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">crossorigin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>anonymous<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css<span class="token punctuation">&quot;</span></span>  <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>page-header<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>基本使用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btn btn-primary<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>发送GET请求<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btn btn-warning<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>发送POST请求<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btn btn-success<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>发送PUT请求<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btn btn-danger<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>发送DELETE请求<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+        <span class="token keyword">const</span> btns <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span>   <span class="token comment">//css选择器，css中button就是一个标签选择器</span>
+        
+        btns<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&quot;GET&quot;</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">'http://localhost:3000/posts/2/'</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        btns<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&quot;POST&quot;</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">&quot;http://localhost:3000/posts&quot;</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token comment">// id: &quot;&quot;,</span>
+                    <span class="token string-property property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;今天天气不错，还挺风和日丽的&quot;</span><span class="token punctuation">,</span>
+                    <span class="token string-property property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        btns<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&quot;PUT&quot;</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">&quot;http://localhost:3000/posts/3&quot;</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token comment">// id: &quot;&quot;,</span>
+                    <span class="token string-property property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;今天天气不错，还挺风和日丽的&quot;</span><span class="token punctuation">,</span>
+                    <span class="token string-property property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;李四&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        btns<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&quot;delete&quot;</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">&quot;http://localhost:3000/posts/3&quot;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="其他方法"><a href="#其他方法" class="header-anchor">#</a> 其他方法</h2> <h3 id="axios-request"><a href="#axios-request" class="header-anchor">#</a> axios.request</h3> <p>用法：axios.request(config)      							#axios.request()和axios()用法完全一致</p> <div class="language- extra-class"><pre class="language-text"><code>axios.request({
+	method: &quot;GET&quot;,
+	url: &quot;http://localhost:3000/posts/3&quot;
+})
+</code></pre></div><h3 id="axios-post"><a href="#axios-post" class="header-anchor">#</a> axios.post</h3> <p>用法：axios.post(url[, data[, config]])</p> <p><strong>data写法一</strong></p> <div class="language- extra-class"><pre class="language-text"><code>axios.post(&quot;http://localhost:3000/posts&quot;,{
+    // id: &quot;&quot;,
+    &quot;title&quot;: &quot;今天天气不错，还挺风和日丽的&quot;,
+    &quot;author&quot;: &quot;张三&quot;
+})
+</code></pre></div><p><strong>data写法二</strong></p> <div class="language- extra-class"><pre class="language-text"><code>let data = {
+    // id: &quot;&quot;,
+    &quot;title&quot;: &quot;今天天气不错，还挺风和日丽的&quot;,
+    &quot;author&quot;: &quot;张三&quot;
+}
+
+axios.post('http://localhost:3000/posts',data).then(r =&gt; console.log())
+</code></pre></div><p><strong>config配置</strong></p> <div class="language- extra-class"><pre class="language-text"><code>let data = {
+    // id: &quot;&quot;,
+    &quot;title&quot;: &quot;今天天气不错，还挺风和日丽的&quot;,
+    &quot;author&quot;: &quot;张三&quot;
+}
+
+axios.post('/posts', data, { baseURL: &quot;http://localhost:3000&quot; }).then(r =&gt; console.log(r))
+</code></pre></div><h3 id="axios-get"><a href="#axios-get" class="header-anchor">#</a> axios.get</h3> <p>axios.get(url[, config])</p> <div class="language- extra-class"><pre class="language-text"><code>axios.get(&quot;/posts/2&quot;).then(r =&gt; console.log(r) )
+</code></pre></div><h3 id="axios-delete"><a href="#axios-delete" class="header-anchor">#</a> axios.delete</h3> <p>axios.delete(url[, config])</p> <h3 id="axios-head"><a href="#axios-head" class="header-anchor">#</a> axios.head</h3> <p>axios.head(url[, config])</p> <h3 id="axios-put"><a href="#axios-put" class="header-anchor">#</a> axios.put</h3> <p>axios.put(url[, data[, config]])</p> <h3 id="axios-patch"><a href="#axios-patch" class="header-anchor">#</a> axios.patch</h3> <p>axios.patch(url[, data[, config]])</p> <h2 id="axios响应体"><a href="#axios响应体" class="header-anchor">#</a> axios响应体</h2> <div class="language- extra-class"><pre class="language-text"><code>axios({
+	method: &quot;GET&quot;,
+	url: 'http://localhost:3000/posts/2/'
+}).then((result) =&gt; {
+	console.log(result)
+})
+</code></pre></div><p>响应体构成部分：</p> <ol><li><p><strong>config</strong> {url: 'http://localhost:3000/posts/2/', method: 'get', headers: {…}, transformRequest: Array(1), transformResponse: Array(1), …}</p> <div class="language- extra-class"><pre class="language-text"><code>adapter: ƒ (e)
+data: undefined
+headers: {Accept: 'application/json, text/plain, */*',Authorization: 'AUTH_TOKEN123'}
+maxBodyLength: -1
+maxContentLength: -1
+method: &quot;get&quot;
+timeout: 0
+transformRequest: [ƒ]
+transformResponse: [ƒ]
+url: &quot;http://localhost:3000/posts/2/&quot;
+validateStatus: ƒ (e)
+xsrfCookieName: &quot;XSRF-TOKEN&quot;
+xsrfHeaderName: &quot;X-XSRF-TOKEN&quot;
+[[Prototype]]: Object
+</code></pre></div></li> <li><p><strong>data</strong>: {id: 2, title: '上硅谷大厂学院上线了', author: '小编'}</p></li> <li><p><strong>headers</strong>: {cache-control: 'no-cache', content-length: '80', content-type: 'application/json; charset=utf-8', expires: '-1', pragma: 'no-cache'}</p> <blockquote><p>headers响应头信息   （响应报文包括4个部分：响应头、响应行、响应空行、响应体）</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>cache-control: &quot;no-cache&quot;
+content-length: &quot;80&quot;
+content-type: &quot;application/json; charset=utf-8&quot;
+expires: &quot;-1&quot;
+location: &quot;http://localhost:3000/posts/15&quot;
+pragma: &quot;no-cache&quot;
+[[Prototype]]: Object
+</code></pre></div></li> <li><p><strong>request</strong>: XMLHttpRequest {readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, onreadystatechange: <em>ƒ</em>, …}</p> <blockquote><p>request是原生的ajax请求对象，即XMLHttpRequest 实例对象</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>onabort: ƒ ()
+onerror: ƒ ()
+onload: null
+onloadend: null
+onloadstart: null
+onprogress: null
+onreadystatechange: ƒ ()
+ontimeout: ƒ ()
+readyState: 4
+response: &quot;{\n  \&quot;id\&quot;: 2,\n  \&quot;title\&quot;: \&quot;上硅谷大厂学院上线了\&quot;,\n  \&quot;author\&quot;: \&quot;小编\&quot;\n}&quot;
+responseText: &quot;{\n  \&quot;id\&quot;: 2,\n  \&quot;title\&quot;: \&quot;上硅谷大厂学院上线了\&quot;,\n  \&quot;author\&quot;: \&quot;小编\&quot;\n}&quot;
+responseType: &quot;&quot;
+responseURL: &quot;http://localhost:3000/posts/2/&quot;
+responseXML: null
+status: 200
+statusText: &quot;OK&quot;
+timeout: 0
+upload: XMLHttpRequestUpload {onloadstart: null, onprogress: null, onabort: null, onerror: null, onload: null, …}
+withCredentials: false
+[[Prototype]]: XMLHttpRequest
+</code></pre></div></li> <li><p><strong>status</strong>: 200</p></li> <li><p><strong>statusText</strong>: &quot;OK&quot;</p> <blockquote><p>响应的状态字符串</p></blockquote></li></ol> <h2 id="axios的配置对象"><a href="#axios的配置对象" class="header-anchor">#</a> axios的配置对象</h2> <div class="language- extra-class"><pre class="language-text"><code>{
+	url: '/user',
+	method: 'get',					 // 默认是get，方法是get时可以不写
+	baseURL: 'https://some-domain.com/api/',		// baseURL将自动加在url前面，除非url是一个绝对 URL。
+	
+	headers: {'X-Requested-With': 'XMLHttpRequest'},
+	
+	params: {						# https://xxxx?id=12345
+    	ID: 12345
+	},
+  
+  paramsSerializer: function(params) {	#/post?a=100&amp;b=200  或者/post/a/100/b/200 或者 /post/a.100/b.200
+    return Qs.stringify(params, {arrayFormat: 'brackets'})
+  },
+	
+  // `validateStatus` 定义对于给定的HTTP 响应状态码是 resolve 或 reject  promise 。如果 `validateStatus` 返回 `true` (或者设置为 `null` 或 `undefined`)，promise 将被 resolve; 否则，promise 将被 rejecte
+  validateStatus: function (status) {
+    return status &gt;= 200 &amp;&amp; status &lt; 300; // 默认的
+  },
+
+  proxy: {
+    host: '127.0.0.1',
+    port: 9000,
+    auth: : {
+      username: 'mikeymike',
+      password: 'rapunz3l'
+    }
+  },
+  
+}
+</code></pre></div><h2 id="axios的默认配置"><a href="#axios的默认配置" class="header-anchor">#</a> axios的默认配置</h2> <p>全局的 axios 默认值</p> <div class="language- extra-class"><pre class="language-text"><code>axios.defaults.method = 'GET';
+axios.defaults.params = {id:100};		#请求变为了：  xxx/posts?id=100
+axios.defaults.timeout = 3000;
+
+axios.defaults.baseURL = 'http://localhost:3000';  		// baseURL将自动加在url前面，除非url是一个绝对 URL。
+axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+</code></pre></div><p>设置了默认配置后，axios可以简化如下：</p> <div class="language- extra-class"><pre class="language-text"><code>axios({
+	method: &quot;GET&quot;,
+	url: 'http://localhost:3000/posts'
+}).then(r=&gt;console.log(r))
+
+-----------简化为  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;-------------
+
+axios({
+	url: '/posts'
+}).then(r=&gt;console.log(r))
+</code></pre></div><ul><li><p>...headers.common['Authorization']  和 ...headers['Authorization']的区别</p> <div class="language- extra-class"><pre class="language-text"><code>axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;   会被配置到headers的common对象上
+axios.defaults.headers['abc'] = &quot;AUTH_TOKEN123&quot;;				会被直接配置到headers对象上
+
+
+两者都会被携带到XHR的请求标头上，测试方法：
+	edge--网络--点击XHR请求，观察右侧的标头--请求标头的部分，发现添加的headers已经被携带上了
+</code></pre></div></li> <li><p>使用<mark><strong>console.dir(axios.defaults)</strong></mark>查看axios的可配置选项（即config可选的配置）：</p> <div class="language- extra-class"><pre class="language-text"><code>Object
+  &gt; adapter: ƒ (e)
+    baseURL: &quot;http://localhost:3000&quot;
+  &gt; headers: {common: {…}, delete: {…}, get: {…}, head: {…}, post: {…}, …}
+    maxBodyLength: -1
+    maxContentLength: -1
+    timeout: 1000
+  &gt; transformRequest: [ƒ]
+  &gt; transformResponse: [ƒ]
+  &gt; validateStatus: ƒ (e)
+    xsrfCookieName: &quot;XSRF-TOKEN&quot;
+    xsrfHeaderName: &quot;X-XSRF-TOKEN&quot;
+    [[Prototype]]: Object
+</code></pre></div></li> <li><p>使用<mark><strong>console.dir(axios.defaults.headers)</strong></mark>查看headers的可配置选项：</p> <div class="language- extra-class"><pre class="language-text"><code>object:
+  &gt; common: {Accept: 'application/json, text/plain, */*', Authorization: 'AUTH_TOKEN123'}
+  &gt; delete: {}
+  &gt; get: {}
+  &gt; head: {}
+  &gt; patch: {Content-Type: 'application/x-www-form-urlencoded'}
+  &gt; post: {Content-Type: 'application/x-www-form-urlencoded'}
+  &gt; put: {Content-Type: 'application/x-www-form-urlencoded'}
+    [[Prototype]]: Object
+</code></pre></div></li></ul> <h2 id="axios创建实例对象"><a href="#axios创建实例对象" class="header-anchor">#</a> axios创建实例对象</h2> <p>创建实例：axios.create([config])</p> <div class="language- extra-class"><pre class="language-text"><code>const duanzi = axios.create({
+  baseURL: 'https://some-domain.com/api/',
+  timeout: 1000,
+  //AUTH_TOKEN也可以在这里配置，添加到的位置是：duanzi.defults.headers，而非在duanzi.defults.headers.common上
+  headers: {'X-Custom-Header': 'foobar','Authorization': AUTH_TOKEN}     	
+});
+
+duanzi({
+	//method: &quot;GET&quot;,			// 默认是get，方法是get时可以不写
+	url: '/posts/2'
+}).then((result) =&gt; {console.log(result) })
+----------------------------------------------------
+duanzi.get(&quot;/posts/2&quot;).then((result) =&gt; {console.log(result) })			//实例对象也可以使用axios已经封装好的方法
+</code></pre></div><p>实例对象也可以使用axios已经封装好的方法</p> <div class="language- extra-class"><pre class="language-text"><code>axios#request(config)
+axios#get(url[, config])
+axios#delete(url[, config])
+axios#head(url[, config])
+axios#post(url[, data[, config]])
+axios#put(url[, data[, config]])
+axios#patch(url[, data[, config]])
+</code></pre></div><ul><li><p><strong>实例添加配置和axios一样，如添加token</strong>，会添加到headers的common中</p> <p><code>duanzi.defaults.headers.common[&quot;Authorization&quot;] = 123 &amp;&amp; console.dir(duanzi.defaults.headers.common)</code></p></li> <li><p>下面这种方式添加的headers是存在于duanzi.defults.headers上，而不是在duanzi.defults.headers.common上</p> <div class="language- extra-class"><pre class="language-text"><code>const duanzi = axios.create({  
+	...
+	headers: {'X-Custom-Header': 'foobar','Authorization': AUTH_TOKEN} 
+})
+</code></pre></div></li> <li><p>添加的header不管是存储在duanzi.defults.headers，还是存储在duanzi.defults.headers.common上，发送请求时都会带在请求标头中</p> <div class="language- extra-class"><pre class="language-text"><code>测试方法：
+edge--网络--点击XHR请求，观察右侧的标头--请求标头的部分，发现添加的headers已经被携带上了
+</code></pre></div></li></ul> <h3 id="使用场景"><a href="#使用场景" class="header-anchor">#</a> 使用场景</h3> <blockquote><p>当项目中有多个数据来源，使用axios.defaults配置只能有一个能快捷使用，其他数据来源的还是要完整写，此时创建多个实例对象即可解决</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>const A = axios.create({
+  baseURL: 'https://a.com/api/',
+  timeout: 1000,
+});
+
+
+const B = axios.create({
+  baseURL: 'https://b.com/api/',
+  timeout: 1000,
+});
+</code></pre></div><h2 id="拦截器"><a href="#拦截器" class="header-anchor">#</a> 拦截器</h2> <blockquote><p>拦截器实际就是promise中的then方法，接收成功、失败的两个回调</p></blockquote> <h3 id="初识拦截器"><a href="#初识拦截器" class="header-anchor">#</a> 初识拦截器</h3> <div class="language- extra-class"><pre class="language-text"><code>// 添加请求拦截器
+axios.interceptors.request.use(function (config) {
+    console.log('请求拦截器 -- 成功')
+    throw '参数出了问题'
+    // return config;
+}, function (error) {
+    console.log('请求拦截器 -- 失败')
+    return Promise.reject(error);
+});
+
+// 添加响应拦截器
+axios.interceptors.response.use(function (response) {
+    console.log('响应拦截器 -- 成功')
+    return response;
+}, function (error) {
+    console.log('响应拦截器 -- 失败')
+    return Promise.reject(error);
+});
+
+axios.get('/posts').then(v =&gt; {
+    console.log('自定义函数处理--成功')
+}, r =&gt; {
+    console.log('自定义函数处理--失败')
+}).catch( r =&gt; {
+    console.log('自定义函数处理--失败 catch')       //then中有失败处理时catch就捕获不到失败了
+})
+
+结果：
+请求拦截器 -- 成功
+响应拦截器 -- 失败
+自定义函数处理--失败
+</code></pre></div><h3 id="定义多个拦截器时"><a href="#定义多个拦截器时" class="header-anchor">#</a> 定义多个拦截器时</h3> <div class="language- extra-class"><pre class="language-text"><code>// 添加请求拦截器1号
+axios.interceptors.request.use(function (config) {
+    console.log('请求拦截器 -- 成功 1号')
+    return config;
+}, function (error) {
+    console.log('请求拦截器 -- 失败 1号')
+    return Promise.reject(error);
+});
+
+// 添加请求拦截器2号
+axios.interceptors.request.use(function (config) {
+    console.log('请求拦截器 -- 成功 2号')
+    return config;
+}, function (error) {
+    console.log('请求拦截器 -- 失败 2号')
+    return Promise.reject(error);
+});
+
+// 添加响应拦截器1号
+axios.interceptors.response.use(function (response) {
+    console.log('响应拦截器 -- 成功 1号')
+    return response;
+}, function (error) {
+    console.log('响应拦截器 -- 失败 1号')
+    return Promise.reject(error);
+});
+
+// 添加响应拦截器2号
+axios.interceptors.response.use(function (response) {
+    console.log('响应拦截器 -- 成功 2号')
+    return response;
+}, function (error) {
+    console.log('响应拦截器 -- 失败 2号')
+    return Promise.reject(error);
+});
+
+
+axios.get('/posts').then(v =&gt; {
+    console.log('自定义函数处理--成功')
+}, r =&gt; {
+    console.log('自定义函数处理--失败')
+}).catch(r =&gt; {
+    console.log('自定义函数处理--失败 catch')       //then中有失败处理时catch就捕获不到失败了
+})
+
+结果：
+请求拦截器 -- 成功 2号
+请求拦截器 -- 成功 1号
+响应拦截器 -- 成功 1号
+响应拦截器 -- 成功 2号
+自定义函数处理--成功
+</code></pre></div><p>结论：</p> <p>请求拦截器：后进先执行</p> <p>响应拦截器：先进先执行</p> <h3 id="拦截器修改config请求参数"><a href="#拦截器修改config请求参数" class="header-anchor">#</a> 拦截器修改config请求参数</h3> <div class="language- extra-class"><pre class="language-text"><code>// 添加请求拦截器1号
+axios.interceptors.request.use(function (config) {
+    console.log('请求拦截器 -- 成功 1号')
+    config.params = {a:100 }									//修改配置，不同拦截器中的配置都会生效
+    return config;
+}, function (error) {
+    console.log('请求拦截器 -- 失败 1号')
+    return Promise.reject(error);
+});
+
+// 添加请求拦截器2号
+axios.interceptors.request.use(function (config) {
+    console.log('请求拦截器 -- 成功 2号')
+    config.timeout = 2000										//修改配置，不同拦截器中的配置都会生效
+    return config;
+}, function (error) {
+    console.log('请求拦截器 -- 失败 2号')
+    return Promise.reject(error);
+});
+
+// 添加响应拦截器1号
+axios.interceptors.response.use(function (response) {
+    console.log('响应拦截器 -- 成功 1号')
+    // return response;
+    return response.data;										//修改配置，自定义处理函数中接收到的就只有data了
+}, function (error) {
+    console.log('响应拦截器 -- 失败 1号')
+    return Promise.reject(error);
+});
+
+// 添加响应拦截器2号
+axios.interceptors.response.use(function (response) {
+    console.log('响应拦截器 -- 成功 2号')
+    return response;
+}, function (error) {
+    console.log('响应拦截器 -- 失败 2号')
+    return Promise.reject(error);
+});
+
+
+axios.get('/posts').then(v =&gt; {
+    console.log('自定义函数处理--成功')
+}, r =&gt; {
+    console.log('自定义函数处理--失败')
+}).catch(r =&gt; {
+    console.log('自定义函数处理--失败 catch')       //then中有失败处理时catch就捕获不到失败了
+})
+
+
+请求拦截器配置效果观察：
+1. edge--console界面中，config多了一项： params: {a: 100}
+2，edge--网络：没加params之前请求的地址是/posts，添加了params之后请求的地址是/posts?a=100
+</code></pre></div><h3 id="移除拦截器"><a href="#移除拦截器" class="header-anchor">#</a> 移除拦截器</h3> <p>如果你想在稍后移除拦截器，可以这样：</p> <div class="language- extra-class"><pre class="language-text"><code>var myInterceptor = axios.interceptors.request.use(function () {/*...*/});
+axios.interceptors.request.eject(myInterceptor);
+</code></pre></div><h3 id="自定义axios实例添加拦截器"><a href="#自定义axios实例添加拦截器" class="header-anchor">#</a> 自定义axios实例添加拦截器</h3> <p>可以为自定义 axios 实例添加拦截器</p> <div class="language- extra-class"><pre class="language-text"><code>var instance = axios.create();
+instance.interceptors.request.use(function () {/*...*/});
+</code></pre></div><h2 id="错误处理"><a href="#错误处理" class="header-anchor">#</a> 错误处理</h2> <p>使用<mark>vscode的debug调试</mark>查看error到底有那些方法：config、isAxiosError、request、response、toJSON、message、stack、</p> <p><strong><mark>console.dir( e )			//查看对象有哪些方法 ！！！！！！</mark></strong></p> <div class="language- extra-class"><pre class="language-text"><code>axios.get('/user/12345')
+  .catch(function (error) {
+  	console.dir(error)									//查看error中有那些方法！！！！！！！！
+    if (error.response) {
+      // 请求已发出，但服务器响应的状态码不在 2xx 范围内
+      console.log(error.response.data);
+      console.log(error.response.status);
+      console.log(error.response.headers);
+    } else {
+      // Something happened in setting up the request that triggered an Error
+      console.log('Error', error.message);
+    }
+    console.log(error.config);
+  });
+</code></pre></div><p>可以使用 <code>validateStatus</code> 配置选项定义一个自定义 HTTP 状态码的错误范围。</p> <div class="language- extra-class"><pre class="language-text"><code>axios.get('/user/12345', {
+  validateStatus: function (status) {
+    return status &lt; 500; // 状态码在大于或等于500时才会 reject
+  }
+})
+</code></pre></div><h2 id="使用-cancel-token-取消请求"><a href="#使用-cancel-token-取消请求" class="header-anchor">#</a> 使用 <em>cancel token</em> 取消请求</h2> <p>配合json-server的delay延时，具体步骤参考上面json-server配置</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">crossorigin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>anonymous<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css<span class="token punctuation">&quot;</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>page-header<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>axios取消请求<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btn btn-primary<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>发送请求<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btn btn-warning<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>取消请求<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+        axios<span class="token punctuation">.</span>defaults<span class="token punctuation">.</span>timeout <span class="token operator">=</span> <span class="token number">5000</span>
+        <span class="token keyword">const</span> btns <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span>
+        <span class="token keyword">let</span> cancel <span class="token operator">=</span> <span class="token keyword">null</span>
+
+        btns<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>cancel <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'http://localhost:3000/posts'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                <span class="token literal-property property">cancelToken</span><span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">axios<span class="token punctuation">.</span>CancelToken</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">executor</span><span class="token punctuation">(</span><span class="token parameter">c</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment">// executor 函数接收一个 cancel 函数作为参数</span>
+                    cancel <span class="token operator">=</span> c<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">v</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                cancel <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+         btns<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+         <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/mkNote_pages/assets/js/app.85220451.js" defer></script><script src="/mkNote_pages/assets/js/2.2defd20b.js" defer></script><script src="/mkNote_pages/assets/js/92.aa28597f.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>发送邮件 | mkNote</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="这是我的第一个 VuePress 站点">
+    
+    <link rel="preload" href="/mkNote_pages/assets/css/0.styles.5ee5f47c.css" as="style"><link rel="preload" href="/mkNote_pages/assets/js/app.85220451.js" as="script"><link rel="preload" href="/mkNote_pages/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/mkNote_pages/assets/js/132.faab3688.js" as="script"><link rel="prefetch" href="/mkNote_pages/assets/js/10.a5dfed7e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/100.5933671b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/101.e7ae901e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/102.7d2ee805.js"><link rel="prefetch" href="/mkNote_pages/assets/js/103.9f737274.js"><link rel="prefetch" href="/mkNote_pages/assets/js/104.ab4d4eef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/105.aa179439.js"><link rel="prefetch" href="/mkNote_pages/assets/js/106.09c2236d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/107.792b3162.js"><link rel="prefetch" href="/mkNote_pages/assets/js/108.fa4d9ba7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/109.c1b1bc01.js"><link rel="prefetch" href="/mkNote_pages/assets/js/11.e74f9970.js"><link rel="prefetch" href="/mkNote_pages/assets/js/110.a376ba9e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/111.e0d5bfbf.js"><link rel="prefetch" href="/mkNote_pages/assets/js/112.8deb7e0b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/113.90cdc72f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/114.a8614e3e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/115.69c9e725.js"><link rel="prefetch" href="/mkNote_pages/assets/js/116.e17dc90c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/117.628d9208.js"><link rel="prefetch" href="/mkNote_pages/assets/js/118.acb3c70b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/119.513144cc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/12.e8ed3d1e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/120.40ee3ff6.js"><link rel="prefetch" href="/mkNote_pages/assets/js/121.53e3b584.js"><link rel="prefetch" href="/mkNote_pages/assets/js/122.b76c0d2b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/123.49a8313c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/124.74b93b0f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/125.019ceceb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/126.369d5d5b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/127.0f1da716.js"><link rel="prefetch" href="/mkNote_pages/assets/js/128.6d918cfd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/129.33bd60fb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/13.fb0ebe5f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/130.3937b900.js"><link rel="prefetch" href="/mkNote_pages/assets/js/131.785ea357.js"><link rel="prefetch" href="/mkNote_pages/assets/js/133.018c0003.js"><link rel="prefetch" href="/mkNote_pages/assets/js/134.a82749c3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/135.8752b815.js"><link rel="prefetch" href="/mkNote_pages/assets/js/136.fd9a6dc0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/137.89479564.js"><link rel="prefetch" href="/mkNote_pages/assets/js/138.d12a008d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/139.f355a2db.js"><link rel="prefetch" href="/mkNote_pages/assets/js/14.e6f6b9ba.js"><link rel="prefetch" href="/mkNote_pages/assets/js/140.e3eb3d51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/141.a7835f24.js"><link rel="prefetch" href="/mkNote_pages/assets/js/142.502e152f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/143.1477dcbd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/144.157a8cf3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/145.e8587394.js"><link rel="prefetch" href="/mkNote_pages/assets/js/146.2d4de5af.js"><link rel="prefetch" href="/mkNote_pages/assets/js/147.ce48995f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/148.d946a47e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/149.9a19208c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/15.fadd07e0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/150.801eb813.js"><link rel="prefetch" href="/mkNote_pages/assets/js/151.5b1c566b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/152.d8d370f5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/153.03ade5ec.js"><link rel="prefetch" href="/mkNote_pages/assets/js/154.411ac005.js"><link rel="prefetch" href="/mkNote_pages/assets/js/155.1167b51b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/156.fb81c665.js"><link rel="prefetch" href="/mkNote_pages/assets/js/157.85f8b3d9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/158.b669b6be.js"><link rel="prefetch" href="/mkNote_pages/assets/js/159.6c5df155.js"><link rel="prefetch" href="/mkNote_pages/assets/js/16.7423e971.js"><link rel="prefetch" href="/mkNote_pages/assets/js/160.6019a527.js"><link rel="prefetch" href="/mkNote_pages/assets/js/161.39ebd813.js"><link rel="prefetch" href="/mkNote_pages/assets/js/162.ae2a809b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/163.d5eb40cb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/164.6191445e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/165.c15ffeab.js"><link rel="prefetch" href="/mkNote_pages/assets/js/166.9a84e265.js"><link rel="prefetch" href="/mkNote_pages/assets/js/167.a8543b7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/168.3a539990.js"><link rel="prefetch" href="/mkNote_pages/assets/js/169.b389d90a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/17.34d1f82b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/170.28e07f21.js"><link rel="prefetch" href="/mkNote_pages/assets/js/171.f3fe7650.js"><link rel="prefetch" href="/mkNote_pages/assets/js/172.495611f9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/173.426a510a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/174.86aeb91c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/175.7350b0a4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/176.8ddc1f51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/177.0800c99b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/178.cdb30931.js"><link rel="prefetch" href="/mkNote_pages/assets/js/179.7b48396e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/18.78c86e3b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/180.4e23d3ef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/181.fc8f8e7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/182.7b21b02b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/19.50754958.js"><link rel="prefetch" href="/mkNote_pages/assets/js/20.ef3cda8e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/21.543f9674.js"><link rel="prefetch" href="/mkNote_pages/assets/js/22.a05f11b4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/23.4d88a77e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/24.71aad58c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/25.46bf477a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/26.54c34fac.js"><link rel="prefetch" href="/mkNote_pages/assets/js/27.67e8f2b5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/28.99aed72a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/29.4c0af258.js"><link rel="prefetch" href="/mkNote_pages/assets/js/3.6e6f36ce.js"><link rel="prefetch" href="/mkNote_pages/assets/js/30.a3725351.js"><link rel="prefetch" href="/mkNote_pages/assets/js/31.8fe83090.js"><link rel="prefetch" href="/mkNote_pages/assets/js/32.d55fa767.js"><link rel="prefetch" href="/mkNote_pages/assets/js/33.e5bdf3fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/34.294ee56f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/35.58414bef.js"><link rel="prefetch" href="/mkNote_pages/assets/js/36.a02d8d8c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/37.6389f6de.js"><link rel="prefetch" href="/mkNote_pages/assets/js/38.9dd6d752.js"><link rel="prefetch" href="/mkNote_pages/assets/js/39.44021b7c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/4.26f73e91.js"><link rel="prefetch" href="/mkNote_pages/assets/js/40.3dc34bae.js"><link rel="prefetch" href="/mkNote_pages/assets/js/41.71d0dde8.js"><link rel="prefetch" href="/mkNote_pages/assets/js/42.07966c0e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/43.77899178.js"><link rel="prefetch" href="/mkNote_pages/assets/js/44.f19b6dc9.js"><link rel="prefetch" href="/mkNote_pages/assets/js/45.231d2aa7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/46.ac9e7b0b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/47.33976224.js"><link rel="prefetch" href="/mkNote_pages/assets/js/48.0e3c1af5.js"><link rel="prefetch" href="/mkNote_pages/assets/js/49.00f6e0d0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/5.5dcec586.js"><link rel="prefetch" href="/mkNote_pages/assets/js/50.c7c22232.js"><link rel="prefetch" href="/mkNote_pages/assets/js/51.b7042968.js"><link rel="prefetch" href="/mkNote_pages/assets/js/52.b83eedba.js"><link rel="prefetch" href="/mkNote_pages/assets/js/53.da1c8817.js"><link rel="prefetch" href="/mkNote_pages/assets/js/54.db0a7189.js"><link rel="prefetch" href="/mkNote_pages/assets/js/55.1357acf3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/56.697208cd.js"><link rel="prefetch" href="/mkNote_pages/assets/js/57.b63549c0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/58.204ba5fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/59.9ced4e6d.js"><link rel="prefetch" href="/mkNote_pages/assets/js/6.f2a96706.js"><link rel="prefetch" href="/mkNote_pages/assets/js/60.b38cc8c1.js"><link rel="prefetch" href="/mkNote_pages/assets/js/61.8e3d0e43.js"><link rel="prefetch" href="/mkNote_pages/assets/js/62.40e135b6.js"><link rel="prefetch" href="/mkNote_pages/assets/js/63.d9ba50a8.js"><link rel="prefetch" href="/mkNote_pages/assets/js/64.e230d9dc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/65.cd9f99da.js"><link rel="prefetch" href="/mkNote_pages/assets/js/66.5083d893.js"><link rel="prefetch" href="/mkNote_pages/assets/js/67.72619bd4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/68.2ff46f6e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/69.22862b0f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/7.26f9313b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/70.5cc3357a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/71.d4fb1d0e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/72.8de19a9a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/73.3fd8d00e.js"><link rel="prefetch" href="/mkNote_pages/assets/js/74.4a823212.js"><link rel="prefetch" href="/mkNote_pages/assets/js/75.c3b89e51.js"><link rel="prefetch" href="/mkNote_pages/assets/js/76.b3caa364.js"><link rel="prefetch" href="/mkNote_pages/assets/js/77.6edf2137.js"><link rel="prefetch" href="/mkNote_pages/assets/js/78.c178059c.js"><link rel="prefetch" href="/mkNote_pages/assets/js/79.dd7733d3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/8.6281cc2b.js"><link rel="prefetch" href="/mkNote_pages/assets/js/80.d98d5bcc.js"><link rel="prefetch" href="/mkNote_pages/assets/js/81.636a3744.js"><link rel="prefetch" href="/mkNote_pages/assets/js/82.c8bdaffb.js"><link rel="prefetch" href="/mkNote_pages/assets/js/83.710462f3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/84.f6c0e8b3.js"><link rel="prefetch" href="/mkNote_pages/assets/js/85.b43cb128.js"><link rel="prefetch" href="/mkNote_pages/assets/js/86.1c1ef745.js"><link rel="prefetch" href="/mkNote_pages/assets/js/87.25b23344.js"><link rel="prefetch" href="/mkNote_pages/assets/js/88.ae93f86f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/89.e85fc20a.js"><link rel="prefetch" href="/mkNote_pages/assets/js/9.0a278515.js"><link rel="prefetch" href="/mkNote_pages/assets/js/90.6232d8a0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/91.068a5731.js"><link rel="prefetch" href="/mkNote_pages/assets/js/92.aa28597f.js"><link rel="prefetch" href="/mkNote_pages/assets/js/93.912181b7.js"><link rel="prefetch" href="/mkNote_pages/assets/js/94.cd6910a4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/95.fc74d1d4.js"><link rel="prefetch" href="/mkNote_pages/assets/js/96.3e6dd3fe.js"><link rel="prefetch" href="/mkNote_pages/assets/js/97.cfde28b0.js"><link rel="prefetch" href="/mkNote_pages/assets/js/98.4372bf96.js"><link rel="prefetch" href="/mkNote_pages/assets/js/99.257a4da4.js">
+    <link rel="stylesheet" href="/mkNote_pages/assets/css/0.styles.5ee5f47c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mkNote_pages/" class="home-link router-link-active"><img src="/mkNote_pages/images/logo.png" alt="mkNote" class="logo"> <span class="site-name can-hide">mkNote</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mkNote_pages/03_ENG/" class="nav-link">
+  ENG
+</a></div><div class="nav-item"><a href="/mkNote_pages/05_历史/" class="nav-link">
+  历史
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Base技能" class="dropdown-title"><span class="title">Base技能</span> <span class="arrow down"></span></button> <button type="button" aria-label="Base技能" class="mobile-dropdown-title"><span class="title">Base技能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/10_公网笔记资源/10_筆記資源.html" class="nav-link">
+  公网笔记资源
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/50_git/10_参考文档.html" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/1000_其他/" class="nav-link">
+  vscode、mk...
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/10_Linux/10_参考文档.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/50_nginx/10_参考文档.html" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/90_docker/10_参考文档.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/100_ansible/10_参考文档.html" class="nav-link">
+  Ansible
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/150_k8s/10_参考文档.html" class="nav-link">
+  K8S
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web前端" class="dropdown-title"><span class="title">web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="web前端" class="mobile-dropdown-title"><span class="title">web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/10_HTML5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/20_CSS3/" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/25_UI库/" class="nav-link">
+  UI 库
+</a></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/30_JavaScript/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/40_ES规范/" class="nav-link">
+  ES规范
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/60_vue2/60_vue_CLI脚手架.html" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/70_Vue3+TS快速上手/00_课程介绍.html" class="nav-link">
+  Vue3.x + TS快速上手
+</a></li></ul></li><li class="dropdown-item"><h4>
+          构建工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/100_构建工具类/" class="nav-link">
+  前端构建工具
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="python" class="dropdown-title"><span class="title">python</span> <span class="arrow down"></span></button> <button type="button" aria-label="python" class="mobile-dropdown-title"><span class="title">python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/40_python/10_python/20_环境准备.html" class="nav-link">
+  python基础
+</a></li><li class="dropdown-item"><h4>
+          Django笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/50_Django/10_参考文档.html" class="nav-link">
+  Django
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/60_RestFramework/10_参考文档.html" class="nav-link">
+  RestFramework
+</a></li></ul></li><li class="dropdown-item"><h4>
+          爬虫笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/10_sqlite/10_参考文档.html" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/20_mysql/10_参考文档.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/30_mongodb/10_参考文档.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/40_redis/10_参考文档.html" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/50_postgreSQL/10_参考文档.html" class="nav-link">
+  PostgreSQL
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.yulinvo.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mySite
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mkNote_pages/03_ENG/" class="nav-link">
+  ENG
+</a></div><div class="nav-item"><a href="/mkNote_pages/05_历史/" class="nav-link">
+  历史
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Base技能" class="dropdown-title"><span class="title">Base技能</span> <span class="arrow down"></span></button> <button type="button" aria-label="Base技能" class="mobile-dropdown-title"><span class="title">Base技能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/10_公网笔记资源/10_筆記資源.html" class="nav-link">
+  公网笔记资源
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/50_git/10_参考文档.html" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/10_base基础技能/1000_其他/" class="nav-link">
+  vscode、mk...
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/10_Linux/10_参考文档.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/50_nginx/10_参考文档.html" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/90_docker/10_参考文档.html" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/100_ansible/10_参考文档.html" class="nav-link">
+  Ansible
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/20_运维/150_k8s/10_参考文档.html" class="nav-link">
+  K8S
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web前端" class="dropdown-title"><span class="title">web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="web前端" class="mobile-dropdown-title"><span class="title">web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/10_HTML5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/20_CSS3/" class="nav-link">
+  CSS3
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/30_web前端/25_UI库/" class="nav-link">
+  UI 库
+</a></li><li class="dropdown-item"><h4>
+          JavaScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/30_JavaScript/" class="nav-link">
+  JS
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/40_ES规范/" class="nav-link">
+  ES规范
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/60_vue2/60_vue_CLI脚手架.html" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/70_Vue3+TS快速上手/00_课程介绍.html" class="nav-link">
+  Vue3.x + TS快速上手
+</a></li></ul></li><li class="dropdown-item"><h4>
+          构建工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/30_web前端/100_构建工具类/" class="nav-link">
+  前端构建工具
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="python" class="dropdown-title"><span class="title">python</span> <span class="arrow down"></span></button> <button type="button" aria-label="python" class="mobile-dropdown-title"><span class="title">python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/40_python/10_python/20_环境准备.html" class="nav-link">
+  python基础
+</a></li><li class="dropdown-item"><h4>
+          Django笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/50_Django/10_参考文档.html" class="nav-link">
+  Django
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/60_RestFramework/10_参考文档.html" class="nav-link">
+  RestFramework
+</a></li></ul></li><li class="dropdown-item"><h4>
+          爬虫笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/mkNote_pages/40_python/90_爬虫/10_参考文档.html" class="nav-link">
+  框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/10_sqlite/10_参考文档.html" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/20_mysql/10_参考文档.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/30_mongodb/10_参考文档.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/40_redis/10_参考文档.html" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/mkNote_pages/50_DB数据库/50_postgreSQL/10_参考文档.html" class="nav-link">
+  PostgreSQL
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.yulinvo.cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  mySite
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/mkNote_pages/40_python/10_python/10_参考文档.html" class="sidebar-link">参考文档</a></li><li><a href="/mkNote_pages/40_python/10_python/20_环境准备.html" class="sidebar-link">环境准备</a></li><li><a href="/mkNote_pages/40_python/10_python/40_pip.html" class="sidebar-link">pip</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基础数据类型</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/mkNote_pages/40_python/10_python/60_基础.html" class="sidebar-link">基础</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>常用模块</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/mkNote_pages/40_python/10_python/80_模块、包.html" class="sidebar-link">模块、包</a></li><li><a href="/mkNote_pages/40_python/10_python/90_文件操作.html" class="sidebar-link">文件操作</a></li><li><a href="/mkNote_pages/40_python/10_python/100_函数.html" class="sidebar-link">函数</a></li><li><a href="/mkNote_pages/40_python/10_python/110_闭包.html" class="sidebar-link">闭包</a></li><li><a href="/mkNote_pages/40_python/10_python/120_装饰器.html" class="sidebar-link">装饰器</a></li><li><a href="/mkNote_pages/40_python/10_python/130_迭代器.html" class="sidebar-link">迭代器</a></li><li><a href="/mkNote_pages/40_python/10_python/140_生成器.html" class="sidebar-link">生成器</a></li><li><a href="/mkNote_pages/40_python/10_python/150_class.html" class="sidebar-link">class</a></li><li><a href="/mkNote_pages/40_python/10_python/160_异常处理.html" class="sidebar-link">异常处理</a></li><li><a href="/mkNote_pages/40_python/10_python/170_进程、线程.html" class="sidebar-link">进程、线程</a></li><li><a href="/mkNote_pages/40_python/10_python/180_Socket编程.html" class="sidebar-link">Socket编程</a></li><li><a href="/mkNote_pages/40_python/10_python/190_队列.html" class="sidebar-link">队列</a></li><li><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html" class="active sidebar-link">python脚本练习</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#发送邮件" class="sidebar-link">发送邮件</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#get-进程id" class="sidebar-link">get 进程id</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#计算50个子线程全部执行完需要的时间" class="sidebar-link">计算50个子线程全部执行完需要的时间</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#红绿灯模拟" class="sidebar-link">红绿灯模拟</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#sockserver" class="sidebar-link">sockserver</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#socket-编程" class="sidebar-link">socket 编程</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#模拟进度条" class="sidebar-link">模拟进度条</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#生成4位包含字母的动态验证码" class="sidebar-link">生成4位包含字母的动态验证码</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#冒泡排序法" class="sidebar-link">冒泡排序法</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#列表旋转90度" class="sidebar-link">列表旋转90度</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#yield练习" class="sidebar-link">yield练习</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#使用yield实现单线程中的异步并发效果" class="sidebar-link">使用yield实现单线程中的异步并发效果</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#str的format方法-args-kwargs" class="sidebar-link">str的format方法（args,*kwargs）</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#深拷贝与浅拷贝" class="sidebar-link">深拷贝与浅拷贝</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#寻找差异" class="sidebar-link">寻找差异</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#菲波那切数列" class="sidebar-link">菲波那切数列</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#dict字典练习" class="sidebar-link">dict字典练习</a></li><li class="sidebar-sub-header"><a href="/mkNote_pages/40_python/10_python/200_python脚本练习.html#编写登录接口" class="sidebar-link">编写登录接口</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="发送邮件"><a href="#发送邮件" class="header-anchor">#</a> 发送邮件</h2> <div class="language- extra-class"><pre class="language-text"><code>#coding:utf-8
+import  smtplib
+from  email.mime.text import  MIMEText
+from email.utils import formataddr
+
+def mail():
+    ret=True
+    try:
+        msg=MIMEText('邮件内容','plain','utf-8')
+        msg['From'] = formataddr(['邮箱标识','zhangwanit@163.com'])
+        msg['To'] = formataddr(['雨林','729100483@qq.com'])
+        msg['Subject'] = '邮件主题'
+
+        server = smtplib.SMTP('smtp.163.com',25)
+        server.login('zhangwanit@163.com','zhangwanit163')
+        server.sendmail('zhangwanit@163.com',['729100483@qq.com','zhangwanit@163.com'],msg.as_string())
+        server.quit()
+    except Exception:
+        ret=False
+    return ret
+
+ret=mail()
+if ret:
+    print '发送成功'
+else:
+    print '发送失败'
+
+
+******************************************************************************************************************************************************
+******************************************************************************************************************************************************
+******************************************************************************************************************************************************
+
+
+#coding:utf-8
+import  smtplib
+from  email.mime.text import  MIMEText
+from email.utils import formataddr
+
+def mail(user1,user2,mailtext):               #形参
+    ret=True
+    try:
+        msg=MIMEText(mailtext,'plain','utf-8')
+        msg['From'] = formataddr(['邮箱标识','zhangwanit@163.com'])
+        msg['To'] = formataddr(['雨林','729100483@qq.com'])
+        msg['Subject'] = '邮件主题'
+
+        server = smtplib.SMTP('smtp.163.com',25)
+        server.login('zhangwanit@163.com','zhangwanit163')
+        server.sendmail('zhangwanit@163.com',[user1,user2],msg.as_string())               #此处虽然有两个接受者，但是是单独发的，在收件人里彼此看不到
+        server.quit()
+    except Exception:
+        ret=False
+    return ret
+
+ret=mail('729100483@qq.com','shanhuifu1222@163.com','这是邮件正文')          #实参
+if ret:
+    print '发送成功'
+else:
+    print '发送失败'
+</code></pre></div><h2 id="get-进程id"><a href="#get-进程id" class="header-anchor">#</a> get 进程id</h2> <div class="language- extra-class"><pre class="language-text"><code>__author__ = &quot;Alex Li&quot;
+from multiprocessing import Process
+import os
+def info(title):
+    print(title)
+    print('module name:', __name__)
+    print('parent process:', os.getppid())
+    print('process id:', os.getpid())
+    print(&quot;\n\n&quot;)
+def f(name):
+    info('\033[31;1mcalled from child process function f\033[0m')
+    print('hello', name)
+if __name__ == '__main__':
+    info('\033[32;1mmain process line\033[0m')
+    p = Process(target=f, args=('bob',))
+    p.start()
+    # p.join()
+</code></pre></div><h2 id="计算50个子线程全部执行完需要的时间"><a href="#计算50个子线程全部执行完需要的时间" class="header-anchor">#</a> 计算50个子线程全部执行完需要的时间</h2> <div class="language- extra-class"><pre class="language-text"><code>#coding:utf-8
+import threading,time
+def run(n):
+    print 'task',n
+    time.sleep(2)
+    print 'task_done',n
+start_time = time.time()
+t_obj= []
+for i in  range(50):
+    t = threading.Thread(target=run,args=('t-%s' %i,))
+  t.setDaemon(True) #将当前线程设置为守护线程，一定要在start之前设置    守护线程的意思是当主线程结束后，子线程也强制结束了，效果是加上这句后fun函数里的print 'task_done',不会执行了
+    t.start()                   #子线程执行完run函数后就退出了，不会一直挂着
+#t.join()               #此时t是最后的i为49的时候的t，为什么t能从for循环传递出来呢？？？  原因：函数执行完变量就释放了，但此处是循环不是函数，执行完后变量不会释放
+    t_obj.append(t)
+print 't_onj:' ,t_obj
+for t in t_obj:
+    t.join()             #子线程没有执行完之前，主线程会卡住；在此处的意思是50个子线程全部执行完后，才执行主线程后面的代码
+print 'cost:',time.time() - start_time ,threading.current_thread(),threading.active_count()         #这里不会得到所有子进程执行完函数run后一共用了多少时间，得到的是启动完所有子线程用的时间，线程和子线程之间是独立的，threading.current_thread()为当前进程所在位置（主线程会提示_MainThread(MainThread），threading.active_count()是统计当前活跃的进程个数
+</code></pre></div><h2 id="红绿灯模拟"><a href="#红绿灯模拟" class="header-anchor">#</a> 红绿灯模拟</h2> <div class="language- extra-class"><pre class="language-text"><code>#coding:utf-8
+import  threading,time
+event = threading.Event()
+def lighter():
+    count = 0
+    event.set()         #先设置绿灯
+    while True:
+        if count &gt; 5 and count &lt; 10:        #改为红灯
+            event.clear()                    #把标志位清了
+            print '\033[41;1m red light is on...\033[0m'
+        elif count &gt; 10:
+            event.set()                      #变绿灯
+            count = 0
+        else:
+            print '\033[42;1m green light is on...\033[0m'
+        time.sleep(1)
+        count += 1
+def car(name):
+    while True:
+        if event.is_set():          #代表绿灯，
+            print '[%s] running...'%name
+            time.sleep(1)
+        else:
+            print '[%s] sees red light ,waiting...'% name
+            event.wait()
+            print '\033[34;1m [%s] green light is on,start going... \033[0m'% name
+light = threading.Thread(target=lighter,)
+light.start()
+
+car1 = threading.Thread(target=car,args=('Tesla'),)
+car1.start()
+</code></pre></div><h2 id="sockserver"><a href="#sockserver" class="header-anchor">#</a> sockserver</h2> <p><strong>server端</strong></p> <div class="language- extra-class"><pre class="language-text"><code>#coding:utf-8
+import SocketServer,socket
+class MyTCPHandle(SocketServer.BaseRequestHandler):
+    def handle(self):                       #跟客户端所有的交互过程都是handle函数处理的
+        while True:
+            try:
+                self.data = self.request.recv(1024).strip()       # self.request：客户端每一个请求过来都会MyTCPHandle实例化; 客户端不传递数据 recv就在这等着，等待时默认是阻塞的
+                print '{} wrote:'.format(self.client_address[0])            # self.client_address[0] 客户端的ip地址
+                print self.data
+                if not self.data:                   #客户端不是不传了，不传了会阻塞在self.request.recv(1024).strip，没有阻塞又收到的数据是空 表示断开了
+                    print '客户端已断开'
+                    break                           # break这个实例就被释放了
+                self.request.sendall(str(self.data.upper()))   # sendall重复调用send，此处也可以使用send
+            except Exception as e:
+                print 'err:',e
+                break
+if __name__ == '__main__':
+    HOST,PORT = 'localhost',9999
+    server = SocketServer.TCPServer((HOST,PORT),MyTCPHandle)
+    # server = SocketServer.ThreadingTCPServer((HOST,PORT),MyTCPHandle)                #多线程
+    # server = SocketServer.ForkingTCPServer((HOST,PORT),MyTCPHandle)             #多进程（winodws上有点问题，linux上没问题）
+    server.serve_forever()                         # 这个可以同时处理多个请求，多线程？？？
+</code></pre></div><p><strong>client端</strong></p> <div class="language- extra-class"><pre class="language-text"><code>#coding:utf-8
+import socket
+client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+client.connect(('localhost',9999))
+while True:
+    cmd = raw_input('&gt;&gt;&gt;:')
+    if len(cmd) == 0: continue
+    client.send(str(cmd))
+    data = client.recv(1024)
+    print data
+client.close()
+</code></pre></div><h2 id="socket-编程"><a href="#socket-编程" class="header-anchor">#</a> socket 编程</h2> <p><strong>server 端</strong></p> <div class="language- extra-class"><pre class="language-text"><code>#coding:utf-8
+import socket,os
+server = socket.socket()
+server.bind(('localhost',9999))
+server.listen(5)
+
+while True:
+conn,addr = server.accept()
+print 'New Conn :',addr
+while True:
+print '等待新指令'
+data = conn.recv(1024)
+if not data:
+print '客户端已断开'
+break
+print '执行指令：',data
+cmd_res = os.popen(data.decode()).read()
+print 'before send :',len(cmd_res)
+if len(cmd_res) == 0:
+cmd_res = 'cmd has no output...'
+conn.send( str(len(cmd_res.encode())).encode('utf-8') )
+#time.sleep(0.5)                #防止粘包，上下的2个send因为是立即执行，（缓存区没满的时候）会被当成一个包发送过去
+client_ack = conn.recv(1024)                  #防止粘包的解决方法，等待客户端确认
+conn.send(cmd_res.encode('utf-8'))
+print 'send done'
+
+server.close()
+</code></pre></div><p><strong>client 端</strong></p> <div class="language- extra-class"><pre class="language-text"><code>#coding:utf-8
+import socket
+client = socket.socket()
+client.connect(('localhost',9999))
+
+while True:
+cmd = raw_input('&gt;&gt;&gt;:').strip()
+if len(cmd) == 0:continue
+client.send(cmd.encode('utf-8'))
+cmd_res_size = client.recv(1024)
+print '命令结果大小：',cmd_res_size
+client.send('准备好接收数据'.encode('utf-8'))
+
+received_size = 0
+received_data = b''
+while received_size &lt; int(cmd_res_size.decode()):
+data = client.recv(1024)
+received_size += len(data)
+received_data += data
+else:
+print 'cmd res received done ...',received_size
+print received_data.decode()
+client.close()
+
+</code></pre></div><h2 id="模拟进度条"><a href="#模拟进度条" class="header-anchor">#</a> 模拟进度条</h2> <div class="language- extra-class"><pre class="language-text"><code>import  sys
+import time
+
+for i in range(10):
+    sys.stdout.write('#')
+    sys.stdout.flush()              #新版本的好像不用这条命令也可以，老版本的好像是全部写到内存后在一次行输出到前端
+    time.sleep(0.5)
+</code></pre></div><h2 id="生成4位包含字母的动态验证码"><a href="#生成4位包含字母的动态验证码" class="header-anchor">#</a> 生成4位包含字母的动态验证码</h2> <div class="language- extra-class"><pre class="language-text"><code>import  random
+checkcode=''
+for i in range(4):
+    current=random.randrange(0,4)
+    if current != i:
+        temp=chr(random.randint(65,90))
+    else:
+        temp=random.randint(0,9)
+    checkcode += str(temp)
+print checkcode
+</code></pre></div><h2 id="冒泡排序法"><a href="#冒泡排序法" class="header-anchor">#</a> 冒泡排序法</h2> <div class="language- extra-class"><pre class="language-text"><code>data=[10,4,33,21,54,3,8,11,5,22,2,1,17,13,6]
+
+i=0
+tmp=''
+while i &lt; len(data)-1:
+    j=i+1
+    while  j&lt;len(data):
+        if data[i] &gt;data[j]:
+            tmp=data[i]
+            data[i]=data[j]
+            data[j]=tmp
+        j += 1
+    i += 1
+print data
+</code></pre></div><h2 id="列表旋转90度"><a href="#列表旋转90度" class="header-anchor">#</a> 列表旋转90度</h2> <div class="language- extra-class"><pre class="language-text"><code>a= [[i for i in range(4)] for j in range(4)]
+print len(a)
+for i in range(len(a)):
+    b=[a[i][i] for row in range(4)]
+    print b
+</code></pre></div><h2 id="yield练习"><a href="#yield练习" class="header-anchor">#</a> yield练习</h2> <p>简单的模拟ATM过程（每次固定取出100元）</p> <div class="language- extra-class"><pre class="language-text"><code>def cash_money(amount):
+    while amount &gt; 0:
+        amount -= 100
+        yield 100               #执行到yield程序就中断执行了，100是执行atm.next()时返回100,接收值通过别人的send方法
+        print '又来取钱了！'
+
+atm=cash_money(500)     #atm是一个生成器，
+print type(atm)          #输出结果：&lt;type 'generator'&gt; ,而type(cash_money)只是一个普通函数&lt;type 'function'&gt;
+print atm.next()         #实际环境中好像不太常用print next这种吧，感觉没什么用：1，需要上面yield返回  2，返回固定的值
+print atm.next()
+print atm.next()
+print '出去看电影！'     #实现异步,保存函数执行过程中的中断状态,随便跳出、跳入上面的while循环
+print atm.next()
+print atm.next()
+</code></pre></div><p>手工指定每次取出多少</p> <div class="language- extra-class"><pre class="language-text"><code>#coding:utf-8
+import  time
+
+def cash_money(amount):
+    zonghe=0
+    while amount-zonghe &gt; 0:
+        duoshao = yield
+        # amount -= 100
+        zonghe += duoshao
+        print 'quchu %s yuan ,shengyu %s'% (duoshao,amount-zonghe)
+
+atm=cash_money(1000)
+atm.next()
+# atm.next()
+
+atm.send(100)
+atm.send(200)
+atm.send(300)
+atm.send(50)
+</code></pre></div><h2 id="使用yield实现单线程中的异步并发效果"><a href="#使用yield实现单线程中的异步并发效果" class="header-anchor">#</a> 使用yield实现单线程中的异步并发效果</h2> <div class="language- extra-class"><pre class="language-text"><code>#coding:utf-8
+import  time
+def consumer(name):
+    print '%s 准备吃包子了!' %name
+    while True:                    #为什么需要一个死循环？？？
+        baozi = yield 100          #实际没有100，但是加上100 如果不执行print c1.next()或是c2.next()看不出区别来
+        print '包子【%s】来了，被【%s】吃了！'%(baozi,name)     #不加()提示TypeError: not enough arguments for format string
+
+def produce(name):
+    c1=consumer('A')
+    c2=consumer('B')
+    c1.next()
+    c2.next()
+    c1.next()
+    c2.next()
+    print &quot;老子开始准备做包子了！&quot;
+    for i in range(3):
+        time.sleep(1)
+        print &quot;做了2个包子！&quot;
+        c1.send(i)               #不光是next()可以中断，send()也可以中断
+        c2.send(i)
+
+produce('alex ')
+</code></pre></div><h2 id="str的format方法-args-kwargs"><a href="#str的format方法-args-kwargs" class="header-anchor">#</a> str的format方法（*args,**kwargs）</h2> <div class="language- extra-class"><pre class="language-text"><code>name='{0} is {1} years old!'
+
+xx=['tom',19]
+
+
+print name.format(xx)     #会提示错误IndexError: tuple index out of range，原因是['tom',19]作为tuple的一个参数
+print name.format(*xx)     #
+
+
+
+name='{0} is {1} years old!'
+xx=['tom',19]
+#print name.format('tom',19)          #按照顺序赋值给{0}，{1}
+print name.format(*xx)
+
+
+name='{name} is {age} old!'          #传递字典的时候，此处不能使用0、1，要使用key
+d={'name':'jim','age':19}
+print name.format(**d)
+# print name.format(name='jim',age='19')      #这个有点类似指定参数赋值
+</code></pre></div><h2 id="深拷贝与浅拷贝"><a href="#深拷贝与浅拷贝" class="header-anchor">#</a> 深拷贝与浅拷贝</h2> <p>现有dic模板如下（里面有很多数据，此处只列出3条），有5K台设备使用此模板</p> <p>需求：现有一批新设备，cpu的监控项为50，因监控项太多，需要直接copy原来模板，源模板不能改变</p> <p>dic={</p> <p>'cpu':[80,],</p> <p>'mem':[80,],</p> <p>'disk':[80,]</p> <p>}</p> <div class="language- extra-class"><pre class="language-text"><code>import copy
+
+dic={
+    'cpu':[80,],
+    'mem':[80,],
+    'disk':[80,]
+}
+print &quot;before&quot;,dic
+# dic_new=copy.copy(dic)          #浅拷贝后修改dic_new源模板也变了
+dic_new=copy.deepcopy(dic)          #深拷贝后修改dic_new源模板不变
+dic_new['cpu'][0]=50
+print dic
+print dic_new
+</code></pre></div><h2 id="寻找差异"><a href="#寻找差异" class="header-anchor">#</a> 寻找差异</h2> <p>数据库中原有：
+old_dict={
+'#1':{'hostname':'c1','cpu_count':2,'mem_capicity':80},
+'#2':{'hostname':'c1','cpu_count':2,'mem_capicity':80},
+'#3':{'hostname':'c1','cpu_count':2,'mem_capicity':80}
+}
+new_dict={
+'#1':{'hostname':'c1','cpu_count':2,'mem_capicity':800},
+'#3':{'hostname':'c1','cpu_count':2,'mem_capicity':80},
+'#4':{'hostname':'c1','cpu_count':2,'mem_capicity':80}
+}</p> <p>代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>修改old_dict中的值，使其和最新的保持一致：
+old_dict={
+    '#1':{'hostname':'c1','cpu_count':2,'mem_capicity':80},
+    '#2':{'hostname':'c1','cpu_count':2,'mem_capicity':80},
+    '#3':{'hostname':'c1','cpu_count':2,'mem_capicity':80}
+}
+new_dict={
+    '#1':{'hostname':'c1','cpu_count':2,'mem_capicity':800},
+    '#3':{'hostname':'c1','cpu_count':2,'mem_capicity':80},
+    '#4':{'hostname':'c1','cpu_count':2,'mem_capicity':80}
+}
+old_keys= set(old_dict.keys())
+new_keys=set(new_dict.keys())
+
+update_set=old_keys.intersection(new_keys)
+delete_set=old_keys.symmetric_difference(update_set)
+add_set=new_keys.symmetric_difference(update_set)
+for i in update_set:
+    old_dict[i]=new_dict[i]
+for i in delete_set:
+    old_dict.pop(i)
+for i in add_set:
+    old_dict[i]=new_dict[i]
+print old_dict
+
+
+
+如果要做精细的判断，大致思路如下：
+print old_dict['#1'].keys()
+old_dict['#1']['mem_capicity'] == new_dict['#1']['mem_capicity']
+</code></pre></div><h2 id="菲波那切数列"><a href="#菲波那切数列" class="header-anchor">#</a> 菲波那切数列</h2> <p>菲波那切数列：</p> <p>0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368 75025 121393</p> <div class="language- extra-class"><pre class="language-text"><code>#coding:utf-8
+
+def func(arg1,arg2):
+    if arg1==0:
+        print  arg1,arg2,
+    arg3=arg1+arg2
+    print  arg3,
+    if arg3 &lt;= 100000:     #不加会报错，超出递归的范围
+        func(arg2,arg3)
+
+func(0,1)
+</code></pre></div><h2 id="dict字典练习"><a href="#dict字典练习" class="header-anchor">#</a> dict字典练习</h2> <p>需求：将[11,22,33,44,55,66,77,99,90] 元素大于66的放到字典的k2中，小于66的放到字典的k1中</p> <div class="language- extra-class"><pre class="language-text"><code>方法一：
+dic={}
+list=[11,22,33,44,55,66,77,99,90]
+list1=[]
+list2=[]
+for i in list:
+    if i &lt;=66:
+        list1.append(i)
+    else:
+        list2.append(i)
+#更新列表的方法一
+# dic.update({'k1':list1})
+# dic.update({'k2':list2})
+
+#更新列表的方法二
+# dic.setdefault('k1',list1)
+# dic.setdefault('k2',list2)
+
+#更新列表的方法三L
+# dic['k1']=list1
+# dic['k2']=list2
+print dic
+
+方法二：
+dic={}
+list=[11,22,33,44,55,66,77,99,90]
+for i in list:
+    if i &lt;= 66:
+        if 'k1' in dic.keys():
+            dic['k1'].append(i)
+        else:
+            dic['k1']=[i]
+    else:
+        if 'k2' in dic.keys():
+            dic['k2'].append(i)
+        else:
+            dic['k2']=[i]
+print dic
+</code></pre></div><h2 id="编写登录接口"><a href="#编写登录接口" class="header-anchor">#</a> 编写登录接口</h2> <p>编写登录接口:</p> <ul><li>输入用户名、密码</li> <li>认证成功后显示欢迎信息</li> <li>输错三次后锁定</li></ul> <div class="language- extra-class"><pre class="language-text"><code>#coding:utf-8
+
+retry_count=0
+retry_limit=3
+retry_dict={}
+while True:
+    username=raw_input('pls input your account&gt;&gt;&gt;').strip()
+    if len(username)==0:
+        print 'username should not be empty！'
+        continue
+    password=raw_input('password&gt;&gt;&gt;').strip()
+
+    account_flag = False
+    with open('account_lock','r') as f:
+        for line in  f.readlines():
+            if username == line.strip():
+                print 'Your account has been locked!'
+                account_flag=True
+                break      #此处如果使用exit呢？
+    if account_flag:
+        break
+
+    account={}
+    with open('accounts') as f:
+        for line in  f.readlines():
+            user,passwd=line.strip().split()
+            account[user]=passwd
+    if username in account.keys():
+        if password == account[username]:
+            print 'login success!'
+            print 'Welcome  %s Login To The Computer!'% username
+            break
+    else:
+        retry_dict[username] = retry_count
+        if retry_count &lt; retry_limit and retry_dict[username] &lt; 3 :
+            print 'username or password is wrong!'
+            print &quot;retry_count=&quot;,retry_count
+            retry_count += 1
+        else:
+            print 'too mach times,quit now!'
+            break
+        if  retry_dict[username] &gt;= 2:
+            with open('account_lock','a') as f:
+                f.write(username)
+                f.write('\n')          #可以合并为f.write(username+'\n')
+                print 'Your account has been locked!'
+                break
+    print retry_dict
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mkNote_pages/40_python/10_python/190_队列.html" class="prev">
+        队列
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/mkNote_pages/assets/js/app.85220451.js" defer></script><script src="/mkNote_pages/assets/js/2.2defd20b.js" defer></script><script src="/mkNote_pages/assets/js/132.faab3688.js" defer></script>
+  </body>
+</html>
