@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git视频一 | yulinvo的笔记小屋</title>
+    <meta name="description" content="Just playing around.">
+    <link rel="stylesheet" href="/mkNote_pages/assets/style.8dbfb5c2.css">
+    <link rel="modulepreload" href="/mkNote_pages/assets/app.8608f89d.js">
+    <link rel="modulepreload" href="/mkNote_pages/assets/10_base基础技能_50_git_git.md.87297e63.lean.js">
+    
+    <script id="check-dark-light">(()=>{const e=localStorage.getItem("vitepress-theme-appearance"),a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-ca9ccb7e><!--[--><!--]--><!--[--><span tabindex="-1" data-v-151f2593></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-151f2593> Skip to content </a><!--]--><!----><header class="VPNav" data-v-ca9ccb7e data-v-a71a30f1><div class="VPNavBar has-sidebar" data-v-a71a30f1 data-v-a35e6f52><div class="container" data-v-a35e6f52><div class="VPNavBarTitle has-sidebar" data-v-a35e6f52 data-v-d5925166><a class="title" href="/mkNote_pages/" data-v-d5925166><!--[--><!--]--><!----><!--[-->yulinvo的笔记小屋<!--]--><!--[--><!--]--></a></div><div class="content" data-v-a35e6f52><!--[--><!--]--><!----><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-a35e6f52 data-v-f83db6ba><span id="main-nav-aria-label" class="visually-hidden" data-v-f83db6ba>Main Navigation</span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/mkNote_pages/03_ENG/" data-v-f83db6ba data-v-47a2263e data-v-3c355974><!--[-->ENG<!--]--><!----></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/mkNote_pages/05_历史/" data-v-f83db6ba data-v-47a2263e data-v-3c355974><!--[-->历史<!--]--><!----></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-f83db6ba data-v-6ffb57d3><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-6ffb57d3><span class="text" data-v-6ffb57d3><!----> Base技能 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="text-icon" data-v-6ffb57d3><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z"></path></svg></span></button><div class="menu" data-v-6ffb57d3><div class="VPMenu" data-v-6ffb57d3 data-v-1c5d0cfc><div class="items" data-v-1c5d0cfc><!--[--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/10_base%E5%9F%BA%E7%A1%80%E6%8A%80%E8%83%BD/10_%E5%85%AC%E7%BD%91%E7%AC%94%E8%AE%B0%E8%B5%84%E6%BA%90/10_%E7%AD%86%E8%A8%98%E8%B3%87%E6%BA%90.html" data-v-e8e0fb1d data-v-3c355974><!--[-->公网笔记资源<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/10_base%E5%9F%BA%E7%A1%80%E6%8A%80%E8%83%BD/50_git/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->git<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/10_base基础技能/1000_其他/" data-v-e8e0fb1d data-v-3c355974><!--[-->vscode、mk...<!--]--><!----></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-f83db6ba data-v-6ffb57d3><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-6ffb57d3><span class="text" data-v-6ffb57d3><!----> 运维 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="text-icon" data-v-6ffb57d3><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z"></path></svg></span></button><div class="menu" data-v-6ffb57d3><div class="VPMenu" data-v-6ffb57d3 data-v-1c5d0cfc><div class="items" data-v-1c5d0cfc><!--[--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/20_%E8%BF%90%E7%BB%B4/10_Linux/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->Linux<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/20_%E8%BF%90%E7%BB%B4/50_nginx/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->Nginx<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/20_%E8%BF%90%E7%BB%B4/90_docker/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->Docker<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/20_%E8%BF%90%E7%BB%B4/100_ansible/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->Ansible<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/20_%E8%BF%90%E7%BB%B4/150_k8s/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->K8S<!--]--><!----></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-f83db6ba data-v-6ffb57d3><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-6ffb57d3><span class="text" data-v-6ffb57d3><!----> web前端 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="text-icon" data-v-6ffb57d3><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z"></path></svg></span></button><div class="menu" data-v-6ffb57d3><div class="VPMenu" data-v-6ffb57d3 data-v-1c5d0cfc><div class="items" data-v-1c5d0cfc><!--[--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/30_web前端/10_HTML5/" data-v-e8e0fb1d data-v-3c355974><!--[-->Html5<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/30_web前端/20_CSS3/" data-v-e8e0fb1d data-v-3c355974><!--[-->CSS3<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/30_web前端/25_UI库/" data-v-e8e0fb1d data-v-3c355974><!--[-->UI 库<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuGroup" data-v-1c5d0cfc data-v-9ca52130><!----><!--[--><!--[--><div class="VPMenuLink" data-v-9ca52130 data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/30_web前端/30_JavaScript/" data-v-e8e0fb1d data-v-3c355974><!--[-->JavaScript<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-9ca52130 data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/30_web前端/40_ES规范/" data-v-e8e0fb1d data-v-3c355974><!--[-->ES规范<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-9ca52130 data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/30_web前端/50_常用JS库/" data-v-e8e0fb1d data-v-3c355974><!--[-->常用JS库<!--]--><!----></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-1c5d0cfc data-v-9ca52130><!----><!--[--><!--[--><div class="VPMenuLink" data-v-9ca52130 data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/30_web%E5%89%8D%E7%AB%AF/60_vue2/60_vue_CLI%E8%84%9A%E6%89%8B%E6%9E%B6.html" data-v-e8e0fb1d data-v-3c355974><!--[-->Vue2.x<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-9ca52130 data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/30_web前端/70_Vue3_TS快速上手/00_课程介绍.html" data-v-e8e0fb1d data-v-3c355974><!--[-->Vue3.x + TS快速上手<!--]--><!----></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-1c5d0cfc data-v-9ca52130><!----><!--[--><!--[--><div class="VPMenuLink" data-v-9ca52130 data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/30_web前端/100_构建工具类/" data-v-e8e0fb1d data-v-3c355974><!--[-->前端构建工具<!--]--><!----></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-f83db6ba data-v-6ffb57d3><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-6ffb57d3><span class="text" data-v-6ffb57d3><!----> python <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="text-icon" data-v-6ffb57d3><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z"></path></svg></span></button><div class="menu" data-v-6ffb57d3><div class="VPMenu" data-v-6ffb57d3 data-v-1c5d0cfc><div class="items" data-v-1c5d0cfc><!--[--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/40_python/10_python/20_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87.html" data-v-e8e0fb1d data-v-3c355974><!--[-->python基础<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuGroup" data-v-1c5d0cfc data-v-9ca52130><!----><!--[--><!--[--><div class="VPMenuLink" data-v-9ca52130 data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/40_python/50_Django/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->Django<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-9ca52130 data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/40_python/60_RestFramework/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->RestFramework<!--]--><!----></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-1c5d0cfc data-v-9ca52130><p class="title" data-v-9ca52130>爬虫</p><!--[--><!--[--><div class="VPMenuLink" data-v-9ca52130 data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/40_python/90_%E7%88%AC%E8%99%AB/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->基础<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-9ca52130 data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/40_python/90_%E7%88%AC%E8%99%AB/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->框架<!--]--><!----></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-f83db6ba data-v-6ffb57d3><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-6ffb57d3><span class="text" data-v-6ffb57d3><!----> 数据库 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="text-icon" data-v-6ffb57d3><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z"></path></svg></span></button><div class="menu" data-v-6ffb57d3><div class="VPMenu" data-v-6ffb57d3 data-v-1c5d0cfc><div class="items" data-v-1c5d0cfc><!--[--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/50_DB%E6%95%B0%E6%8D%AE%E5%BA%93/10_sqlite/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->SQLite<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/50_DB%E6%95%B0%E6%8D%AE%E5%BA%93/20_mysql/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->MySql<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/50_DB%E6%95%B0%E6%8D%AE%E5%BA%93/30_mongodb/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->MongoDB<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/50_DB%E6%95%B0%E6%8D%AE%E5%BA%93/40_redis/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->Redis<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-1c5d0cfc data-v-e8e0fb1d><a class="VPLink link" href="/mkNote_pages/50_DB%E6%95%B0%E6%8D%AE%E5%BA%93/50_postgreSQL/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-e8e0fb1d data-v-3c355974><!--[-->PostgreSQL<!--]--><!----></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="https://www.yulinvo.cn" target="_blank" rel="noreferrer" data-v-f83db6ba data-v-47a2263e data-v-3c355974><!--[-->mySite<!--]--><!----></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-a35e6f52 data-v-a3e7452b><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" aria-label="toggle dark mode" data-v-a3e7452b data-v-968780f1 data-v-086e8519><span class="check" data-v-086e8519><span class="icon" data-v-086e8519><!--[--><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="sun" data-v-968780f1><path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"></path><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"></path><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"></path><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"></path><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"></path><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"></path><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"></path><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="moon" data-v-968780f1><path d="M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z"></path></svg><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-a35e6f52 data-v-738bef5a data-v-f6988cfb><!--[--><a class="VPSocialLink" href="https://github.com/vuejs/vitepress" target="_blank" rel="noopener" data-v-f6988cfb data-v-e57698f6><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a><a class="VPSocialLink" href="..." target="_blank" rel="noopener" data-v-f6988cfb data-v-e57698f6><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a><a class="VPSocialLink" href="..." target="_blank" rel="noopener" data-v-f6988cfb data-v-e57698f6><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Dribbble</title><path d="M12...6.38z"/></svg></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-a35e6f52 data-v-e89b88d7 data-v-6ffb57d3><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-6ffb57d3><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="icon" data-v-6ffb57d3><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="5" cy="12" r="2"></circle></svg></button><div class="menu" data-v-6ffb57d3><div class="VPMenu" data-v-6ffb57d3 data-v-1c5d0cfc><!----><!--[--><!--[--><!----><div class="group" data-v-e89b88d7><div class="item appearance" data-v-e89b88d7><p class="label" data-v-e89b88d7>Appearance</p><div class="appearance-action" data-v-e89b88d7><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" aria-label="toggle dark mode" data-v-e89b88d7 data-v-968780f1 data-v-086e8519><span class="check" data-v-086e8519><span class="icon" data-v-086e8519><!--[--><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="sun" data-v-968780f1><path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"></path><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"></path><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"></path><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"></path><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"></path><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"></path><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"></path><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="moon" data-v-968780f1><path d="M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z"></path></svg><!--]--></span></span></button></div></div></div><div class="group" data-v-e89b88d7><div class="item social-links" data-v-e89b88d7><div class="VPSocialLinks social-links-list" data-v-e89b88d7 data-v-f6988cfb><!--[--><a class="VPSocialLink" href="https://github.com/vuejs/vitepress" target="_blank" rel="noopener" data-v-f6988cfb data-v-e57698f6><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a><a class="VPSocialLink" href="..." target="_blank" rel="noopener" data-v-f6988cfb data-v-e57698f6><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a><a class="VPSocialLink" href="..." target="_blank" rel="noopener" data-v-f6988cfb data-v-e57698f6><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Dribbble</title><path d="M12...6.38z"/></svg></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-a35e6f52 data-v-e5dd9c1c><span class="container" data-v-e5dd9c1c><span class="top" data-v-e5dd9c1c></span><span class="middle" data-v-e5dd9c1c></span><span class="bottom" data-v-e5dd9c1c></span></span></button></div></div></div><!----></header><div class="VPLocalNav" data-v-ca9ccb7e data-v-aac27d5e><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-aac27d5e><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="menu-icon" data-v-aac27d5e><path d="M17,11H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,11,17,11z"></path><path d="M21,7H3C2.4,7,2,6.6,2,6s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,7,21,7z"></path><path d="M21,15H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,15,21,15z"></path><path d="M17,19H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,19,17,19z"></path></svg><span class="menu-text" data-v-aac27d5e>Menu</span></button><a class="top-link" href="#" data-v-aac27d5e> Return to top </a></div><aside class="VPSidebar" data-v-ca9ccb7e data-v-f332cb62><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-f332cb62><span class="visually-hidden" id="sidebar-aria-label" data-v-f332cb62> Sidebar Navigation </span><!--[--><div class="group" data-v-f332cb62><section class="VPSidebarGroup" data-v-f332cb62 data-v-2976c796><!----><div class="items" data-v-2976c796><!--[--><a class="VPLink link link" href="/mkNote_pages/10_base%E5%9F%BA%E7%A1%80%E6%8A%80%E8%83%BD/50_git/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-2976c796 data-v-f7e544fc data-v-3c355974><!--[--><span class="link-text" data-v-f7e544fc>参考文档</span><!----><!--]--><!----></a><a class="VPLink link link" href="/mkNote_pages/10_base%E5%9F%BA%E7%A1%80%E6%8A%80%E8%83%BD/50_git/20_%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87.html" data-v-2976c796 data-v-f7e544fc data-v-3c355974><!--[--><span class="link-text" data-v-f7e544fc>环境准备</span><!----><!--]--><!----></a><!--]--></div></section></div><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-ca9ccb7e data-v-8af69dc9><div class="VPDoc has-sidebar has-aside" data-v-8af69dc9 data-v-f0af2311><div class="container" data-v-f0af2311><div class="aside" data-v-f0af2311><div class="aside-curtain" data-v-f0af2311></div><div class="aside-container" data-v-f0af2311><div class="aside-content" data-v-f0af2311><div class="VPDocAside" data-v-f0af2311 data-v-aea49c31><!--[--><!--]--><!--[--><!--]--><div class="VPDocAsideOutline has-outline" data-v-aea49c31 data-v-e03d48a8><div class="content" data-v-e03d48a8><div class="outline-marker" data-v-e03d48a8></div><div class="outline-title" data-v-e03d48a8>On this page</div><nav aria-labelledby="doc-outline-aria-label" data-v-e03d48a8><span class="visually-hidden" id="doc-outline-aria-label" data-v-e03d48a8> Table of Contents for current page </span><ul class="root" data-v-e03d48a8><!--[--><li style="" data-v-e03d48a8><a class="outline-link" href="#git视频一" data-v-e03d48a8>git视频一</a><!----></li><li style="" data-v-e03d48a8><a class="outline-link" href="#git视频二" data-v-e03d48a8>git视频二</a><!----></li><!--]--></ul></nav></div></div><!--[--><!--]--><div class="spacer" data-v-aea49c31></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-f0af2311><div class="content-container" data-v-f0af2311><!--[--><!--]--><main class="main" data-v-f0af2311><div style="position:relative;" class="vp-doc _mkNote_pages_10_base%E5%9F%BA%E7%A1%80%E6%8A%80%E8%83%BD_50_git_git" data-v-f0af2311><div><h2 id="git视频一" tabindex="-1">git视频一 <a class="header-anchor" href="#git视频一" aria-hidden="true">#</a></h2><h3 id="参考视频" tabindex="-1">参考视频 <a class="header-anchor" href="#参考视频" aria-hidden="true">#</a></h3><p><a href="https://www.bilibili.com/video/BV1kK4y1S7H2?p=1" target="_blank" rel="noreferrer">7小时学会Git实战（完整版）通俗易懂_哔哩哔哩_bilibili</a></p><p>参考文档：<a href="https://www.cnblogs.com/cxx8181602/p/11125539.html" target="_blank" rel="noreferrer">https://www.cnblogs.com/cxx8181602/p/11125539.html</a></p><h3 id="git下载-安装" tabindex="-1">git下载/安装 <a class="header-anchor" href="#git下载-安装" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#直接在联想软件管理中心安装的Git</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="init" tabindex="-1">init <a class="header-anchor" href="#init" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#mkdir test123 &amp;&amp; git init   或者 git init test123 	</span></span>
+<span class="line"><span style="color:#A6ACCD;">.git的目录结构如下：</span></span>
+<span class="line"><span style="color:#A6ACCD;">    hooks 目录包含客户端或服务端的钩子脚本；</span></span>
+<span class="line"><span style="color:#A6ACCD;">    info 包含一个全局性排除文件</span></span>
+<span class="line"><span style="color:#A6ACCD;">    logs 保存日志信息</span></span>
+<span class="line"><span style="color:#A6ACCD;">    objects 目录存储所有数据内容；                ！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">    refs 目录存储指向数据的提交对象的指针（分支）</span></span>
+<span class="line"><span style="color:#A6ACCD;">    config 文件包含项目特有的配置选项</span></span>
+<span class="line"><span style="color:#A6ACCD;">    description 用来显示对仓库的描述信息</span></span>
+<span class="line"><span style="color:#A6ACCD;">    HEAD 文件指示目前被检出的分支</span></span>
+<span class="line"><span style="color:#A6ACCD;">    index 文件保存暂存区信息</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="head" tabindex="-1">HEAD <a class="header-anchor" href="#head" aria-hidden="true">#</a></h3><blockquote><p>HEAD指向的是本地版本库，不是本地工作区也不是暂存区！！！！！！！！！</p></blockquote><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">HEAD是一个指针，指向最新的位置   （.git/HEAD）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">$ cat HEAD</span></span>
+<span class="line"><span style="color:#A6ACCD;">	ref: refs/heads/master				#查看当前的指针位置</span></span>
+<span class="line"><span style="color:#A6ACCD;">$ cat refs/heads/master</span></span>
+<span class="line"><span style="color:#A6ACCD;">	7f271baee54799931c2672d8764fcd4382bee33d</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;">分支的本质：</span></span>
+<span class="line"><span style="color:#A6ACCD;">	refs/heads/master|test 中保存的是最近一次提交的hash值(应该是commit的hash值)</span></span>
+<span class="line"><span style="color:#A6ACCD;">	HEAD中保存的是当前的指针，指向当前所在的分支(refs/heads/master|test)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="object（-git目录下）" tabindex="-1">object（.git目录下） <a class="header-anchor" href="#object（-git目录下）" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">$ echo &#39;test content&#39; | git hash-object -w --stdin  #输出一串hash值（hash值的前面两位作为了目录名称、后面的作为了文件名）</span></span>
+<span class="line"><span style="color:#A6ACCD;">$git hash-object -w ./abc.text				#object中只是 hash--单个文件 的对应关系，并不会存储版本信息！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">$ git cat-file -p d670460b4b4aece5915caf5c68d12f560a9fe3e4            #根据hash值方向输出内容</span></span>
+<span class="line"><span style="color:#A6ACCD;">$ git cat-file -t d670460b4b4aece5915caf5c68d12f560a9fe3e4            #hash值存储的类型</span></span>
+<span class="line"><span style="color:#A6ACCD;">#git cat-file -t  ${refs/heads/master}	#查看类型；将变量的值改为master文件中的hash值即可</span></span>
+<span class="line"><span style="color:#A6ACCD;">#git cat-file -p  ${refs/heads/master}	#查看内容</span></span>
+<span class="line"><span style="color:#A6ACCD;">git对象：	key:value 组成的键值对（key是val对应的hash，即上面的d67xx:&#39;test content&#39; ）</span></span>
+<span class="line"><span style="color:#A6ACCD;">		键值对在git内部是一个blob类型</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">树对象：     #git update-index 【往暂存区添加一条记录存到.git/index】/ git write-tree【生成树对象存到.git/objects】</span></span>
+<span class="line"><span style="color:#A6ACCD;">提交对象：   #git commit-tree treehash【生成树对象存到.git/objects】</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git ls-files [-s]	#查看暂存区中的文件，-s显示详细信息</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#09 探秘</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">refs中包含了几项：heads/tags/remotes</span></span>
+<span class="line"><span style="color:#A6ACCD;">	所以删除远程tag可以： git push origin :refs/tags/3.0 但是修改远程分支名称却不能用这种方法(refs/for/dev不存在)</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;">refs/heads/[master|dev] 存放的是commitID		#07:55</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git cat-file -t ${refs/heads/master}	#是一个commit类型</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git cat-file -t ${refs/tags/v1.0}		#是一个tag类型,refs/tags/v1.0中存放的是一个commitID提交信息</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git cat-file -p ${refs/tags/v1.0}	#查看存放的内容，是一个object</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;">objects：				#11.00</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">	commit</span></span>
+<span class="line"><span style="color:#A6ACCD;">	tree		#这个可以理解为文件夹</span></span>
+<span class="line"><span style="color:#A6ACCD;">	blob</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#P10 commit、tree、blob三个对象之间的关系</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">一个commit对应一个tree</span></span>
+<span class="line"><span style="color:#A6ACCD;">blob跟文件名没有关系</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#P11 数一数tree的个数</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">创建单文件夹，文件夹中创建单文件，add然后commit查看objects中数据的变化：</span></span>
+<span class="line"><span style="color:#A6ACCD;">	1，创建文件夹doc，因为文件夹中没有文件，git不会去探测</span></span>
+<span class="line"><span style="color:#A6ACCD;">	2，文件夹中创建readme文件，文件里面输入内容&quot;hello world&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;">	3，文件只要加入到暂存区 git就会创建blob</span></span>
+<span class="line"><span style="color:#A6ACCD;">	4，commit之后objects中会有4个文件：</span></span>
+<span class="line"><span style="color:#A6ACCD;">		- blob文件，内容为&quot;hello world&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;">		- tree文件，内容为doc			key：doc  value：hash值</span></span>
+<span class="line"><span style="color:#A6ACCD;">		- tree文件，内容为blob		key：readme	value：hash值</span></span>
+<span class="line"><span style="color:#A6ACCD;">		- commit文件，</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="基础命令" tabindex="-1">基础命令 <a class="header-anchor" href="#基础命令" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git add 		#提交到暂存区		 #P07 05.00</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#add后，之后每次修改都需要重新add，如果不想保存更改信息，需要git restore &lt;file&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#文件add之前是红色的,add之后是绿色的，表示已经纳入到git的环境中了（这个也是比较合理的，被管理的是绿色，没有被管理的是红色）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git commit			#提交到版本库		#P07 	05.05</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git log				#在合并分支之前，master上是看不到dev分支上的commit记录的</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git reset --hard commitID					#回滚		#P07 13.25</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#回滚后git log只能查看到当前，截至到当前之后的就看不到了</span></span>
+<span class="line"><span style="color:#A6ACCD;">git reflog		#日志信息，不受回滚的影响			#P07 20.00</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h4 id="删除文件并提交" tabindex="-1">删除文件并提交 <a class="header-anchor" href="#删除文件并提交" aria-hidden="true">#</a></h4><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">1,rm -f abc.txt</span></span>
+<span class="line"><span style="color:#A6ACCD;">2,git add ./</span></span>
+<span class="line"><span style="color:#A6ACCD;">2,git commit -m &#39;xx&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#上面的步骤合并为两步：git rm abc.txt aaa.txt; git commit -m &#39;xx&#39;       #git rm相当于是合并了步骤1、步骤2</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#abc.txt/aaa.txt要曾经add过</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h4 id="rename文件并提交" tabindex="-1">rename文件并提交 <a class="header-anchor" href="#rename文件并提交" aria-hidden="true">#</a></h4><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">1,mv  abc.txt   aaa.txt</span></span>
+<span class="line"><span style="color:#A6ACCD;">2,git add ./</span></span>
+<span class="line"><span style="color:#A6ACCD;">2,git commit -m &#39;xx&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;">#上面的步骤合并为两步：git mv abc.txt 123; git commit -m &#39;xx&#39;               #git mv相当于是合并了步骤1、步骤2</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#abc.txt要曾经add过</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="commit" tabindex="-1">commit <a class="header-anchor" href="#commit" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git commit -s 										添加用户签名信息</span></span>
+<span class="line"><span style="color:#A6ACCD;">git commit --amend 							修改上次提交</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git commit					#不加-m，再弹出的vim中输入注释信息也是一样的（需要先add文件）</span></span>
+<span class="line"><span style="color:#A6ACCD;">git commit -a 		#跳过使用暂存区域，前提是必须是已经跟踪过的文件(曾经add过的文件)，直接在弹出的窗口编辑commit信息</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#-am提交注释时，&quot;a&quot;一定要写在&quot;m&quot;的前面</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git rebase -i commitID		#删除提交记录，交互框中选择&quot;d&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h4 id="commit、branch、tag之间的关系" tabindex="-1">commit、branch、tag之间的关系 <a class="header-anchor" href="#commit、branch、tag之间的关系" aria-hidden="true">#</a></h4><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">1，master分支创建master01文件，add &amp;&amp; commit后打上tag：master01_tag</span></span>
+<span class="line"><span style="color:#A6ACCD;">2，devr分支创建dev01文件，add &amp;&amp; commit后打上tag: dev01_tag</span></span>
+<span class="line"><span style="color:#A6ACCD;">3，master分支创建master02文件，add &amp;&amp; commit后打上tag：master02_tag</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">测试：</span></span>
+<span class="line"><span style="color:#A6ACCD;">	- 此时在master分支上： git reset --hard dev01_tag，发现：master分支上只有master01和dev01两个文件，并不是master01和master02两个文件（即：此时将master分支文件还原到了dev01_tag的状态），然后git ll查看(HEAD -&gt; master)指向了dev01_tag的commit提交【即在同一行:  0ab0aaf (HEAD -&gt; master, tag: dev01_tag) add dev01 file】</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">结论：</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#commitID保存就是当前文件夹下的所有内容，和分支没有关系，就是提交的时候文件夹下的所有内容！！！！！！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#接上，即此commitID就是一个文件快照（比如此时有5个文件，那这个commitID就是对应了这5个文件）！！！！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h4 id="git-log-oneline-all-graph历史" tabindex="-1">git log --oneline --all --graph历史 <a class="header-anchor" href="#git-log-oneline-all-graph历史" aria-hidden="true">#</a></h4><ul><li><p>当有提交没有merge时git ll查看</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#没有merge时查看，6c48e4b是没有向上合并的线路的，相当于是基于7f271ba创建了新分支，新分支上做了两次提交但是没有合并</span></span>
+<span class="line"><span style="color:#A6ACCD;">    * 9bb2f81 comm 4.0</span></span>
+<span class="line"><span style="color:#A6ACCD;">    | * 6c48e4b (tag: 5.0, origin/zjh, origin/dev, origin/ddz, ddz) comm 5.0  #注意此处没有向上合并的线路</span></span>
+<span class="line"><span style="color:#A6ACCD;">    | * ef31ce1 (tag: 4.4, tag: 4.0) comm 4.0</span></span>
+<span class="line"><span style="color:#A6ACCD;">    |/</span></span>
+<span class="line"><span style="color:#A6ACCD;">    * 7f271ba (origin/master, origin/HEAD, master) dev 3.0		#图示在此处创建了两个分支！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#此时git cat-file -p 9bb2f81发现只有一个parent  ！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>当有提交merge之后git ll查看</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">merge合并后查看，d977e19是有向上合并的线路，相当于基于91f9389创建了新分支，新分支上做了两次提交，并提交合并了</span></span>
+<span class="line"><span style="color:#A6ACCD;">    *   93df1f9 v11</span></span>
+<span class="line"><span style="color:#A6ACCD;">    |\</span></span>
+<span class="line"><span style="color:#A6ACCD;">    | * d977e19 03commit</span></span>
+<span class="line"><span style="color:#A6ACCD;">    * | 4b7b32a v11</span></span>
+<span class="line"><span style="color:#A6ACCD;">    |/</span></span>
+<span class="line"><span style="color:#A6ACCD;">    * 91f9389 my site 2.0					#图示在此处创建了两个分支！！！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">        </span></span>
+<span class="line"><span style="color:#A6ACCD;">#此时git cat-file -p 93df1f9发现有2个parent	！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li></ul><h3 id="工作区、暂存区、本地版本库" tabindex="-1">工作区、暂存区、本地版本库 <a class="header-anchor" href="#工作区、暂存区、本地版本库" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#P08 03.00开始							#重复观看</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#工作区、暂存区、版本库之间的关系！！！！！！！！！		#P08 02.20</span></span>
+<span class="line"><span style="color:#A6ACCD;">git reset --soft 版本号		#回滚到暂存区！！！		#commit后的内容reset返回的时候，都有使用【版本号】来回滚</span></span>
+<span class="line"><span style="color:#A6ACCD;">git reset --hard 版本号		#从版本库回到工作区</span></span>
+<span class="line"><span style="color:#A6ACCD;">git reset --mix 版本号			#从版本库回到红色的工作区（文件没有被add时的状态、新文件或有变动文件时的状态）</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#不带参数的话(soft/hard/mix都不带)默认就是mixed</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#https://www.bilibili.com/video/BV1BE411g7SV/?spm_id_from=trigger_reload  	#09:00</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git reset HEAD	&lt;files&gt;			#将暂存区回滚到未追踪时的工作区(文件状态由：绿色变为红色)</span></span>
+<span class="line"><span style="color:#A6ACCD;">#测试：git reset a4a11e5会将index.html回退到暂存区，此时在git reset --hard commitID会：1回退到对应的版本，2清空暂存区</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git checkout  -- &lt;files&gt;	  #这个和git restor类似(应该是新版本中使用git restor，老版本中使用git checkout？？？)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="reset" tabindex="-1">reset <a class="header-anchor" href="#reset" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#git reset --hard			#如果commitID缺省应该是HEAD</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="设置alias别名" tabindex="-1">设置alias别名 <a class="header-anchor" href="#设置alias别名" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git config --local alias.ll &#39;log  --graph --pretty=format:&quot;%h %s&quot; --oneline&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;">git config --local alias.ll &#39;log  --graph --pretty=format:&quot;%h %s&quot; --oneline --decorate --all&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;">git config --local alias.mc &#39;commit -m&#39;		#&#39;commit -m &#39;后面有空格的时候使用别名会报错</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">如果后面只有一个单词的就可以不加引号，比如git config --global alias.st  stuts</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><ul><li><p>删除alias别名</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">$ git config --unset alias.ll				#删除alias别名，默认操作的是--local下的</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li></ul><h3 id="branch" tabindex="-1">branch <a class="header-anchor" href="#branch" aria-hidden="true">#</a></h3><blockquote><p><strong>git branch -h #查看帮助命令 ！！！！！！！！！！！</strong></p></blockquote><ul><li><p>增</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git branch 新分支名 [基准分支/标签/commit]				 #新建一个本地分支</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>删</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git branch -d bug								#删除bug分支（当分支有内容未合并时，使用-D强制删除）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">删除远程分支</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git push origin --delete serverfix		#删除远程分支（远程serverfix分支下有无文件都可以删除）</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git remote prune origin --dry-run		</span></span>
+<span class="line"><span style="color:#A6ACCD;">		#列出仍在远程跟踪但是远程已被删除的无用分支（远程分支以被删除，远程跟踪分支还存在的）</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git remote prune origin					#接上， 清除上面命令列出来的远程跟踪</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>改</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;"># git branch -m v1.0  v2.0					#修改本地分支名称</span></span>
+<span class="line"><span style="color:#A6ACCD;"># git branch -M main						#将master分支改名为main分支（在master分支上执行）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">如何修改远程分支名呢？ </span></span>
+<span class="line"><span style="color:#A6ACCD;">	还是说将本地分支名称修改push后，远程的名称也自动改了？（这种方式测试过不行，远端会同时保留新、旧两个分支）</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git push  origin  dev:refs/for/dev123	#不生效，什么都不会改变，远端既没有新建dev分支(如果没有)更没有重命名</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git push  origin  dev:dev123			#不是将dev名称改为dev123，而是在远端新建一个分支dev123</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>查</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">每一个名称的分支都有两个，一个是本地，一个是远程，因为代码可能会推送到多个远程仓库，所以remotes/不同的仓库名/远程分支名：</span></span>
+<span class="line"><span style="color:#A6ACCD;">    master</span></span>
+<span class="line"><span style="color:#A6ACCD;">    dev</span></span>
+<span class="line"><span style="color:#A6ACCD;">    remotes/origin/master</span></span>
+<span class="line"><span style="color:#A6ACCD;">    remotes/origin/dev</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git branch -av</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git branch  [-r/-a]								   #查看本地分支，-r远程分支，-a所有分支</span></span>
+<span class="line"><span style="color:#A6ACCD;">git branch -v										#可以查看每一个分支的最后一次提交</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git branch –-merged				#查看哪些分支已经合并到当前分支;在这个列表中分支名字前没有 * 号的分支通常可以使用;</span></span>
+<span class="line"><span style="color:#A6ACCD;">git branch --no-merged			#查看所有包含未合并工作的分支;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li></ul><h4 id="master分支" tabindex="-1">master分支 <a class="header-anchor" href="#master分支" aria-hidden="true">#</a></h4><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">master分支也可以被删除（在其他分支上执行）		#master也只是指向了一次commit提交对象而已</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#删除master分支：git branch -d master</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#创建master分支：git checkout -b master 82843a4</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h4 id="主分支如何确定" tabindex="-1">主分支如何确定 <a class="header-anchor" href="#主分支如何确定" aria-hidden="true">#</a></h4><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">首先开宗明义：主分支跟master/dev是没有关系的，只跟commit提交历史有关系，所谓的branch分支都是在此提交历史上做的分叉</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">1. git init 并add &amp;&amp; commit后会有一个commitID，此时这个提交就是根（通常是master分支，原因见下面一行）</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#因为commit之后才会有master分支，所以没法在提交之前删除master分支，所以第一次提交通常是在master分支下</span></span>
+<span class="line"><span style="color:#A6ACCD;">2，如果在根的基础上创建dev分支，git ll查看就分叉了，是基于第一次提交去做的分叉</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p><strong>问题：</strong></p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#如何查看分支是基于哪个分支创建的，如果有10个分支，怎么查看他们之间的依赖关系呢？？？  #git log可以看到类似下面的解构：</span></span>
+<span class="line"><span style="color:#A6ACCD;">	commit02 (HEAD -&gt; dev)</span></span>
+<span class="line"><span style="color:#A6ACCD;">	commit01</span></span>
+<span class="line"><span style="color:#A6ACCD;">    ${baseCommit00} (master)</span></span>
+<span class="line"><span style="color:#A6ACCD;">    #说明当前的dev分支是在master分支的${baseCommit00}提交基础上，做了两次提交commit01和commit02</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p><strong>git ll上能看到分叉的条件</strong></p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#不涉及master分支，是在dev分支上操作，master上原理相同</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">1，dev上切出去一个分支test，在test上创建文件并提交</span></span>
+<span class="line"><span style="color:#A6ACCD;">2，在dev分支上创建文件并提交，使得当前dev的状态和创建test分支时状态不同</span></span>
+<span class="line"><span style="color:#A6ACCD;">3，在dev分支上执行：git merge test，然后执行git ll 查看就有分叉了</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="分离头指针" tabindex="-1">分离头指针 <a class="header-anchor" href="#分离头指针" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">分离头指针：即工作在没有分支的情况下（HEAD没有指向具体的分支）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git checkout CommitID</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">分离头指针有利的使用场景：如果只是想做一些尝试性的变更，如果效果不好的话就随手丢弃了</span></span>
+<span class="line"><span style="color:#A6ACCD;">	1，git checkout CommitID修改文件后add &amp;&amp; commit提交，是能够提交成功的</span></span>
+<span class="line"><span style="color:#A6ACCD;">	2，查看git log查看HEAD并没有绑定分支（commitID -- HEAD）！！！！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">	3，git checkout master 此时会有提示信息，提示如果想用的话新建一个分支</span></span>
+<span class="line"><span style="color:#A6ACCD;">	4，使用gitk --all查看并没有步骤一中对应的commit信息</span></span>
+<span class="line"><span style="color:#A6ACCD;">	5，按照步骤三中的提示创建一个新的分支，此时操作就保留了下来了</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;">	问题：如何确实不需要保留修改，git会如何处理？ 要怎么验证被丢弃掉了呢</span></span>
+<span class="line"><span style="color:#A6ACCD;">		#步骤1或3 提示消息的commitID不会被记录，提示消息消失后，commitID就找不到了</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#注意分离头指针只是没有对应的分支，HEAD是有值的(git ll查看能看到)，所以依然可以执行git reset HEAD之类的回退动作</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="进一步理解head和branch" tabindex="-1">进一步理解HEAD和branch <a class="header-anchor" href="#进一步理解head和branch" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">比较相邻的两个commit之间有什么差异：			#04.30</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git diff commitID1 commitID2</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git diff HEAD HEAD^</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git diff HEAD HEAD~1</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git diff HEAD HEAD^1</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git diff HEAD HEAD^^			#这个应该是指全局的吧(git log --all)</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git diff HEAD HEAD^1^1</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">测试：git ll &amp;&amp; git checkout HEAD^ 	查看commit提交记录在git ll历史的移动！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#一：只在主线上（git ll左侧的主线，而不是master分支的主线）回退。  主线：纯粹是以commit记录先后为准，跟分支没关系！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#二：接上，主线上dev分支可以在master前面</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#三：有分叉的时候（即有两个parent时），git checkout HEAD^时好像只会回退到左侧主线上的版本，不会回退到右侧分叉的版本!?</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="gitk" tabindex="-1">gitk <a class="header-anchor" href="#gitk" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">分支删除前先看下分支的树形结构：			#02.00</span></span>
+<span class="line"><span style="color:#A6ACCD;">	gitk --all		#绿色的是分支（可以看到多个分支对应同一个commit），&lt;开头的是tag</span></span>
+<span class="line"><span style="color:#A6ACCD;">		#commit &lt;-- tag/branch		#是branch对应commit！！！！！！！！！！！！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">注意gitk 查看完整的分支树：view的定制--new views -- 选中&quot;All refs&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="checkout" tabindex="-1">checkout <a class="header-anchor" href="#checkout" aria-hidden="true">#</a></h3><blockquote><p>git checkout dev 切换分支实际上等效与执行 git reset --hard dev（或者dev对应的commit）</p></blockquote><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git checkout 分支名：									#检出到指定分支</span></span>
+<span class="line"><span style="color:#A6ACCD;">git checkout -b 新分支名 [已有分支名称/标签/commit]：			#新建并检出分支</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#git checkout -b feature origin/feature</span></span>
+<span class="line"><span style="color:#A6ACCD;">#git checkout -t origin/feature          #作用同上，使用-t参数，它默认会在本地建立一个和远程分支名字一样的分支</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">最佳实践：每次切换分支前，当前分支一定要是干净的（git status中没有暂存的内容，没有红色的也没有绿色的内容）！！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">一个坑：</span></span>
+<span class="line"><span style="color:#A6ACCD;">	1,在分支中新建一个c.txt，未跟踪(没有add)此时切到master分支，发现master分支也能看到c.txt了(污染了主分支，此时如果切回到master分支，删除新建的分支，文件就被保留到master分支上了，master分支就被彻底污染了)</span></span>
+<span class="line"><span style="color:#A6ACCD;">		#add了没有commit也是一样</span></span>
+<span class="line"><span style="color:#A6ACCD;">		#切换会分支将c.txt重新commit之后，master也正常了</span></span>
+<span class="line"><span style="color:#A6ACCD;">	2，上面的情况是初始化的时候，不是初始化的情况：当c.txt文件被commit过后，再次修改c.txt时，没有commit之前是强制不允许切换到master分支的</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="log" tabindex="-1">log <a class="header-anchor" href="#log" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">--online :			单行显示；	 -数字：显示最近几条记录</span></span>
+<span class="line"><span style="color:#A6ACCD;">-- 文件名：			查看指定文件的修改记录</span></span>
+<span class="line"><span style="color:#A6ACCD;">-p：					显示代码变动；--stat：显示文件变动概要（文件名，修改行数等）</span></span>
+<span class="line"><span style="color:#A6ACCD;">--reverse			#逆向显示日志信息（最先提交的在最前面）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git log --all			#查看所有分支的commit历史</span></span>
+<span class="line"><span style="color:#A6ACCD;">git log -n4 			#查看最近的4次提交记录</span></span>
+<span class="line"><span style="color:#A6ACCD;">git log -4 				#好像也可以</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git log --oneline --all --graph		#这个也不能查看最新分支之后的提交，也是需要git reflog来查看！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="gitk图形界面查看log版本历史" tabindex="-1">gitk图形界面查看log版本历史 <a class="header-anchor" href="#gitk图形界面查看log版本历史" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">gitk			#git bash界面直接输入gitk会弹出图形界面</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#弹出的界面上点击tag不会触发下方的sha1 ID变化，点击branch或commit注释信息会触发</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">Committer提交者和author不同的情况：			#02.30</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#版本穿梭的时候会不一致</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">查看完整的分支树：view的定制--new views -- 选中&quot;All refs&quot;，命名为view01，可以在view中直接选中view01（没有关闭界面的情况下）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="diff" tabindex="-1">Diff <a class="header-anchor" href="#diff" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#diff比较的好像是当前的状态和版本库中的文件区别</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">--文件名：		查看指定文件的修改记录</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#git diff</span></span>
+<span class="line"><span style="color:#A6ACCD;">#git diff  HEAD -- hello.py			#查看工作区和版本库里面最新版本的区别</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="merge" tabindex="-1">Merge <a class="header-anchor" href="#merge" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git merge bug			#P11 08.40			#merge提交时会弹出一个新的窗口，用来输入合并的commit信息</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git merge dev			#分支之间冲突的时候如何处理			 #P11 12.45</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#vim ${冲突文件}		手动逐行修改</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#解决冲突后，git add &amp;&amp; git commit</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">===============================================</span></span>
+<span class="line"><span style="color:#A6ACCD;">文件名称冲突： </span></span>
+<span class="line"><span style="color:#A6ACCD;">	现象：git merge origin/js报错（在master分支上执行）：CONFLICT (rename/delete): 网页左侧列表--未完成/temp.css renamed to 01二级菜单--未完成/temp.css in origin/js, but deleted in HEAD.</span></span>
+<span class="line"><span style="color:#A6ACCD;">	处理方法：</span></span>
+<span class="line"><span style="color:#A6ACCD;">	总结：注意此处的分支名为【(master|MERGING)】，是一种中间态的，实际上js分支上的内容已经全部合并过来了，此状态包含两个分支上的所有的文件，所以在此处去解决冲突（改名、vim修改文件冲突内容等）！！！！！！！！！！！！！！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="tag" tabindex="-1">tag <a class="header-anchor" href="#tag" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#P23  11.10</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git push origin --tags						#这个为啥不需要指定分支名称呢？？？</span></span>
+<span class="line"><span style="color:#A6ACCD;">git push origin v1.0 						#推送某个tag</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><ul><li><p>增</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git tag v1.4  [commitHash]  [-m &#39;tag message xxx&#39;]				#如果不指定commitHash，默认当前HEAD</span></span>
+<span class="line"><span style="color:#A6ACCD;">git tag -a v1.4								#-a可以添加一些注释信息</span></span>
+<span class="line"><span style="color:#A6ACCD;">git tag -a v1 -m &quot;第一版&quot;  &amp;&amp; git log		#使用当前的HEAD的commitID,使用git log可以看到commit上多了一个tag信息</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>删</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git tag -d v1.4</span></span>
+<span class="line"><span style="color:#A6ACCD;">git push origin  :refs/tags/v1.4	#删除远程代码仓库里的tag（实际上是本地的[空标签]推送到远端的v1.4，相当于删除）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>改</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">如何修改远程仓库中tag的名称？</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>查</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git tag										#列出所有的tag</span></span>
+<span class="line"><span style="color:#A6ACCD;">git tag -l &#39;v1.8.5*’						#列出所有以v1.8.5开头的版本</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">查看特定标签（这个用的好像不多）</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git show tagname		#git show 可以显示任意类型的对象（git 对象 树对象 提交对象 tag 对象）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">查看当前状态在哪个tag上：git log --oneline (git tag好像没有类似的查看命令)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>检出标签</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git checkout v1.0     #只执行这个会有头部分离的警告(因为HEAD没有指向分支)，还要使用下面的命令检出分支</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git checkout -b version2	#为啥要新建，添加tag后就只能检出新分支不能切换到对应的分支么？？？</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>遇见的一个问题</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">1.0/2.0/3.0三个tag标签，远程和本地都是3.0的状态，此时发现有问题需要【将master分支】退回到2.0版本，此时git reset --hard 2.0后发现git push无法推送，感觉tag和dev分支好像不太一样，tag只针对master么？？？</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li></ul><h3 id="clone" tabindex="-1">clone <a class="header-anchor" href="#clone" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git clone git@xxx.git abc12111			#abc12111是clone后的新名称</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git clone https:xx / git@github.xx		#注意：同样是public的仓库，https克隆不需要认证，ssh地址需要认证，为啥？？？</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><ul><li>git clone下来的代码只显示master一个分支，其实是已经全部拉下来了，不需要额外处理 #P14 15.10</li></ul><h3 id="remote" tabindex="-1">remote <a class="header-anchor" href="#remote" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git remote rm origin //删除关联对应的远程仓库地址		#git remote remove origin</span></span>
+<span class="line"><span style="color:#A6ACCD;">git remote get-url origin //查看远程仓库地址</span></span>
+<span class="line"><span style="color:#A6ACCD;">git remote set-url origin https://github.com/developers-youcong/Metronic_Template.git		//修改remote地址</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="push" tabindex="-1">push <a class="header-anchor" href="#push" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git push origin 本地分支名:refs/for/远程分支名</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#git push -f origin master:gh-pages		#将本地的master分支推送到远端，并将远端上的该分支命名为gh-pages</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git push origin master			#将本地的master分支推送到远程仓库</span></span>
+<span class="line"><span style="color:#A6ACCD;">git push origin dev				#将本地的dev分支推送到远程仓库</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">-u:</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git push -u origin master	 	#-u可写可不写		#P14	06.50</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git	push -u origin dev			#默认是不会推送dev分支的，要另外推送下		#P14 11.30</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="pull" tabindex="-1">pull <a class="header-anchor" href="#pull" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git checkout dev &amp;&amp;	git pull origin dev		#一定要切换到dev分支之后在执行pull么？？？  #P15  07.00左右</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git pull origin dev 等同于下面两条命令：			#P16 15.40	很重要，重复观看！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git fetch origin dev		#将远程仓库代码拉到本地的版本库，而不是直接拉到工作区</span></span>
+<span class="line"><span style="color:#A6ACCD;">		#git fetch origin		#看之前的笔记应该是可以不写分支名的</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git merge origin/dev 		#将版本库的代码更新到工作区</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p><strong>pull的时候解决冲突</strong></p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#vim ${冲突文件}		#手动逐行修改，不过课件中修改后好像没有手动add &amp;&amp; commit的过程		#P16 11.50</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#解决冲突后应该也是要add &amp;&amp; commit &amp;&amp; push的</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="rebase" tabindex="-1">Rebase <a class="header-anchor" href="#rebase" aria-hidden="true">#</a></h3><blockquote><p>作用：将代码的提交记录变得简洁</p></blockquote><ul><li><p>第一种：将多个commit整合成一个提交记录</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#git rebase -i commitID(旧的提交记录)		#将从commitID到当前HEAD的合并成一个提交记录			#P17 07.00</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#-i是交互式的rebase</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;">#git rebase -i HEAD~3			#从当前开始，找最近的3条记录进行合并</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#之后还要vim进行修改合并的顺序，然后还要进行vim修改提交的commitID信息</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;">#注意：已经提交到远程仓库的代码，尽量不要进行合并（那这样的话，好像就用处不大了吧！！！）		#P17 10.55</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>git merge 后，git log查看dev分支上在master分支上的位置好像是根据时间先后顺序排列的</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#P18 07:20	此处展示的树结构</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#自己的总结：好像不管是merge还是rebase，底层的以【时间先后顺序排列】的规则是不变的，这应该是git的一个基本的规则！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">dev是rebase &amp;&amp; master上merge，此时在master上查看log也没有分叉了，用merge也可以没有分叉！！！！！！ 	 #P18 09:20</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#这个不是的，依然会产生分叉，只是这个情况比较特殊，master上内容没有更改是和dev是保持一致的，如果master有更改的话，依然是会产生分叉的！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>分支rebase合并</p><blockquote><p>git rebase的应用场景为：master分支上有更新，dev分支同步master分支的更新时，使用git rebase master（dev在master分支上的时间点已rebase的时间点为准，而不是以创建dev分支的时间点为准！！！！！！）</p></blockquote><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git log --graph																#P18 07.50</span></span>
+<span class="line"><span style="color:#A6ACCD;">git log --graph	 --pretty=format:&quot;%h %s&quot;									#P18 08.40</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#--pretty=oneline和--oneline的区别是：同样都是一行显示，--oneline输出时hash值变短了</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git checkout dev &amp;&amp; git add &amp;&amp; git commit  &amp;&amp; git rebase master 			#P18 11.00</span></span>
+<span class="line"><span style="color:#A6ACCD;">git rebase master的时候（master上代码有更新时），dev上的分支上原有的commitID也变化了(根据时间重新生成了commitID替换掉原来的commitID)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git pull 会在git log中产生分叉(git log --oneline --graph)					#P19 03.00左右</span></span>
+<span class="line"><span style="color:#A6ACCD;">git fetch  &amp;&amp; git rebase origin/dev		#这样就不会产生分叉了     			 #P19 04.00左右</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>参考文档：</p><p>#<a href="https://www.bilibili.com/video/BV1Qb411N7ay?from=search&amp;seid=16412934312561339544&amp;spm_id_from=333.337.0.0" target="_blank" rel="noreferrer">https://www.bilibili.com/video/BV1Qb411N7ay?from=search&amp;seid=16412934312561339544&amp;spm_id_from=333.337.0.0</a></p><p>#<a href="https://www.jianshu.com/p/4079284dd970" target="_blank" rel="noreferrer">https://www.jianshu.com/p/4079284dd970</a></p><p>#<a href="https://www.bilibili.com/video/BV1dp4y1v748?from=search&amp;seid=16412934312561339544&amp;spm_id_from=333.337.0.0" target="_blank" rel="noreferrer">https://www.bilibili.com/video/BV1dp4y1v748?from=search&amp;seid=16412934312561339544&amp;spm_id_from=333.337.0.0</a></p><p><strong>注意</strong></p><ol><li>在公共分支（如master分支）上尽量不要使用rebase（因为git rebase会重写提交历史），尽量在自己的分支上使用rebase，公共分支上使用merge</li></ol></li><li><p>Rebase解决冲突 #P19 06.40</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">1，手动逐个解决冲突</span></span>
+<span class="line"><span style="color:#A6ACCD;">2，git add .</span></span>
+<span class="line"><span style="color:#A6ACCD;">3, git commit or git rebase --continue</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#冲突演示：		#master和dev同时修改同一个文件				#P19 07.45</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#git checkout -m -- filename找回冲突现场</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li></ul><h3 id="stash存储" tabindex="-1">stash存储 <a class="header-anchor" href="#stash存储" aria-hidden="true">#</a></h3><blockquote><p>使用场景：需要切换分支时，当前分支上的内容没有写完不想commit提交，针对这种情况，可以使用存储</p></blockquote><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git stash 命令会将未完成的修改保存到一个栈上，而你可以在任何时候重新应用这些改动(git stash apply) #需要先add可以不commit</span></span>
+<span class="line"><span style="color:#A6ACCD;">git stash	#将当前未完成的工作存储下，此时在git status查看已经没有这些未提交的东西了(实际上相当于做了commit提交只是没有记录，使用git log --online查看没有记录)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git stash list: 				#查看存储</span></span>
+<span class="line"><span style="color:#A6ACCD;">git stash apply stash@{2}		#如果不指定一个储藏，Git 认为指定的是最近的储藏</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#git stash apply 	直接使用栈顶的元素</span></span>
+<span class="line"><span style="color:#A6ACCD;">git stash drop stash@{2} 					加上将要移除的储藏的名字来移除它</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#如果什么都不加会不会删除栈顶的元素</span></span>
+<span class="line"><span style="color:#A6ACCD;">git stash pop		#使用储藏然后立即从栈上扔掉它，这个用的比较多，相当于是git stash apply 和 drop两个功能合并了</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="beyond-compare快速解决冲突" tabindex="-1">beyond compare快速解决冲突 <a class="header-anchor" href="#beyond-compare快速解决冲突" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git中配置beyond compare 													#P20 05.00</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git config --local merge.tool bc3				#local是只在当前项目中生效			   #P20 07.50</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git config --local mergetool.path &#39;/usr/local/bin/bcomp&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    git config --local mergetool.keepBackup false			#解决冲突后不用保留源文件了</span></span>
+<span class="line"><span style="color:#A6ACCD;">git mergetool 	(在merge之后操作的，merge时提示有冲突然后启动此命令)									#P20 07.10</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="多人协同开发" tabindex="-1">多人协同开发 <a class="header-anchor" href="#多人协同开发" aria-hidden="true">#</a></h3><ul><li>gitflow工作流</li></ul><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">多人同时开发一个&quot;赌博&quot;功能的时候，创建两个分支，每个分支都是从dev分支上拆分出来的，而不是直接从master分支上拆的 	#P22 07.00~08.00要重复观看下</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">gitflow工作流</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h4 id="邀请成员" tabindex="-1">邀请成员 <a class="header-anchor" href="#邀请成员" aria-hidden="true">#</a></h4><ul><li><p>方式一：创建项目并邀请成员 #P23 04.30</p></li><li><p>方式二：先创建组织（将成员加入到该组织中），在组织中创建项目 #P23 06.20</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#一个组织中可以包含很多个仓库，同样的一个组织中也可以包含多个成员</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#注意看组织中创建好的项目路径(http://github.com/oldboy-org/xx.git)，说明这个组织名称和用户名称是同级别的	#P23 08.45</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><ul><li><p>将成员拉入到组织中 #P24 03.5</p></li><li><p>成员权限</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">默认情况下，成员权限是只读，不能提交							#P25 00.20</span></span>
+<span class="line"><span style="color:#A6ACCD;">成员权限：对组织赋权/对组织中的项目进行赋权					  #P25 01.00左右</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li></ul></li></ul><h4 id="pull-request" tabindex="-1">pull request <a class="header-anchor" href="#pull-request" aria-hidden="true">#</a></h4><ul><li><p>添加/配置 合并规则来进行代码的review（网页端配置） #P26 02.10</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">即：(git bash界面)代码merge的时候，git会自动将代码挂起，等待review之后才能继续merge</span></span>
+<span class="line"><span style="color:#A6ACCD;">#接上，好像不是，需要在web页面端提交					#P26  05.00</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>网页端合并完成后，本地的git仓库的后续操作： #P26 10.10</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">为啥git pull origin dev的时候，还需要看下当前是哪个分支？？？			#P26 10.25</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>测试上线</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">review代码时可以指定review人员									 #P27  04.10</span></span>
+<span class="line"><span style="color:#A6ACCD;">代码的review或是merge的时候，产生冲突如何处理（手动解决）				#P27  09.50</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li></ul><h3 id="给开源软件贡献代码" tabindex="-1">给开源软件贡献代码 <a class="header-anchor" href="#给开源软件贡献代码" aria-hidden="true">#</a></h3><blockquote><p>#P28</p></blockquote><ol><li><p>fork源代码</p></li><li><p>创建pull request</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">创建pull request的两个位置：</span></span>
+<span class="line"><span style="color:#A6ACCD;">	1，在分支名称的右侧可以新建</span></span>
+<span class="line"><span style="color:#A6ACCD;">	2，在&quot;代码/Issues/Pull Requests&quot;这里也可以新建</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li></ol><h3 id="git配置文件" tabindex="-1">git配置文件 <a class="header-anchor" href="#git配置文件" aria-hidden="true">#</a></h3><h4 id="local-global-system配置" tabindex="-1">local/global/system配置 <a class="header-anchor" href="#local-global-system配置" aria-hidden="true">#</a></h4><blockquote><p>#P29</p></blockquote><ul><li><p>--local #缺省默认是local ！！！ #文件存放位置：.git/config</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git config --list --local		</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#查看config的配置信息(如果不加--local这些，默认会将--local/global/system下的配置都会列出来)</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#git config  --local user.name</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>--global #文件存放位置：~/.gitconfig</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git config --list --global		#查看config的配置信息</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">设置账号信息:		</span></span>
+<span class="line"><span style="color:#A6ACCD;">	# git config --global user.email &quot;you@example.com&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;">	# git config --global user.name &quot;Your Name&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;">		#如果gloabl和local都设置了user.name、user.email，以local为准； 测试方法：git commit之后查看git log提交信息中的author中的name和email</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;">	删除账号信息：git config --global --unset user.name 			#如果不行，就把用户名也加上</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">输入用户名密码:		#就是登录gitee网页的账号密码！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">	# git push</span></span>
+<span class="line"><span style="color:#A6ACCD;">        Username for &#39;https://gitee.com&#39;: yulinvo</span></span>
+<span class="line"><span style="color:#A6ACCD;">        Password for &#39;https://yulinvo@gitee.com&#39;: xx</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#push的时候，--global中配置的user、email可以推送到github中，clone下载之后也会有；但是项目目录下配置的用户信息不会push上去，what （这是之前的笔记）？</p></li><li><p>--system #文件存放位置：/etc/gitconfig (注意：需要有root权限；gitconfig没有点，不是隐藏文件)</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git config --list --system	#查看config的配置信息</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li></ul><p>优先级（从高到低）：本地 &gt; 全局(global) &gt; 系统</p><h4 id="pageup-pagedown功能配置" tabindex="-1">pageup/pagedown功能配置 <a class="header-anchor" href="#pageup-pagedown功能配置" aria-hidden="true">#</a></h4><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">vim  /etc/inputrc	</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#文件存放位置：1，git bash中可以直接找到	2，资源管理器路径 C:\Program Files\Git\etc\inputrc</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#配置项规则		键：功能（功能关键字都是预置好的，不可修改）</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;">	32   #&quot;\e[5~&quot;: beginning-of-history            # Page up					#默认配置</span></span>
+<span class="line"><span style="color:#A6ACCD;"> 	33   #&quot;\e[6~&quot;: end-of-history                  # Page down					#默认配置</span></span>
+<span class="line"><span style="color:#A6ACCD;"> 	34   #&quot;\e[5~&quot;: previous-history                # Page up		    		#尝试修改成此配置，发现不成效</span></span>
+<span class="line"><span style="color:#A6ACCD;"> 	35   #&quot;\e[6~&quot;: next-history                    # Page down	     			#尝试修改成此配置，发现不成效</span></span>
+<span class="line"><span style="color:#A6ACCD;"> 	36   &quot;\e[5~&quot;: history-search-backward          # Page up					#修改后配置</span></span>
+<span class="line"><span style="color:#A6ACCD;"> 	37   &quot;\e[6~&quot;: history-search-forward           # Page down					#修改后配置</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h4 id="alias配置" tabindex="-1"><strong>alias配置</strong> <a class="header-anchor" href="#alias配置" aria-hidden="true">#</a></h4><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[alias]</span></span>
+<span class="line"><span style="color:#A6ACCD;">	ll = log --oneline --graph</span></span>
+<span class="line"><span style="color:#A6ACCD;">    mc = &quot;commit -m&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="git免密登陆" tabindex="-1">git免密登陆 <a class="header-anchor" href="#git免密登陆" aria-hidden="true">#</a></h3><blockquote><p>账号密码登陆的时候，密码处也可以用github端生成的token代替 ！！！！</p></blockquote><ul><li><p>方式一：URL中体现</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">https://用户名:密码@github.com/yulinvo/testProject.git</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#git remote add origin https://用户名:密码@github.com/yulinvo/testProject.git  #之后操作就不需要账号密码了</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><ul><li><p>https免密登陆</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git config --global credential.helper store</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">查看.git/config:</span></span>
+<span class="line"><span style="color:#A6ACCD;">[credential]  </span></span>
+<span class="line"><span style="color:#A6ACCD;">    helper = store</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li></ul></li><li><p>方式二：SSH实现</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">SSH Key突然失效问题解答及处理办法: https://gitee.com/help/articles/4352#article-header0</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>方式三：git自动管理凭证 #P30 09.30</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">window设置--凭据管理器--windows凭据--普通凭据--添加普通凭据：</span></span>
+<span class="line"><span style="color:#A6ACCD;">	Internet地址或网络地址：git:https://github.com</span></span>
+<span class="line"><span style="color:#A6ACCD;">	用户名：Personal Access Token			#应为是自动添加的，这个可能被隐藏了</span></span>
+<span class="line"><span style="color:#A6ACCD;">	密码：xx</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">参考地址：https://www.bilibili.com/video/BV1dq4y117CY?p=38	#03:00左右</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#另: 本节视频中邀请团队成员，可以邮件确认，也可以（在邀请成员的位置点击&quot;Copy invite link&quot;）用被邀请人的账号登录后，直接将邀请链接在浏览器中打开也会跳到邀请的界面</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#好像要win来帮忙管理凭据，需要弹出一个对话框&quot;GitHub Login&quot;，在这里输入才能帮助保存凭据；在git命令行中提示输入的用户名、密码是不会被win作为凭据来保存的</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li></ul><h3 id="gitignore忽略文件" tabindex="-1">gitignore忽略文件 <a class="header-anchor" href="#gitignore忽略文件" aria-hidden="true">#</a></h3><ul><li><p>在gitignore中的文件，git status也不再显示了 #P31 02.00左右</p></li><li><p>.gitignore文件默认是会被管理的 #P31 03.20</p></li><li><p>github上提供的gitignore文件模板： #P31 05.55</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#搜索的时候使用&#39;ALL GitHub&#39;选项</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>.gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。解决方法:</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git rm -r --cached .				#把本地缓存删除（改变成未track状态）</span></span>
+<span class="line"><span style="color:#A6ACCD;">git ls-files	#查看暂存区内容	#查看当前版本管理文件(git add之后就会出现，不管是否commit过都会出现在这里！！！)</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#git ls-files -s</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></li><li><p>规则：</p></li></ul><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">以”#”号开头表示注释；</span></span>
+<span class="line"><span style="color:#A6ACCD;">以斜杠“/”开头表示目录；</span></span>
+<span class="line"><span style="color:#A6ACCD;">以星号“*”通配多个字符；</span></span>
+<span class="line"><span style="color:#A6ACCD;">以问号“?”通配单个字符</span></span>
+<span class="line"><span style="color:#A6ACCD;">以方括号“[]”包含单个字符的匹配列表；</span></span>
+<span class="line"><span style="color:#A6ACCD;">以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">** 代表匹配多级目录							#这个好像没什么用吧，而且这个是对的么？？？</span></span>
+<span class="line"><span style="color:#A6ACCD;">匹配模式最后跟反斜杠（/）说明要忽略的是目录。		#不管在哪个层级，在根目录和子目录都忽略（好像不用写/也能表示同样意思）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">file		#忽略目录file下的全部内容；不管是根目录下的/file/目录，还是某个子目录/child/file/目录，都会被忽略。</span></span>
+<span class="line"><span style="color:#A6ACCD;">/file		#忽略根目录下的/file目录的全部内容；</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/*</span></span>
+<span class="line"><span style="color:#A6ACCD;">!.gitignore		#忽略所有文件(好像不用像正则表达式一样用.*表示所有)，但不忽略.gitignore文件。</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><ul><li>vue2创建后自动配置示例：</li></ul><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">.DS_Store</span></span>
+<span class="line"><span style="color:#A6ACCD;">node_modules</span></span>
+<span class="line"><span style="color:#A6ACCD;">/dist</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">.history</span></span>
+<span class="line"><span style="color:#A6ACCD;">*.py[cz]</span></span>
+<span class="line"><span style="color:#A6ACCD;">mysite/__pycache__/</span></span>
+<span class="line"><span style="color:#A6ACCD;">mysite/settings.py</span></span>
+<span class="line"><span style="color:#A6ACCD;">note/__pycache__/</span></span>
+<span class="line"><span style="color:#A6ACCD;">note/migrations</span></span>
+<span class="line"><span style="color:#A6ACCD;">vue-note-project/node_modules/</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"># local env files</span></span>
+<span class="line"><span style="color:#A6ACCD;">.env.local</span></span>
+<span class="line"><span style="color:#A6ACCD;">.env.*.local</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"># Log files</span></span>
+<span class="line"><span style="color:#A6ACCD;">npm-debug.log*</span></span>
+<span class="line"><span style="color:#A6ACCD;">yarn-debug.log*</span></span>
+<span class="line"><span style="color:#A6ACCD;">yarn-error.log*</span></span>
+<span class="line"><span style="color:#A6ACCD;">pnpm-debug.log*</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"># Editor directories and files</span></span>
+<span class="line"><span style="color:#A6ACCD;">.idea</span></span>
+<span class="line"><span style="color:#A6ACCD;">.vscode</span></span>
+<span class="line"><span style="color:#A6ACCD;">*.suo</span></span>
+<span class="line"><span style="color:#A6ACCD;">*.ntvs*</span></span>
+<span class="line"><span style="color:#A6ACCD;">*.njsproj</span></span>
+<span class="line"><span style="color:#A6ACCD;">*.sln</span></span>
+<span class="line"><span style="color:#A6ACCD;">*.sw?</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><ul><li><strong>note项目gitignore示例：</strong></li></ul><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">完整版：</span></span>
+<span class="line"><span style="color:#A6ACCD;">node_modules</span></span>
+<span class="line"><span style="color:#A6ACCD;">.history</span></span>
+<span class="line"><span style="color:#A6ACCD;">*.py[cz]</span></span>
+<span class="line"><span style="color:#A6ACCD;">mysite/__pycache__/</span></span>
+<span class="line"><span style="color:#A6ACCD;">mysite/settings.py</span></span>
+<span class="line"><span style="color:#A6ACCD;">note/__pycache__/</span></span>
+<span class="line"><span style="color:#A6ACCD;">note/migrations</span></span>
+<span class="line"><span style="color:#A6ACCD;">vue2_note/node_modules/</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">精简版:</span></span>
+<span class="line"><span style="color:#A6ACCD;">node_modules</span></span>
+<span class="line"><span style="color:#A6ACCD;">.history</span></span>
+<span class="line"><span style="color:#A6ACCD;">*.py[cz]</span></span>
+<span class="line"><span style="color:#A6ACCD;">__pycache__</span></span>
+<span class="line"><span style="color:#A6ACCD;">mysite/settings.py</span></span>
+<span class="line"><span style="color:#A6ACCD;">note/migrations</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="github任务管理" tabindex="-1">github任务管理 <a class="header-anchor" href="#github任务管理" aria-hidden="true">#</a></h3><blockquote><p>#P32</p></blockquote><ul><li>issues：文档及Bug管理</li><li>wiki：项目介绍，类似于Readme文档</li></ul><h3 id="refs" tabindex="-1">refs <a class="header-anchor" href="#refs" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">分支管理的命名空间，如：refs/heads/*, refs/for/refs/heads/*,refs/tags/*</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="reset和revert" tabindex="-1">Reset和Revert <a class="header-anchor" href="#reset和revert" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#两种回退方式</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">原则:Gerrit merge之前用reset , merge之后用revert</span></span>
+<span class="line"><span style="color:#A6ACCD;">git reset commit-id --hard :回退到指定commit，不留任何痕迹</span></span>
+<span class="line"><span style="color:#A6ACCD;">git reset HEAD^</span></span>
+<span class="line"><span style="color:#A6ACCD;">git reset master^^</span></span>
+<span class="line"><span style="color:#A6ACCD;">git reset HEAD~1</span></span>
+<span class="line"><span style="color:#A6ACCD;">git reset master~3</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git revert commit-id -s :回退一次提交，并自动生成一个相反的patch，需审核入库才能生效，类似gerrit上的revert按钮功能</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git revert &lt;name of bad commit&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git revert HEAD</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="clean和checkout" tabindex="-1">Clean和Checkout <a class="header-anchor" href="#clean和checkout" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#清理本地工作目录</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git clean -fd:删除所有未跟踪的文件和目录，清理临时文件利器</span></span>
+<span class="line"><span style="color:#A6ACCD;">git checkout --文件名∶把一个文件回退到原始未修改的状态</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="cherry-pick" tabindex="-1">Cherry-pick <a class="header-anchor" href="#cherry-pick" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#单个/批量合入修改</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git cherry-pick -s -x sha1		#拣选指定提交并合入当前分支</span></span>
+<span class="line"><span style="color:#A6ACCD;">	-s∶添加用户签名信息</span></span>
+<span class="line"><span style="color:#A6ACCD;">	-x∶添加原始commit shal信息，用于追溯</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">参考下：https://www.bilibili.com/video/BV1UL411V7f3?p=22	（视频不一定好，随便找的一个）</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git cherry-pick commitID		#想要对应提交的更改，但是又不想做分支的merge或rebase时</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="format-patch和apply-am" tabindex="-1">Format-patch和apply ( am ) <a class="header-anchor" href="#format-patch和apply-am" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#补丁生成和应用</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git format-path commit-id-..commit-id :</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#自动生成patch，如0001-Add-LeTV_X60_20130901_030001.xml.patch</span></span>
+<span class="line"><span style="color:#A6ACCD;">git apply patch-name :应用patch</span></span>
+<span class="line"><span style="color:#A6ACCD;">git format-patch + git apply =离线版cherry-pick</span></span>
+<span class="line"><span style="color:#A6ACCD;">git am patch-name:另一种打patch的方式，可以自动复用commit message</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h2 id="git视频二" tabindex="-1">git视频二 <a class="header-anchor" href="#git视频二" aria-hidden="true">#</a></h2><p>参考视频：<a href="https://www.bilibili.com/video/BV1fq4y1y7Rs?p=6&amp;spm_id_from=pageDriver" target="_blank" rel="noreferrer">玩转Git三剑客_哔哩哔哩_bilibili</a></p><h3 id="p16-变更commit提交信息（非最近一次）" tabindex="-1">#P16 变更commit提交信息（非最近一次） <a class="header-anchor" href="#p16-变更commit提交信息（非最近一次）" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git rebase -i commitID（这个commitID是要变更的提交信息，之前一次的提交的id，也就是前一次的）</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#里面显示的信息顺序从上到下好像是：从旧的提交--&gt;新的提交</span></span>
+<span class="line"><span style="color:#A6ACCD;">	第一行的pick 改为r，wq保存后会弹出一个交互信息框，然后编辑commit信息wq保存退出（不需要第一行有pick）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">提交commit信息变更后，commit的ID也变化了，要理解下！！！！		#05.00</span></span>
+<span class="line"><span style="color:#A6ACCD;">	tree、blob都没有变化，commit为啥会变化呢？  能想到的原因：提交的commit注释信息也是生成提交ID的一个元素</span></span>
+<span class="line"><span style="color:#A6ACCD;">	也有头部分离</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">注意：如果有tag指向提交，更改提交信息后tag也消失了（git ll查看）！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="p17-将多个连续的commit整理成1个" tabindex="-1">#P17 将多个连续的commit整理成1个 <a class="header-anchor" href="#p17-将多个连续的commit整理成1个" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git rebase -i commitID（这个commitID也是前一次的）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="p18-将多个间隔的commit整理成1个" tabindex="-1">#P18 将多个间隔的commit整理成1个 <a class="header-anchor" href="#p18-将多个间隔的commit整理成1个" aria-hidden="true">#</a></h3><blockquote><p>重复看下</p></blockquote><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">需要将commitID手动添加进去</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">实际上是手动将commit提交顺序在vim中修改(前后顺序改下)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">gitk --all会出现两棵树：注意看中间是有断点的，不是连续的		#06.00</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">将tag、branch删除后，gitk中显示的用不到的结构就会被git清理掉，要怎么做呢？		#07.00</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="p19-比较暂存区和head所含文件的差异" tabindex="-1">#P19 比较暂存区和HEAD所含文件的差异 <a class="header-anchor" href="#p19-比较暂存区和head所含文件的差异" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git diff --cached		#比较暂存区和HEAD（版本库）之间的差异，如果commitID缺省应该是HEAD</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#注意结果和git diff是不同的！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">git diff --staged 作用和git diff --cached相同</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="p20-比较工作区和暂存区所含文件的差异" tabindex="-1">#P20 比较工作区和暂存区所含文件的差异 <a class="header-anchor" href="#p20-比较工作区和暂存区所含文件的差异" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git diff							#默认情况下（什么都不写）比较的是工作区和暂存区的区别</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#文件修改后add，此时再次修改此文件先不提交，此时执行git diff才能看到区别！！！！！！！！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">git diff -- readme.md				#只比较readme.md文件的差异</span></span>
+<span class="line"><span style="color:#A6ACCD;">git diff -- readme.md	style.cc 	#比较readme.md和style.css两个文件的差异</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git diff commitID:		#比较工作区和本地版本库之间的差异  (git diff HEAD)</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#等于两条命令之和；&quot;git diff&quot; + &quot;git diff --cached&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="p21-恢复所有暂存区的内容" tabindex="-1">#P21 恢复所有暂存区的内容 <a class="header-anchor" href="#p21-恢复所有暂存区的内容" aria-hidden="true">#</a></h3><blockquote><p>使用场景：暂存区的内容都不要了，恢复成HEAD指向的内容（和git reset --hard感觉是一个意思吧？？？）</p></blockquote><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git reset HEAD    #后面不加文件名，默认恢复所有的文件</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">以为新版本的git对应的命令是&quot;git restore --staged&quot;，测试后发现不是，还是上面的命令</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="p22-恢复暂存区的文件！！！！！" tabindex="-1">#P22 恢复暂存区的文件！！！！！ <a class="header-anchor" href="#p22-恢复暂存区的文件！！！！！" aria-hidden="true">#</a></h3><blockquote><p>这一节内容不是太重要，感觉打开了一个思路，对note的尝试性的修改可以放到此处（好像也没什么用，在看下本节视频找找灵感吧）</p></blockquote><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git status根据提示命令操作即可</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git diff index.html		#不是要加--么，此处为什么可以什么都不加呢		#03.55</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#P23 取消暂存区文件修改</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git reset HEAD -- index.html		#这个也不会回退文件内容，只是取消缓存，文件内容还是以工作区为准！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">git restore --staged index.html		</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#这个只是将取消暂存文件，文件的内容不会回退！！！！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#接上，即文件add后，修改然后restore --staged 文件依然后修改后的状态！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git restore index.html		#在没有add时，使用此命令可以退回文件内容（git status会有此提示命令！！！！）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="p25-查看不同提交的指定文件的差异" tabindex="-1">#P25 查看不同提交的指定文件的差异 <a class="header-anchor" href="#p25-查看不同提交的指定文件的差异" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git diff temp master -- index.html		#注意01.51的那句话，+-都是master相对于temp分支而言的（后面的对前面的而言）</span></span>
+<span class="line"><span style="color:#A6ACCD;">git diff  xx xx -- index.html		#用commit比较（要用分支上最新的commitID），和上面一样</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#P26 删除文件</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git rest --hard HEAD	#01.30	#这个HEAD应该还是指向Commit，即本地版本库的状态，而不是当前工作区的状态！！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#P27 stash</p><p>#P28 gitignore</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">*.dsym/  加不加斜杠的区别：	 #文件夹下所有文件都不管理，但是a.dysm是需要管理的（如果*.dsym/没有斜杠，就也不会被管控了）</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="p29-git的备份" tabindex="-1">#P29 git的备份 <a class="header-anchor" href="#p29-git的备份" aria-hidden="true">#</a></h3><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git clone --bare 	/c/Users/yulinvo/Desktop/temp/git_1635399898/abc123/.git  ya.git		#03.50</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#--bare是不带工作区的</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git clone --bare 	file:///c/Users/yulinvo/Desktop/temp/git_1635399898/abc123/.git  zhineng.git</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git remote add zhineng file:///c/Users/yulinvo/Desktop/temp/git_1635399898/abc123/.git		#06.40</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#git push -u zhineng suling (当有两个remotes时，不设置-u，执行git push就不知道要往哪里push了)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#P32 创建个人仓库</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">勾选license之后（课件中勾选的是MIT License），仓库创建出来会有一个LICENSE文件</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="p33-把本地仓库同步到github" tabindex="-1">#P33 把本地仓库同步到github <a class="header-anchor" href="#p33-把本地仓库同步到github" aria-hidden="true">#</a></h3><blockquote><p>重复观看</p></blockquote><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">git push github --all 		#04.20		#此时git remote -v有两个远端（github和zhineng）	！！！！！！！！！！！！</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">gitk --all查看  	#05.40		#注意绿色的分支，远程分支也会显示</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git fetch github  master，此时在gitk --all查看又出现了一个独立的树		#手动指定远端（因为本地有两个remote）	#07.50</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">远端有文件时，在本地fetch后，git merge github/master会报错，之前遇见过这个错误，好像没有解决，只记得是个大坑：	#11.00</span></span>
+<span class="line"><span style="color:#A6ACCD;">	git merge --allow-unrelated-histories github/master</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">这一集要好好看下，主要看点：1，本地已经有git仓库了  2，github上的仓库初始化的时候有一个License文件，注意看下合并后的树的形状，git push github master之后再看下树的形状，github/master已经指向master分支了（而不是initial commit了） #13.00</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#P34 不同人修改不同文件</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">创建分支可以是有斜杠的：feature/add_git_commmands  		#01.55</span></span>
+<span class="line"><span style="color:#A6ACCD;">git clone git@xxx.git	new_name.git		#clone时可以改名  #03.50</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git checkout -b feature/add_git_commmands	origin/feature/add_git_commmands	#08.35 </span></span>
+<span class="line"><span style="color:#A6ACCD;">	#自己测试时好像不需要远端仓库名（好像自动会根据名称创建，git checkout -b feature/add_git_commmands）</span></span>
+<span class="line"><span style="color:#A6ACCD;">	#接上，git branch feature/add_git_commmands 好像是不行吧，回头测试下</span></span>
+<span class="line"><span style="color:#A6ACCD;">	</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git push 本地分支  远端分支		#关于本地分支名称、远端分支名称的关系可以再看下</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git push -f			#19.20</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#P39 禁止向集成分支执行push -f操作</p><p>#P40 禁止向集成分支执行变更历史的操作</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">公共分支禁止执行rebase变基的操作			#00.10</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">git rebase 之后不能git reset --hard xx 返回了么？？？</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#P43 github搜索技巧</p><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">in:readme</span></span>
+<span class="line"><span style="color:#A6ACCD;">stars:&gt;1000</span></span>
+<span class="line"><span style="color:#A6ACCD;">搜索代码片段</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>#P44 在github上搭建个人博客</p><p>#P46 github上的组织</p></div></div></main><!--[--><!--]--><footer class="VPDocFooter" data-v-f0af2311 data-v-a54a85bd><!----><div class="prev-next" data-v-a54a85bd><div class="pager" data-v-a54a85bd><!----></div><div class="pager" data-v-a54a85bd><a class="pager-link next" href="/mkNote_pages/10_base%E5%9F%BA%E7%A1%80%E6%8A%80%E8%83%BD/50_git/10_%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html" data-v-a54a85bd><span class="desc" data-v-a54a85bd>Next page</span><span class="title" data-v-a54a85bd>参考文档</span></a></div></div></footer><!--[--><!--]--></div></div></div></div></div><!----><!--[--><!--]--></div></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"03_eng_10_参考文档.md\":\"203fb2da\",\"03_eng_20_环境准备.md\":\"a35587b5\",\"03_eng_30_自然拼读.md\":\"c81c8817\",\"03_eng_40_音标.md\":\"dc948db2\",\"03_eng_readme.md\":\"6908ef5e\",\"03_eng_index.md\":\"b250de60\",\"05_历史_10_参考文档.md\":\"d9ed8239\",\"05_历史_20_环境准备.md\":\"6d82a7de\",\"05_历史_readme.md\":\"fbf15d04\",\"05_历史_index.md\":\"907c61ae\",\"10_base基础技能_1000_其他_10_vscode技巧.md\":\"5c973f1c\",\"10_base基础技能_1000_其他_20_markdown语法.md\":\"691f8991\",\"10_base基础技能_1000_其他_readme.md\":\"d78dd02a\",\"10_base基础技能_1000_其他_index.md\":\"4dcae79b\",\"10_base基础技能_10_公网笔记资源_10_筆記資源.md\":\"5ae3cb18\",\"10_base基础技能_10_公网笔记资源_20_环境准备.md\":\"800b527c\",\"10_base基础技能_10_公网笔记资源_readme.md\":\"4a5703b8\",\"10_base基础技能_50_git_10_参考文档.md\":\"006c8acb\",\"10_base基础技能_50_git_20_环境准备.md\":\"a21dcc77\",\"10_base基础技能_50_git_git.md\":\"87297e63\",\"10_base基础技能_50_git_gitlab.md\":\"74378979\",\"20_运维_100_ansible_01_起步.md\":\"2c23a41c\",\"20_运维_100_ansible_10_参考文档.md\":\"5c0a6141\",\"20_运维_100_ansible_20_环境准备.md\":\"c81a6352\",\"20_运维_10_linux_1000_shell_01_shell脚本练习.md\":\"0e9bdffd\",\"20_运维_10_linux_10_参考文档.md\":\"2a3b593c\",\"20_运维_10_linux_150_环境搭建_apache环境搭建.md\":\"9a0f4337\",\"20_运维_10_linux_150_环境搭建_nginx-印象笔记.md\":\"9654ba4b\",\"20_运维_10_linux_150_环境搭建_php环境搭建.md\":\"c03a3eb5\",\"20_运维_10_linux_200_常用服务搭建_centos 7安装samba服务器.md\":\"529bf67d\",\"20_运维_10_linux_200_常用服务搭建_vsftpd搭建.md\":\"8625f039\",\"20_运维_10_linux_20_环境准备.md\":\"1d16157a\",\"20_运维_10_linux_30_yum.md\":\"a0a6542e\",\"20_运维_10_linux_40_三剑客_10_grep.md\":\"bb8e62ad\",\"20_运维_10_linux_40_三剑客_20_sed.md\":\"b02a1fa4\",\"20_运维_10_linux_40_三剑客_30_awk.md\":\"2b00f3f9\",\"20_运维_10_linux_50_常用命令.md\":\"44f5b8f1\",\"20_运维_10_linux_60_工具.md\":\"9ce6f524\",\"20_运维_10_linux_70_常用配置项.md\":\"178103a7\",\"20_运维_10_linux_80_服务安装.md\":\"055bb628\",\"20_运维_10_linux_90_iptables.md\":\"bbcf0563\",\"20_运维_150_k8s_10_参考文档.md\":\"e99fa75b\",\"20_运维_150_k8s_20_环境准备.md\":\"3d506b13\",\"20_运维_50_nginx_10_参考文档.md\":\"fa637412\",\"20_运维_50_nginx_20_环境准备.md\":\"1f613a38\",\"20_运维_90_docker_10_参考文档.md\":\"958de5c0\",\"20_运维_90_docker_200_dockfile_10_dockfile.md\":\"b568e73b\",\"20_运维_90_docker_20_环境准备.md\":\"50c70ead\",\"20_运维_90_docker_aa.md\":\"55bdfb35\",\"30_web前端_100_构建工具类_10_nodejs_npm.md\":\"cbc57343\",\"30_web前端_100_构建工具类_20_vuepress_v1.x.md\":\"6a3636c3\",\"30_web前端_100_构建工具类_30_vuepress_v2.x.md\":\"d04d4149\",\"30_web前端_100_构建工具类_40_vite.md\":\"b4350b59\",\"30_web前端_100_构建工具类_50_vitepress.md\":\"f58d3e2b\",\"30_web前端_100_构建工具类_readme.md\":\"a20a5df4\",\"30_web前端_100_构建工具类_index.md\":\"1c135866\",\"30_web前端_10_html5_10_html5.md\":\"eecbb721\",\"30_web前端_10_html5_readme.md\":\"811f717b\",\"30_web前端_10_html5_index.md\":\"abc3088e\",\"30_web前端_20_css3_10_css3.md\":\"340cb851\",\"30_web前端_20_css3_readme.md\":\"8a93241c\",\"30_web前端_20_css3_index.md\":\"f620b968\",\"30_web前端_25_ui库_10_bootstrap.md\":\"c98c2fc5\",\"30_web前端_25_ui库_30_element_for_vue2.md\":\"269e6fb7\",\"30_web前端_25_ui库_40_element_for_vue3.md\":\"44607bbc\",\"30_web前端_25_ui库_readme.md\":\"021033a2\",\"30_web前端_25_ui库_index.md\":\"76725d88\",\"30_web前端_30_javascript_100_dom.md\":\"737e28bb\",\"30_web前端_30_javascript_10_参考文档.md\":\"0e1d1f35\",\"30_web前端_30_javascript_20_基础数据类型_01_number类型.md\":\"e9074b0a\",\"30_web前端_30_javascript_20_基础数据类型_02_string类型.md\":\"7cf75336\",\"30_web前端_30_javascript_20_基础数据类型_03_boolean.md\":\"dc96a810\",\"30_web前端_30_javascript_20_基础数据类型_04_undefined和null.md\":\"28f5a29a\",\"30_web前端_30_javascript_20_基础数据类型_05_null类型.md\":\"a7ba58d5\",\"30_web前端_30_javascript_20_基础数据类型_06_运算符.md\":\"d3a52978\",\"30_web前端_30_javascript_20_基础数据类型_07_list类型.md\":\"8201c749\",\"30_web前端_30_javascript_20_基础数据类型_08_obj对象.md\":\"155b31eb\",\"30_web前端_30_javascript_20_基础数据类型_readme.md\":\"8835cd04\",\"30_web前端_30_javascript_30_js通用基础.md\":\"d5e3e23a\",\"30_web前端_30_javascript_50_js内置对象.md\":\"c9e72721\",\"30_web前端_30_javascript_60_条件判断语句.md\":\"37f7bbe7\",\"30_web前端_30_javascript_70_循环语句.md\":\"6103ee6a\",\"30_web前端_30_javascript_80_函数.md\":\"ed39344e\",\"30_web前端_30_javascript_90_构造函数.md\":\"7728f3c0\",\"30_web前端_30_javascript_readme.md\":\"48f957f7\",\"30_web前端_30_javascript_index.md\":\"3bd8f796\",\"30_web前端_40_es规范_es10.md\":\"1251d69f\",\"30_web前端_40_es规范_es11.md\":\"775044a9\",\"30_web前端_40_es规范_es6.md\":\"3e473968\",\"30_web前端_40_es规范_es7.md\":\"b6c4d651\",\"30_web前端_40_es规范_es8.md\":\"a3e333db\",\"30_web前端_40_es规范_es9.md\":\"8b1d5b04\",\"30_web前端_40_es规范_readme.md\":\"7cad4df1\",\"30_web前端_40_es规范_index.md\":\"f0d37518\",\"30_web前端_50_常用js库_axios.md\":\"e551303e\",\"30_web前端_50_常用js库_index.md\":\"2a3f740c\",\"30_web前端_50_常用js库_promise.md\":\"ab942e94\",\"30_web前端_60_vue2_10_参考文档.md\":\"47b35133\",\"30_web前端_60_vue2_20_起步.md\":\"e19183a9\",\"30_web前端_60_vue2_30_vue2基础.md\":\"664d2f85\",\"30_web前端_60_vue2_60_vue_cli脚手架.md\":\"9005fdff\",\"30_web前端_60_vue2_80_vue-router路由.md\":\"6a45681d\",\"30_web前端_60_vue2_90_vuex状态管理.md\":\"b1eab550\",\"30_web前端_70_vue3_ts快速上手_00_课程介绍.md\":\"da14965c\",\"30_web前端_70_vue3_ts快速上手_01_初识typescript_01_初识ts.md\":\"76986aab\",\"30_web前端_70_vue3_ts快速上手_01_初识typescript_02_安装ts.md\":\"924eba2c\",\"30_web前端_70_vue3_ts快速上手_01_初识typescript_03_第一个typescript程序.md\":\"f8e5c771\",\"30_web前端_70_vue3_ts快速上手_01_初识typescript_04_webpack打包.md\":\"fcb9ca12\",\"30_web前端_70_vue3_ts快速上手_02_typescript常用语法_01_type.md\":\"bf88d9d1\",\"30_web前端_70_vue3_ts快速上手_02_typescript常用语法_02_interface.md\":\"ff6eee04\",\"30_web前端_70_vue3_ts快速上手_02_typescript常用语法_03_class.md\":\"848db1d1\",\"30_web前端_70_vue3_ts快速上手_02_typescript常用语法_04_function.md\":\"234b91aa\",\"30_web前端_70_vue3_ts快速上手_02_typescript常用语法_05_generic.md\":\"b86f46cd\",\"30_web前端_70_vue3_ts快速上手_02_typescript常用语法_06_other.md\":\"f3f226a0\",\"30_web前端_70_vue3_ts快速上手_03_vue3快速上手_01_认识vue3.md\":\"c1c9664e\",\"30_web前端_70_vue3_ts快速上手_03_vue3快速上手_02_创建vue3项目.md\":\"2bd2aae1\",\"30_web前端_70_vue3_ts快速上手_04_composition api_01_composition api_常用部分.md\":\"a1271be7\",\"30_web前端_70_vue3_ts快速上手_04_composition api_02_composition api_其它部分.md\":\"d7d056f6\",\"30_web前端_70_vue3_ts快速上手_04_composition api_03_手写组合api.md\":\"0f9fad80\",\"30_web前端_70_vue3_ts快速上手_04_composition api_04_composition vs option.md\":\"5d661731\",\"30_web前端_70_vue3_ts快速上手_05_其它新组合和api_01_新组件.md\":\"7e603fe6\",\"30_web前端_70_vue3_ts快速上手_05_其它新组合和api_02_其他新api.md\":\"cef007c3\",\"30_web前端_70_vue3_ts快速上手_06_vue3综合案例_readme.md\":\"5377b571\",\"30_web前端_70_vue3_ts快速上手_06_vue3综合案例_index.md\":\"42f15d7a\",\"30_web前端_70_vue3_ts快速上手_07_使用vuepress搭建在线文档网站_快速搭建在线文档.md\":\"65ecb835\",\"40_python_10_python_100_函数.md\":\"b3450cf0\",\"40_python_10_python_10_参考文档.md\":\"3cd7776f\",\"40_python_10_python_110_闭包.md\":\"e9df72ea\",\"40_python_10_python_120_装饰器.md\":\"c2a5ac31\",\"40_python_10_python_130_迭代器.md\":\"36fc4985\",\"40_python_10_python_140_生成器.md\":\"904be7de\",\"40_python_10_python_150_class.md\":\"52431cd8\",\"40_python_10_python_160_异常处理.md\":\"76f992a0\",\"40_python_10_python_170_进程、线程.md\":\"76b23ab9\",\"40_python_10_python_180_socket编程.md\":\"9033db99\",\"40_python_10_python_190_队列.md\":\"56a543c3\",\"40_python_10_python_200_python脚本练习.md\":\"b829d75c\",\"40_python_10_python_20_环境准备.md\":\"ae812e7f\",\"40_python_10_python_40_pip.md\":\"da4ea003\",\"40_python_10_python_50_基础数据类型_05_int类型.md\":\"e703ccb8\",\"40_python_10_python_50_基础数据类型_10_str字符串.md\":\"48c61813\",\"40_python_10_python_50_基础数据类型_15_list列表.md\":\"d7bade4e\",\"40_python_10_python_50_基础数据类型_20_tuple元组.md\":\"ee7a31fd\",\"40_python_10_python_50_基础数据类型_25_dict字典.md\":\"75fed3e0\",\"40_python_10_python_50_基础数据类型_30_set集合.md\":\"15cbbd1e\",\"40_python_10_python_60_基础.md\":\"56fb36cc\",\"40_python_10_python_70_常用模块_100_shutil模块.md\":\"5498ed09\",\"40_python_10_python_70_常用模块_10_内置模块.md\":\"0fbc080c\",\"40_python_10_python_70_常用模块_110_shelve模块.md\":\"6884eeca\",\"40_python_10_python_70_常用模块_120_xml模块.md\":\"75318243\",\"40_python_10_python_70_常用模块_130_pyyaml模块.md\":\"0e4b7ec6\",\"40_python_10_python_70_常用模块_140_configparser模块.md\":\"31b2503e\",\"40_python_10_python_70_常用模块_150_hashlib模块.md\":\"2414b498\",\"40_python_10_python_70_常用模块_160_subprocess模块.md\":\"e91355b1\",\"40_python_10_python_70_常用模块_170_loggine模块.md\":\"56c0b53a\",\"40_python_10_python_70_常用模块_180_fabric模块.md\":\"97083644\",\"40_python_10_python_70_常用模块_190_paramiko模块.md\":\"669a438c\",\"40_python_10_python_70_常用模块_20_sys模块.md\":\"0b2285cb\",\"40_python_10_python_70_常用模块_30_os模块.md\":\"802d0eb0\",\"40_python_10_python_70_常用模块_40_time_datetime模块.md\":\"4b446c99\",\"40_python_10_python_70_常用模块_50_termcolor模块.md\":\"d7d3db93\",\"40_python_10_python_70_常用模块_60_re模块.md\":\"c4214cc9\",\"40_python_10_python_70_常用模块_70_optparse与argparse模块.md\":\"325d1d33\",\"40_python_10_python_70_常用模块_80_json模块.md\":\"bd38d351\",\"40_python_10_python_70_常用模块_90_pickle模块.md\":\"bf2fe214\",\"40_python_10_python_80_模块、包.md\":\"febfecdc\",\"40_python_10_python_90_文件操作.md\":\"efe079f5\",\"40_python_50_django_10_参考文档.md\":\"9380fd1f\",\"40_python_50_django_20_环境准备.md\":\"651e42e1\",\"40_python_60_restframework_10_参考文档.md\":\"5a041c19\",\"40_python_60_restframework_20_环境准备.md\":\"e6b419c9\",\"40_python_90_爬虫_10_参考文档.md\":\"1dc30953\",\"40_python_90_爬虫_20_环境准备.md\":\"80045e3c\",\"40_python_readme.md\":\"6ad1a480\",\"50_db数据库_10_sqlite_10_参考文档.md\":\"152dcc9a\",\"50_db数据库_10_sqlite_20_环境准备.md\":\"5e19ad2a\",\"50_db数据库_20_mysql_10_参考文档.md\":\"d3177547\",\"50_db数据库_20_mysql_20_环境准备.md\":\"7f2d0852\",\"50_db数据库_20_mysql_mysql.md\":\"3d0999dc\",\"50_db数据库_20_mysql_mysql安装.md\":\"008a0ee5\",\"50_db数据库_30_mongodb_10_参考文档.md\":\"0f597f12\",\"50_db数据库_30_mongodb_20_环境准备.md\":\"56ba7e7f\",\"50_db数据库_40_redis_10_参考文档.md\":\"0a7f00fe\",\"50_db数据库_40_redis_20_环境准备.md\":\"2f1cd709\",\"50_db数据库_50_postgresql_10_参考文档.md\":\"93cadcd3\",\"50_db数据库_50_postgresql_20_环境准备.md\":\"dac304d0\",\"readme.md\":\"32c75573\",\"index.md\":\"9dc9140a\"}")</script>
+    <script type="module" async src="/mkNote_pages/assets/app.8608f89d.js"></script>
+    
+  </body>
+</html>

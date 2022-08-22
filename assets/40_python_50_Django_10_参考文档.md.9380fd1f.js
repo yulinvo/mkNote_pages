@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as _}from"./app.8608f89d.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"40_python/50_Django/10_\u53C2\u8003\u6587\u6863.md"}'),a={name:"40_python/50_Django/10_\u53C2\u8003\u6587\u6863.md"};function o(n,r,s,c,p,d){return _(),e("div")}const f=t(a,[["render",o]]);export{m as __pageData,f as default};

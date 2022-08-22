@@ -1,0 +1,7 @@
+import{_ as s,c as o,o as n,b as a}from"./app.8608f89d.js";const A=JSON.parse('{"title":"termcolor","description":"","frontmatter":{},"headers":[],"relativePath":"40_python/10_python/70_\u5E38\u7528\u6A21\u5757/50_termcolor\u6A21\u5757.md"}'),e={name:"40_python/10_python/70_\u5E38\u7528\u6A21\u5757/50_termcolor\u6A21\u5757.md"},t=a(`<h1 id="termcolor" tabindex="-1">termcolor <a class="header-anchor" href="#termcolor" aria-hidden="true">#</a></h1><blockquote><p>\u8F93\u51FA\u5E26\u989C\u8272\u5B57\u4F53</p></blockquote><div class="language-"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#pip install termcolor          #\u8F93\u51FA\u5E26\u989C\u8272\u5B57\u4F53 \u6A21\u5757</span></span>
+<span class="line"><span style="color:#A6ACCD;">#from termcolor import colored,cprint</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#text=colored(&#39;hello world!&#39;,&#39;red&#39;) ; print text</span></span>
+<span class="line"><span style="color:#A6ACCD;">#cprint(&#39;hello world&#39;,&#39;red&#39;)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div>`,3),l=[t];function r(c,p,_,i,d,m){return n(),o("div",null,l)}const C=s(e,[["render",r]]);export{A as __pageData,C as default};

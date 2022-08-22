@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as t}from"./app.8608f89d.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"20_\u8FD0\u7EF4/90_docker/200_dockfile/10_dockfile.md"}'),c={name:"20_\u8FD0\u7EF4/90_docker/200_dockfile/10_dockfile.md"};function _(r,a,d,s,n,i){return t(),o("div")}const p=e(c,[["render",_]]);export{l as __pageData,p as default};

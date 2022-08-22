@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,b as l}from"./app.8608f89d.js";const y=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"20_\u8FD0\u7EF4/10_Linux/90_iptables.md"}'),p={name:"20_\u8FD0\u7EF4/10_Linux/90_iptables.md"},e=l("",12),t=[e];function c(o,i,r,d,A,C){return n(),a("div",null,t)}const u=s(p,[["render",c]]);export{y as __pageData,u as default};
